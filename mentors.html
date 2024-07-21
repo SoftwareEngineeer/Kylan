@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Prestigious University</title>
+    <!-- Stylesheets -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            color: #333;
+            background-color: #f4f4f9;
+        }
+
+        .main-header .header-top {
+            background-color: #002147;
+            color: white;
+        }
+
+        .main-header .header-top .text {
+            color: white;
+        }
+
+        .main-header .header-top .top-right .text a {
+            color: #ffc72c;
+        }
+
+        .main-header .header-lower .logo-box .logo img {
+            max-height: 80px;
+        }
+
+        .main-slider .rev_slider_wrapper {
+            max-height: 600px;
+        }
+
+        .main-slider .rev-slidebg {
+            opacity: 0.8;
+        }
+
+        .sec-title .title {
+            color: #002147;
+            font-weight: bold;
+        }
+
+        .sec-title h2 {
+            font-size: 36px;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .team-section .team-block .inner-box {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-section .team-block .inner-box:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .team-section .team-block .image img {
+            border-radius: 50%;
+            border: 5px solid #002147;
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .team-section .team-block .inner-box:hover .image img {
+            transform: scale(1.05);
+        }
+
+        .team-section .team-block .lower-content h4 a {
+            color: #002147;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .team-section .team-block .lower-content h4 a:hover {
+            color: #ffc72c;
+        }
+
+        .team-section .team-block .lower-content .designation {
+            color: #666;
+            font-style: italic;
+        }
+
+        .bio-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .bio-modal .bio-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        .bio-modal .bio-content .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .bio-modal .bio-content .close:hover,
+        .bio-modal .bio-content .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .button-box a.theme-btn {
+            background-color: #002147;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .button-box a.theme-btn:hover {
+            background-color: #ffc72c;
+            color: #002147;
+        }
+    </style>
+</head>
+
+<body class="hidden-bar-wrapper">
+
+    <div class="page-wrapper">
+        <!-- Header Style One -->
+        <header class="main-header">
+    	
+            <!-- Header Top -->
+            <div class="header-top">
+                <div class="auto-container">
+                    <div class="inner-container clearfix">
+                        <!-- Top Left -->
+                        <div class="top-left clearfix">
+                            <div class="text"><span>Working time:</span> Monday to Friday 9 AM - 5 PM</div>
+                        </div>
+                        
+                        <!-- Top Right -->
+                        <div class="top-right pull-right clearfix">
+                            <!-- Social Box -->
+                            <ul class="social-box">
+                                <li><a href="https://facebook.com/" class="fa fa-facebook"></a></li>
+                                <li><a href="https://www.instagram.com/" class="fa fa-instagram"></a></li>
+                                <li><a href="https://youtube.com/" class="fa fa-youtube-play"></a></li>
+                                
+                            </ul>
+                            <a href="find_a_school.html" class="btn btn-consultation">Free Consultation</a>
+    
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Header Lower -->
+            <div class="header-lower">
+                <div class="auto-container clearfix">
+                    
+                    <!-- Logo Box -->
+                    <div class="pull-left logo-box">
+                        <div class="logo"><a href="index.html"><img src="assets/images/logo.png" alt="" title=""></a></div>
+                    </div>
+                    
+                    <!-- Nav Outer -->
+                    <div class="nav-outer clearfix">
+                        <!-- Mobile Navigation Toggler -->
+                        <div class="mobile-nav-toggler"><span class="icon flaticon-menu"></span></div>
+                        <!-- Main Menu -->
+                        <nav class="main-menu navbar-expand-md">
+                            <div class="navbar-header">
+                                <!-- Toggle Button -->
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            
+                            <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+                                <ul class="navigation clearfix">
+                                    <li class="current dropdown"><a href="#">Home</a>
+                                        <ul>
+                                            <li><a href="index.html">Homepage One</a></li>
+                                            <li><a href="index-2.html">Homepage Two</a></li>
+                                            <li><a href="index-3.html">Homepage Three</a></li>
+                                            <li class="dropdown"><a href="#">Header Styles</a>
+                                                <ul>
+                                                    <li><a href="index.html">Header Style One</a></li>
+                                                    <li><a href="index-2.html">Header Style Two</a></li>
+                                                    <li><a href="index-3.html">Header Style Three</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="#">About</a>
+                                        <ul>
+                                            <li><a href="about.html">Who We Are</a></li>
+                                            <li><a href="faq.html">What We Specialize In</a></li>
+                                            <li><a href="price.html">Our Teachers</a></li>
+                                            <li class="dropdown"><a href="#">Testimonials</a>
+                                                <ul>
+                                                    <li><a href="mentors.html">Team</a></li>
+                                                    <li><a href="mentor-detail.html">Team Detail</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="#">Services</a>
+                                        <ul>
+                                            <li><a href="services.html">Academic Coaching</a></li>
+                                            <li><a href="service-detail.html">Admission Support</a></li>
+                                            <li><a href="service-detail.html">Our Courses</a></li>
+                                            <li><a href="service-detail.html">Children Temperament Test</a></li>
+                                            <li><a href="service-detail.html">Kuder Test</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="#">Edu</a>
+                                        <ul>
+                                            <li><a href="portfolio.html">Korea</a></li>
+                                            <li><a href="portfolio-detail.html">Abroad</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="#">Calender</a>
+                                        <ul>
+                                            <li><a href="courses.html">Sign Up for Consulting</a></li>
+                                            <li><a href="course-detail.html">Sign Up for Classes</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="#">Where To Find Us</a>
+                                        <ul>
+                                            <li><a href="https://youtube.com/">Youtube</a></li>
+                                            <li><a href="blog.html">Blog</a></li>
+                                            <li><a href="https://www.instagram.com/">Instagram</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="#">Contact Us</a>
+                                        <ul>
+                                            <li><a href="https://google.com/">Notices</a></li>
+                                        </ul>
+                                    </li>
+                            
+                            </div>
+                        </nav>
+                        
+                        <!-- Main Menu End-->
+                        <div class="outer-box clearfix">
+                            
+                            <!-- Search Btn -->
+                            <div class="search-box-btn transition-300ms"><span class="icon fa fa-search"></span></div>
+                            
+                            <!-- Nav Btn -->
+                            <div class="nav-btn navSidebar-button transition-300ms"><span class="icon flaticon-menu-1"></span></div>
+                                
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- End Header Lower -->
+            
+            <!-- Sticky Header  -->
+            <div class="sticky-header">
+                <div class="auto-container clearfix">
+                    <!--Logo-->
+                    <div class="logo pull-left">
+                        <a href="index.html" title=""><img src="assets/images/logo-small.png" alt="" title=""></a>
+                    </div>
+                    <!--Right Col-->
+                    <div class="pull-right">
+                    
+                        <!-- Main Menu -->
+                        <nav class="main-menu">
+                            <!--Keep This Empty / Menu will come through Javascript-->
+                        </nav>
+                        <!-- Main Menu End-->
+                        
+                        <!-- Mobile Navigation Toggler -->
+                        <div class="mobile-nav-toggler"><span class="icon flaticon-menu-1"></span></div>
+                        
+                    </div>
+                </div>
+            </div><!-- End Sticky Menu -->
+        
+            <!-- Mobile Menu  -->
+            <div class="mobile-menu">
+                <div class="menu-backdrop"></div>
+                <div class="close-btn"><span class="icon flaticon-multiply"></span></div>
+                
+                <nav class="menu-box">
+                    <div class="nav-logo"><a href="index.html"><img src="assets/images/logo-small.png" alt="" title=""></a></div>
+                    <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
+                </nav>
+            </div><!-- End Mobile Menu -->
+        
+        </header>
+        <!-- End Main Header -->
+
+        <!-- Main Slider -->
+        <section class="main-slider">
+            <div class="rev_slider_wrapper fullwidthbanner-container" id="rev_slider_one_wrapper" data-source="gallery">
+                <div class="rev_slider fullwidthabanner" id="rev_slider_one" data-version="5.4.1">
+                    <ul>
+                        <li data-transition="slidingoverlayhorizontal" data-description="Slide Description" data-index="rs-1688" data-slotamount="default" data-thumb="assets/images/main-slider/image-1.jpg" data-title="Slide Title">
+                            <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="assets/images/main-slider/image-1.jpg">
+
+                            <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['1100','800','800','500']" data-whitespace="normal" data-hoffset="['15','15','15','15']" data-voffset="['-150','-240','-210','-210']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="">
+                                <div class="title">Welcome to Our University</div>
+                            </div>
+
+                            <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['1100','800','800','500']" data-whitespace="normal" data-hoffset="['15','15','15','15']" data-voffset="['-30','-100','-100','-110']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"delay":0,"split":"chars","splitdelay":0.05,"speed":2000,"frame":"0","from":"x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"power4.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"power3.inOut"}]' style="">
+                                <h1>Excellence in <br> Education</h1>
+                            </div>
+
+                            <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['1100','800','800','500']" data-whitespace="normal" data-hoffset="['15','15','15','15']" data-voffset="['100','40','15','0']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"delay":0,"speed":1500,"frame":"0","from":"x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;","mask":"x:[-100%];y:0;s:inherit;e:inherit;","to":"o:1;","ease":"power3.out"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"power3.inOut"}]' style="">
+                                <div class="text">Join us on a journey of academic excellence and personal growth.</div>
+                            </div>
+
+                            <div class="tp-caption tp-resizeme" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['700','700','700','500']" data-whitespace="normal" data-hoffset="['15','15','15','15']" data-voffset="['190','150','105','100']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="">
+                                <div class="button-box">
+                                    <a href="services.html" class="theme-btn btn-style-two"><span class="txt">Get Started</span></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- End Main Slider -->
+
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <!-- Image Column -->
+                    <div class="image-column col-lg-5 col-md-12 col-sm-12">
+                        <div class="inner-column">
+                            <div class="image" data-tilt data-tilt-max="3">
+                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\school.jpg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Column -->
+                    <div class="content-column col-lg-7 col-md-12 col-sm-12">
+                        <div class="inner-column">
+                            <div class="sec-title">
+                                <div class="title">About Us</div>
+                                <h2>Empowering Future Leaders</h2>
+                                <div class="text">We are dedicated to nurturing the minds and talents of our students, helping them to become the best versions of themselves. Join us on a journey of growth and excellence.</div>
+                            </div>
+                            <div class="row clearfix">
+                                <!-- Column -->
+                                <div class="column col-lg-4 col-md-4 col-sm-12">
+                                    <ul class="option-list">
+                                        <li>
+                                            <span class="icon transition-500ms flaticon-check"></span>
+                                            Flexible <br> Schedules
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Column -->
+                                <div class="column col-lg-4 col-md-4 col-sm-12">
+                                    <ul class="option-list">
+                                        <li>
+                                            <span class="icon transition-500ms flaticon-check"></span>
+                                            24/7 Online <br> Support
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Column -->
+                                <div class="column col-lg-4 col-md-4 col-sm-12">
+                                    <ul class="option-list">
+                                        <li>
+                                            <span class="icon transition-500ms flaticon-check"></span>
+                                            Personalized <br> Guidance
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Counter Box -->
+                            <div class="counter-box">
+                                <!-- Fact Counter -->
+                                <div class="fact-counter">
+                                    <div class="row clearfix">
+                                        <!-- Column -->
+                                        <div class="counter-column col-lg-4 col-md-4 col-sm-12">
+                                            <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                                <div class="content">
+                                                    <div class="count-outer count-box">
+                                                        <span class="count-text" data-speed="2500" data-stop="10">0</span>k
+                                                    </div>
+                                                    <div class="counter-title">Active Students <br> Worldwide</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Column -->
+                                        <div class="counter-column col-lg-4 col-md-4 col-sm-12">
+                                            <div class="inner wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
+                                                <div class="content">
+                                                    <div class="count-outer count-box">
+                                                        <span class="count-text" data-speed="2500" data-stop="10">0</span>k
+                                                    </div>
+                                                    <div class="counter-title">Campus Locations <br> Globally</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Column -->
+                                        <div class="counter-column col-lg-4 col-md-4 col-sm-12">
+                                            <div class="inner wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
+                                                <div class="content">
+                                                    <div class="count-outer count-box">
+                                                      
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Counter Box -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End About Section -->
+
+        <!-- Team Section -->
+        <section class="team-section">
+            <div class="auto-container">
+                <div class="sec-title">
+                    <div class="title">Our Team</div>
+                    <h2>Get to Know Us</h2>
+                </div>
+                <div class="row clearfix">
+                    <!-- Team Block -->
+                    <div class="team-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\Peter.jpg" alt="Peter Chi" />
+                            </div>
+                            <div class="lower-content">
+                                <h4><a href="#" class="open-bio" data-bio="teacher1-bio">Peter Chi</a></h4>
+                                <div class="designation">Managing Director</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\Hye-Ju.jpg" alt="Hyeju Yoon" />
+                            </div>
+                            <div class="lower-content">
+                                <h4><a href="#" class="open-bio" data-bio="teacher2-bio">Hyeju Yoon</a></h4>
+                                <div class="designation">Director</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\John.jpg" alt="John Char" />
+                            </div>
+                            <div class="lower-content">
+                                <h4><a href="#" class="open-bio" data-bio="teacher3-bio">John Char</a></h4>
+                                <div class="designation">Admissions Consultant</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\Sarang.jpg" alt="Sarang Lee" />
+                            </div>
+                            <div class="lower-content">
+                                <h4><a href="#" class="open-bio" data-bio="teacher4-bio">Sarang Lee</a></h4>
+                                <div class="designation">Admissions Consultant</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\Richard.jpg" alt="Richard Koh" />
+                            </div>
+                            <div class="lower-content">
+                                <h4><a href="#" class="open-bio" data-bio="teacher5-bio">Richard Koh</a></h4>
+                                <div class="designation">Admissions Consultant</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\Peter-Lee.jpg" alt="Peter Lee" />
+                            </div>
+                            <div class="lower-content">
+                                <h4><a href="#" class="open-bio" data-bio="teacher6-bio">Peter Lee</a></h4>
+                                <div class="designation">Admissions Consultant</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\Christina.jpg" alt="Christina Kwon" />
+                            </div>
+                            <div class="lower-content">
+                                <h4><a href="#" class="open-bio" data-bio="teacher7-bio">Christina Kwon</a></h4>
+                                <div class="designation">Admissions Consultant</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\Suzie.jpg" alt="Suzie Im" />
+                            </div>
+                            <div class="lower-content">
+                                <h4><a href="#" class="open-bio" data-bio="teacher8-bio">Suzie Im</a></h4>
+                                <div class="designation">Client Relations Manager</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\Boyoon.jpg" alt="Boyoon Kim" />
+                            </div>
+                            <div class="lower-content">
+                                <h4><a href="#" class="open-bio" data-bio="teacher9-bio">Boyoon Kim</a></h4>
+                                <div class="designation">Client Relations Officer</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\Suyeon.jpg" alt="Suyeon Hwang" />
+                            </div>
+                            <div class="lower-content">
+                                <h4><a href="#" class="open-bio" data-bio="teacher10-bio">Suyeon Hwang</a></h4>
+                                <div class="designation">Administrative Officer</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\Ben.jpg" alt="Ben Coz" />
+                            </div>
+                            <div class="lower-content">
+                                <h4><a href="#" class="open-bio" data-bio="teacher11-bio">Ben Coz</a></h4>
+                                <div class="designation">Admissions Consultant</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\Eli.jpg" alt="Eli Lee" />
+                            </div>
+                            <div class="lower-content">
+                                <h4><a href="#" class="open-bio" data-bio="teacher12-bio">Eli Lee</a></h4>
+                                <div class="designation">Admissions Consultant</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\Jaimin.jpg" alt="Jaimin Yoon" />
+                            </div>
+                            <div class="lower-content">
+                                <h4><a href="#" class="open-bio" data-bio="teacher13-bio">Jaimin Yoon</a></h4>
+                                <div class="designation">Admissions Consultant</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\Jae.jpg" alt="Jae Chang" />
+                            </div>
+                            <div class="lower-content">
+                                <h4><a href="#" class="open-bio" data-bio="teacher14-bio">Jae Chang</a></h4>
+                                <div class="designation">Admissions Consultant</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\Henry.jpg" alt="Henry Byun" />
+                            </div>
+                            <div class="lower-content">
+                                <h4><a href="#" class="open-bio" data-bio="teacher15-bio">Henry Byun</a></h4>
+                                <div class="designation">Admissions Consultant</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bio Modals -->
+        <div id="teacher1-bio" class="bio-modal">
+            <div class="bio-content">
+                <span class="close">&times;</span>
+                <h2>Peter Chi</h2>
+                <p>Bio details...</p>
+            </div>
+        </div>
+        <div id="teacher2-bio" class="bio-modal">
+            <div class="bio-content">
+                <span class="close">&times;</span>
+                <h2>Hyeju Yoon</h2>
+                <p>Bio details...</p>
+            </div>
+        </div>
+        <div id="teacher3-bio" class="bio-modal">
+            <div class="bio-content">
+                <span class="close">&times;</span>
+                <h2>John Char</h2>
+                <p>Bio details...</p>
+            </div>
+        </div>
+        <div id="teacher4-bio" class="bio-modal">
+            <div class="bio-content">
+                <span class="close">&times;</span>
+                <h2>Sarang Lee</h2>
+                <p>Bio details...</p>
+            </div>
+        </div>
+        <div id="teacher5-bio" class="bio-modal">
+            <div class="bio-content">
+                <span class="close">&times;</span>
+                <h2>Richard Koh</h2>
+                <p>Bio details...</p>
+            </div>
+        </div>
+        <div id="teacher6-bio" class="bio-modal">
+            <div class="bio-content">
+                <span class="close">&times;</span>
+                <h2>Peter Lee</h2>
+                <p>Bio details...</p>
+            </div>
+        </div>
+        <div id="teacher7-bio" class="bio-modal">
+            <div class="bio-content">
+                <span class="close">&times;</span>
+                <h2>Christina Kwon</h2>
+                <p>Bio details...</p>
+            </div>
+        </div>
+        <div id="teacher8-bio" class="bio-modal">
+            <div class="bio-content">
+                <span class="close">&times;</span>
+                <h2>Suzie Im</h2>
+                <p>Bio details...</p>
+            </div>
+        </div>
+        <div id="teacher9-bio" class="bio-modal">
+            <div class="bio-content">
+                <span class="close">&times;</span>
+                <h2>Boyoon Kim</h2>
+                <p>Bio details...</p>
+            </div>
+        </div>
+        <div id="teacher10-bio" class="bio-modal">
+            <div class="bio-content">
+                <span class="close">&times;</span>
+                <h2>Suyeon Hwang</h2>
+                <p>Bio details...</p>
+            </div>
+        </div>
+        <div id="teacher11-bio" class="bio-modal">
+            <div class="bio-content">
+                <span class="close">&times;</span>
+                <h2>Ben Coz</h2>
+                <p>Bio details...</p>
+            </div>
+        </div>
+        <div id="teacher12-bio" class="bio-modal">
+            <div class="bio-content">
+                <span class="close">&times;</span>
+                <h2>Eli Lee</h2>
+                <p>Bio details...</p>
+            </div>
+        </div>
+        <div id="teacher13-bio" class="bio-modal">
+            <div class="bio-content">
+                <span class="close">&times;</span>
+                <h2>Jaimin Yoon</h2>
+                <p>Bio details...</p>
+            </div>
+        </div>
+        <div id="teacher14-bio" class="bio-modal">
+            <div class="bio-content">
+                <span class="close">&times;</span>
+                <h2>Jae Chang</h2>
+                <p>Bio details...</p>
+            </div>
+        </div>
+        <div id="teacher15-bio" class="bio-modal">
+            <div class="bio-content">
+                <span class="close">&times;</span>
+                <h2>Henry Byun</h2>
+                <p>Bio details...</p>
+            </div>
+        </div>
+
+        <!-- JavaScript for Modals -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var modals = document.querySelectorAll('.bio-modal');
+                var openButtons = document.querySelectorAll('.open-bio');
+                var closeButtons = document.querySelectorAll('.bio-modal .close');
+
+                openButtons.forEach(function (button) {
+                    button.addEventListener('click', function () {
+                        var bioId = button.getAttribute('data-bio');
+                        document.getElementById(bioId).style.display = 'block';
+                    });
+                });
+
+                closeButtons.forEach(function (button) {
+                    button.addEventListener('click', function () {
+                        button.parentElement.parentElement.style.display = 'none';
+                    });
+                });
+
+                window.addEventListener('click', function (event) {
+                    modals.forEach(function (modal) {
+                        if (event.target == modal) {
+                            modal.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        </script>
+
+        <!-- Scroll To Top -->
+        <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-up"></span></div>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="auto-container">
+                <div class="widgets-section">
+                    <div class="row clearfix">
+                        <!--Footer Column-->
+                        <div class="footer-column col-lg-4 col-md-6 col-sm-12">
+                            <div class="footer-widget about-widget">
+                                <h2>About Us</h2>
+                                <div class="text">We are a prestigious university committed to providing quality education and empowering future leaders. Our programs are designed to nurture the talents and skills of our students, preparing them for success in their chosen fields.</div>
+                            </div>
+                        </div>
+
+                        <!--Footer Column-->
+                        <div class="footer-column col-lg-4 col-md-6 col-sm-12">
+                            <div class="footer-widget links-widget">
+                                <h2>Quick Links</h2>
+                                <ul class="list">
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="services.html">Our Services</a></li>
+                                    <li><a href="courses.html">Courses</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                    <li><a href="blog.html">Blog</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!--Footer Column-->
+                        <div class="footer-column col-lg-4 col-md-6 col-sm-12">
+                            <div class="footer-widget contact-widget">
+                                <h2>Contact Us</h2>
+                                <ul class="contact-info">
+                                    <li><span class="icon flaticon-map"></span> 123 University Avenue, City, Country</li>
+                                    <li><span class="icon flaticon-phone"></span> +123-456-7890</li>
+                                    <li><span class="icon flaticon-email"></span> info@university.com</li>
+                                </ul>
+                                <ul class="social-box">
+                                    <li><a href="https://www.instagram.com/" class="fa fa-instagram"></a></li>
+                                    <li><a href="https://youtube.com/" class="fa fa-youtube-play"></a></li>
+                                    <li><a href="https://google.com/" class="fa fa-blog"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+
+        <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="assets/js/jquery.fancybox.js"></script>
+        <script src="assets/js/appear.js"></script>
+        <script src="assets/js/parallax.min.js"></script>
+        <script src="assets/js/tilt.jquery.min.js"></script>
+        <script src="assets/js/jquery.paroller.min.js"></script>
+        <script src="assets/js/owl.js"></script>
+        <script src="assets/js/wow.js"></script>
+        <script src="assets/js/validate.js"></script>
+        <script src="assets/js/nav-tool.js"></script>
+        <script src="assets/js/jquery-ui.js"></script>
+        <script src="assets/js/script.js"></script>
+    </div>
+</body>
+</html>
