@@ -65,6 +65,12 @@
 .main-slider .tp-bullets{
 	display:none !important;	
 }
+.title-hyv.style-heading {
+    font-weight: bold; /* Makes text bolder */
+    font-size: 24px; /* Increases the font size */
+	color: #777777;
+}
+
 .btn-consultation {
     display: inline-block;
     padding: 8px 18px; /* Adjusted padding for better sizing */
