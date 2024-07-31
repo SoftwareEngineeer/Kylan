@@ -22,6 +22,45 @@
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 
+<style>
+	.dropdown {
+		position: relative;
+		display: inline-block;
+	}
+
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #f9f9f9;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+	}
+
+	.dropdown-content a {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+	}
+
+	.dropdown-content a:hover {background-color: #f1f1f1;}
+
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+
+	.dropdown-submenu {
+		position: relative;
+	}
+
+	.dropdown-submenu:hover .dropdown-content {
+		display: block;
+		left: 100%;
+		top: 0;
+	}
+</style>
+
 </head>
 
 <body class="hidden-bar-wrapper">
@@ -48,12 +87,12 @@
                     <div class="top-right pull-right clearfix">
 						<!-- Social Box -->
 						<ul class="social-box">
-							<li><a href="https://facebook.com/" class="fa fa-facebook"></a></li>
-							<li><a href="https://www.instagram.com/" class="fa fa-instagram"></a></li>
+							<li><a href="https://www.facebook.com/share/nanbA8kA8TZNrpFv/?mibextid=LQQJ4d" class="fa fa-facebook"></a></li>
+							<li><a href="https://www.instagram.com/kylanconsulting.vn?igsh=MXZpcjRmbGg1amR2Mg==" class="fa fa-instagram"></a></li>
 							<li><a href="https://youtube.com/" class="fa fa-youtube-play"></a></li>
 							
 						</ul>
-						<a href="find_a_school.html" class="btn btn-consultation">Free Consultation</a>
+						<a href="consultant.html" class="btn btn-consultation">Free Consultation</a>
 
                     </div>
 					
@@ -87,59 +126,48 @@
 						
 						<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
 							<ul class="navigation clearfix">
-								<li class="current dropdown"><a href="#">Home</a>
-									<ul>
-										<li><a href="index.html">Homepage One</a></li>
-										<li><a href="index-2.html">Homepage Two</a></li>
-										<li><a href="index-3.html">Homepage Three</a></li>
-										<li class="dropdown"><a href="#">Header Styles</a>
-											<ul>
-												<li><a href="index.html">Header Style One</a></li>
-												<li><a href="index-2.html">Header Style Two</a></li>
-												<li><a href="index-3.html">Header Style Three</a></li>
-											</ul>
-										</li>
-									</ul>
+								
+									
+										<li><a href="index.html">Home</a></li>
+											
+										
+									
 								</li>
 								<li class="dropdown"><a href="#">About</a>
 									<ul>
 										<li><a href="about.html">Who We Are</a></li>
 										<li><a href="faq.html">What We Specialize In</a></li>
-										<li><a href="price.html">Our Teachers</a></li>
-										<li class="dropdown"><a href="#">Testimonials</a>
-											<ul>
-												<li><a href="mentors.html">Team</a></li>
-												<li><a href="mentor-detail.html">Team Detail</a></li>
-											</ul>
-										</li>
+										<li><a href="mentors.html">Our Team</a></li>
+										
 									</ul>
 								</li>
 								<li class="dropdown"><a href="#">Services</a>
-									<ul>
-										<li><a href="services.html">Academic Coaching</a></li>
-										<li><a href="service-detail.html">Admission Support</a></li>
-										<li><a href="service-detail.html">Our Courses</a></li>
-										<li><a href="service-detail.html">Children Temperament Test</a></li>
-										<li><a href="service-detail.html">Kuder Test</a></li>
+									<ul class="dropdown-content">
+										<li><a href="services.html">College Admissions</a></li>
+										<li class="dropdown"><a href="#">Boarding School</a>
+											<ul class="dropdown-content">
+											
+													<ul class="dropdown-content">
+														<li><a href="mentors.html">USA</a></li>
+														<li><a href="mentor-detail.html">Canada</a></li>
+													</ul></li>
+												
+												</li>
+											</ul>
+										</li>
+										<li><a href="service-detail.html">Additional Services</a></li>
+										
+										
 									</ul>
 								</li>
-								<li class="dropdown"><a href="#">Edu</a>
+								
+								<li class="dropdown"><a href="#">Results</a>
 									<ul>
-										<li><a href="portfolio.html">Korea</a></li>
-										<li><a href="portfolio-detail.html">Abroad</a></li>
+										<li><a href="portfolio.html">Recent Results</a></li>
+										<li><a href="portfolio-detail.html">Testimonials</a></li>
 									</ul>
 								</li>
-								<li class="dropdown"><a href="#">Calender</a>
-									<ul>
-										<li><a href="courses.html">Sign Up for Consulting</a></li>
-										<li><a href="course-detail.html">Sign Up for Classes</a></li>
-									</ul>
-								</li>
-								<li class="dropdown"><a href="#">Contact Us</a>
-									<ul>
-										<li><a href="https://google.com/">Notices</a></li>
-									</ul>
-								</li>
+								<li><a href="consultant.html">Contact Us</a></li>
 						
 						</div>
 					</nav>
@@ -252,12 +280,7 @@
 				<div class="text">Welcome to our company</div>
 				<h1>News Feeds</h1>
 			</div>
-			<div class="breadcrumb-outer">
-				<ul class="page-breadcrumb">
-					<li><a href="index.html">Home</a></li>
-					<li>Blog</li>
-				</ul>
-			</div>
+			
 		</div>
 	</section>
 	<!-- End Page Title Section -->
@@ -625,8 +648,7 @@
                                 <div class="footer-widget info-widget">
 									<h5>Get In Touch</h5>
 									<ul class="contact-info-list">
-										<li><span>Head Office</span><a href="#">12/North Hall Tower, <br> NYC, UK</a></li>
-										<li><span>Sub Office</span><a href="#">34, A/Front Tower, <br> London, UK</a></li>
+										<li><span>Head Office</span><a href="https://maps.app.goo.gl/q7fX7Pw97DjcX6Q57">Shophouse A26, Sunshine City, Ciputra, Bac Tu Liem, Ha Noi, 100000</a></li>
 									</ul>
 								</div>
 							</div>
@@ -641,7 +663,7 @@
 											<div class="form-group">
 												<span class="icon flaticon-email"></span>
 												<input type="email" name="search-field" value="" placeholder="Email address" required>
-												<button type="submit" class="theme-btn submit-btn">Subscribe Now<span class="arrow flaticon-right-arrow"></span></button>
+												<button type="submit" class="theme-btn submit-btn">Subscribe Now<span class="arrow flaticon-right-arrow-1"></span></button>
 											</div>
 										</form>
 									</div>
@@ -657,11 +679,9 @@
 			<div class="footer-bottom">
 				<div class="clearfix">
 					<div class="pull-left">
-						<div class="copyright">Copyright By &copy; <a href="https://themeforest.net/user/themexriver">Themexriver</a> - 2022</div>
+						<div class="copyright">Copyright By &copy; <a href="https://themeforest.net/user/themexriver">Kylan</a> - 2024</div>
 					</div>
-					<div class="pull-right">
-						<div class="payments"><img src="assets/images/icons/payment.png" alt="" /></div>
-					</div>
+					
 				</div>
 			</div>
 			
