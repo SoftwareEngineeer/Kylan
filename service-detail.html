@@ -13,6 +13,8 @@
 
 <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
 <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnH/4UdsdXal/g9RZ3p6D1NU/2sv5L5D1v7E5RQEUx3P6u+N2gFGS4Q4Un6fP4tYs1V1Jx5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -146,6 +148,80 @@
         flex: 2;
         padding: 0 20px;
     }
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+    }
+    .content {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    .checklist-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-bottom: 20px;
+    }
+    .checklist-links ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .checklist-links ul li {
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 25px;
+        font-size: 1.1em;
+    }
+    .checklist-links ul li:before {
+        content: "\f00c";
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #007bff;
+    }
+    .roadmap-image-container {
+        position: relative;
+        text-align: center;
+    }
+    .roadmap-links a {
+        position: absolute;
+    }
+    .roadmap-links a.elementary {
+        top: 16.5%;
+        left: 23.5%;
+        height: 6.5%;
+        width: 11.5%;
+    }
+    .roadmap-links a.eighth-grade {
+        top: 29%;
+        left: 65.5%;
+        height: 6.5%;
+        width: 11.5%;
+    }
+    .roadmap-links a.high-school {
+        top: 50.5%;
+        left: 38%;
+        height: 6.5%;
+        width: 11.5%;
+    }
+    .roadmap-image {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
 </style>
 </head>
 
@@ -171,212 +247,35 @@
 
     <hr class="section-divider">
 
+    
+
     <!-- Overview of the US College Application Process Section -->
-    <section class="section-content">
-        <div class="auto-container">
-            <div class="section-title">
-                <i class="fas fa-info-circle"></i> Overview of the US College Application Process
-            </div>
-            <div class="row">
-                <div class="image-container col-lg-6 col-md-12 col-sm-12">
-                    <div class="image">
-                        <img src="assets/css/images/Applying-To-College-900x643.jpg" alt="Overview of the US College Application Process">
-                    </div>
-                </div>
-                <div class="text-container col-lg-6 col-md-12 col-sm-12">
-                    <p>Gain an overview of the US higher education system and the importance of early planning and preparation. Understand the application timeline to ensure you stay on track throughout the admissions cycle.</p>
-                </div>
-            </div>
+    <main class="page-content" role="main">
+        <!--[ CONTENT ]-->
+        <div class="content cms-content scale-font">
+          <h1>Transition Roadmap</h1>
+<p style="text-align: right;"><a href="https://www.transitioniowa.org/filesimages/Checklist_Elementary_print.pdf">View the Elementary Checklist</a></p>
+<p style="text-align: right;"><a href="/filesimages/Elementary Roadmap.pdf">View the full Elementary Roadmap</a></p>
+<p style="text-align: right;"><a href="https://www.transitioniowa.org/filesimages/Checklist_Beginning8th_print.pdf">View the 8th Grade Checklist</a></p>
+<p style="text-align: right;"><a href="https://www.askresource.org/handler/dataassistant.ashx?id=1a943292-4954-4baf-8711-a0801ee6e4ba">View the full 8th Grade Roadmap</a></p>
+<p style="text-align: right;"><a href="https://www.transitioniowa.org/filesimages/Checklist_High School_print.pdf">View the High School Checklist</a></p>
+<p style="text-align: right;"><a href="https://www.askresource.org/handler/dataassistant.ashx?id=791c200d-11b5-4d98-8eff-a98a821ab1b4">View the full High School Roadmap</a></p>
+<div style="position: relative;">
+<a style="position:absolute; top:16.5%; left: 23.5%; height:6.5%; width:11.5%;" href="/filesimages/Checklist_Elementary_print.pdf" target="_blank" alt="Elementary Checklist" title="Elementary"></a>
+<a style="position:absolute; top:29%; left: 65.5%; height:6.5%; width:11.5%;" href="/filesimages/Checklist_Beginning8th_print.pdf" target="_blank" alt="8th Grade Checklist" title="Beginning 8th"></a>
+<a style="position:absolute; top:50.5%; left: 38%; height:6.5%; width:11.5%;" href="/filesimages/Checklist_High School_print.pdf" target="_blank" alt="High School Checklist" title="High School"></a>
+<img class="roadmap-image" alt="Transition Roadmap" src="images/Transition Roadmap 2.png">
+</div>
         </div>
-    </section>
+      </main>
+  </div>
+</section>
 
-    <hr class="section-divider">
 
-    <!-- Admission Requirements Section -->
-    <section class="section-content">
-        <div class="auto-container">
-            <div class="section-title">
-                <i class="fas fa-check-circle"></i> Admission Requirements
-            </div>
-            <div class="row">
-                <div class="text-container col-lg-6 col-md-12 col-sm-12">
-                    <ul>
-                        <li>Delve into detailed explanations of admission criteria, including GPA, standardized test scores (SAT/ACT), extracurricular activities, essays, and letters of recommendation.</li>
-                        <li>Learn about common application platforms like Common App and Coalition App, and understand the differences between undergraduate and graduate admissions requirements.</li>
-                    </ul>
-                </div>
-                <div class="image-container col-lg-6 col-md-12 col-sm-12">
-                    <div class="image">
-                        <img src="assets/css/images/OIP.jpeg" alt="Admission Requirements">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <hr class="section-divider">
 
-    <!-- Choosing the Right Colleges Section -->
-    <section class="section-content">
-        <div class="auto-container">
-            <div class="section-title">
-                <i class="fas fa-university"></i> Choosing the Right Colleges
-            </div>
-            <div class="row">
-                <div class="image-container col-lg-6 col-md-12 col-sm-12">
-                    <div class="image">
-                        <img src="assets/css/images/Choosing-the-Right-College.png" alt="Choosing the Right Colleges">
-                    </div>
-                </div>
-                <div class="text-container col-lg-6 col-md-12 col-sm-12">
-                    <ul>
-                        <li>Receive guidance on researching and evaluating potential colleges based on academic programs, campus culture, location, size, and other factors.</li>
-                        <li>Get tips for creating a balanced list of reach, match, and safety schools, and explore resources for college rankings, campus visits, and virtual tours.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <hr class="section-divider">
-
-    <!-- Building a Strong Application Section -->
-    <section class="section-content">
-        <div class="auto-container">
-            <div class="section-title">
-                <i class="fas fa-pencil-alt"></i> Building a Strong Application
-            </div>
-            <div class="row">
-                <div class="text-container col-lg-6 col-md-12 col-sm-12">
-                    <ul>
-                        <li>Follow step-by-step instructions for completing the application, including personal information, academic history, and extracurricular activities.</li>
-                        <li>Discover strategies for writing compelling essays that showcase your personality, passions, and achievements, and learn how to obtain strong letters of recommendation.</li>
-                    </ul>
-                </div>
-                <div class="image-container col-lg-6 col-md-12 col-sm-12">
-                    <div class="image">
-                        <img src="assets/css/images/Building-strong-online-presence-scaled.jpg" alt="Building a Strong Application">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <hr class="section-divider">
-
-    <!-- Preparing for Tests Section -->
-    <section class="section-content">
-        <div class="auto-container">
-            <div class="section-title">
-                <i class="fas fa-book"></i> Preparing for Tests
-            </div>
-            <div class="row">
-                <div class="image-container col-lg-6 col-md-12 col-sm-12">
-                    <div class="image">
-                        <img src="assets/css/images/examtips.jpg" alt="Preparing for Tests">
-                    </div>
-                </div>
-                <div class="text-container col-lg-6 col-md-12 col-sm-12">
-                    <ul>
-                        <li>Learn about the SAT and ACT exams, including format, content, and scoring, and access study resources and test prep strategies.</li>
-                        <li>Understand optional SAT Subject Tests and AP exams, and develop a study plan that works for you.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <hr class="section-divider">
-
-    <!-- Financial Aid and Scholarships Section -->
-    <section class="section-content">
-        <div class="auto-container">
-            <div class="section-title">
-                <i class="fas fa-dollar-sign"></i> Financial Aid and Scholarships
-            </div>
-            <div class="row">
-                <div class="text-container col-lg-6 col-md-12 col-sm-12">
-                    <ul>
-                        <li>Explore financial aid options, including grants, scholarships, loans, and work-study programs, and get guidance on completing the FAFSA and CSS Profile.</li>
-                        <li>Discover tips for researching and applying for scholarships, both merit-based and need-based.</li>
-                    </ul>
-                </div>
-                <div class="image-container col-lg-6 col-md-12 col-sm-12">
-                    <div class="image">
-                        <img src="assets/css/images/OIP (1).jpeg" alt="Financial Aid and Scholarships">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <hr class="section-divider">
-
-    <!-- Tips for International Students Section -->
-    <section class="section-content">
-        <div class="auto-container">
-            <div class="section-title">
-                <i class="fas fa-globe"></i> Tips for International Students
-            </div>
-            <div class="row">
-                <div class="image-container col-lg-6 col-md-12 col-sm-12">
-                    <div class="image">
-                        <img src="assets/css/images/image.png" alt="Tips for International Students">
-                    </div>
-                </div>
-                <div class="text-container col-lg-6 col-md-12 col-sm-12">
-                    <ul>
-                        <li>Find special considerations for international applicants, including language proficiency exams (TOEFL/IELTS), visa requirements, and cultural adjustments.</li>
-                        <li>Access resources for navigating the visa application process and securing student visas.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <hr class="section-divider">
-
-    <!-- Frequently Asked Questions Section -->
-    <section class="section-content">
-        <div class="auto-container">
-            <div class="section-title">
-                <i class="fas fa-question-circle"></i> Frequently Asked Questions
-            </div>
-            <div class="row">
-                <div class="text-container col-lg-6 col-md-12 col-sm-12">
-                    <p>Explore commonly asked questions about the college application process and admissions requirements, and find links to helpful resources, such as college planning websites, admission blogs, and forums.</p>
-                </div>
-                <div class="image-container col-lg-6 col-md-12 col-sm-12">
-                    <div class="image">
-                        <img src="assets/css/images/answering-frequently-asked-questions.jpg" alt="Frequently Asked Questions">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <hr class="section-divider">
-
-    <!-- Testimonials and Success Stories Section -->
-    <section class="section-content">
-        <div class="auto-container">
-            <div class="section-title">
-                <i class="fas fa-star"></i> Testimonials and Success Stories
-            </div>
-            <div class="row">
-                <div class="image-container col-lg-6 col-md-12 col-sm-12">
-                    <div class="image">
-                        <img src="assets/css/images/OIP (2).jpeg" alt="Testimonials and Success Stories">
-                    </div>
-                </div>
-                <div class="text-container col-lg-6 col-md-12 col-sm-12">
-                    <p>Read inspiring stories from students who have successfully navigated the college application process with our guidance, and discover testimonials from satisfied clients and their families.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <hr class="section-divider">
+</div>
 
     <!-- Contact Us Section -->
     <section class="section-content">

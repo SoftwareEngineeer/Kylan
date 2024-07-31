@@ -146,6 +146,42 @@ body {
 .elementor-widget-72h .image-w7m {
   margin-bottom: 30px;
 }
+/* Add this to your CSS file or within a <style> tag in the HTML head section */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animated-image {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.fade-in {
+  animation-name: fadeIn;
+}
+
+.slide-in {
+  animation-name: slideIn;
+}
+
 
 @media (min-width: 768px) {
   .col-3w5 {

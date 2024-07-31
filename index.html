@@ -43,6 +43,48 @@
 		transform: translateY(-2px); /* Slight lift on hover */
 		box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Enhanced shadow for 3D effect on hover */
 	}
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.dropdown {
+		position: relative;
+		display: inline-block;
+	}
+
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #f9f9f9;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+	}
+
+	.dropdown-content a {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+	}
+
+	.dropdown-content a:hover {background-color: #f1f1f1;}
+
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+
+	.dropdown-submenu {
+		position: relative;
+	}
+
+	.dropdown-submenu:hover .dropdown-content {
+		display: block;
+		left: 100%;
+		top: 0;
+	}
 	</style>
 </head>
 
@@ -70,8 +112,8 @@
                     <div class="top-right pull-right clearfix">
 						<!-- Social Box -->
 						<ul class="social-box">
-							<li><a href="https://facebook.com/" class="fa fa-facebook"></a></li>
-							<li><a href="https://www.instagram.com/" class="fa fa-instagram"></a></li>
+							<li><a href="https://www.facebook.com/share/nanbA8kA8TZNrpFv/?mibextid=LQQJ4d" class="fa fa-facebook"></a></li>
+							<li><a href="https://www.instagram.com/kylanconsulting.vn?igsh=MXZpcjRmbGg1amR2Mg==" class="fa fa-instagram"></a></li>
 							<li><a href="https://youtube.com/" class="fa fa-youtube-play"></a></li>
 							
 						</ul>
@@ -109,46 +151,45 @@
 						
 						<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
 							<ul class="navigation clearfix">
-								<li class="current dropdown"><a href="#">Home</a>
-									<ul>
-										<li><a href="index.html">Homepage One</a></li>
-										<li><a href="index-2.html">Homepage Two</a></li>
-										<li><a href="index-3.html">Homepage Three</a></li>
-										<li class="dropdown"><a href="#">Header Styles</a>
-											<ul>
-												<li><a href="index.html">Header Style One</a></li>
-												<li><a href="index-2.html">Header Style Two</a></li>
-												<li><a href="index-3.html">Header Style Three</a></li>
-											</ul>
-										</li>
-									</ul>
+								
+									
+										<li><a href="index.html">Home</a></li>
+											
+										
+									
 								</li>
 								<li class="dropdown"><a href="#">About</a>
 									<ul>
 										<li><a href="about.html">Who We Are</a></li>
 										<li><a href="faq.html">What We Specialize In</a></li>
-										<li><a href="price.html">Our Teachers</a></li>
-										<li class="dropdown"><a href="#">Testimonials</a>
-											<ul>
-												<li><a href="mentors.html">Team</a></li>
-												<li><a href="mentor-detail.html">Team Detail</a></li>
-											</ul>
-										</li>
+										<li><a href="price.html">Our Team</a></li>
+										
 									</ul>
 								</li>
 								<li class="dropdown"><a href="#">Services</a>
-									<ul>
-										<li><a href="services.html">Academic Coaching</a></li>
-										<li><a href="service-detail.html">Admission Support</a></li>
-										<li><a href="service-detail.html">Our Courses</a></li>
-										<li><a href="service-detail.html">Children Temperament Test</a></li>
-										<li><a href="service-detail.html">Kuder Test</a></li>
+									<ul class="dropdown-content">
+										<li><a href="services.html">Admission</a></li>
+										<li class="dropdown"><a href="#">Boarding School</a>
+											<ul class="dropdown-content">
+											
+													<ul class="dropdown-content">
+														<li><a href="mentors.html">USA</a></li>
+														<li><a href="mentor-detail.html">Canada</a></li>
+													</ul></li>
+												
+												</li>
+											</ul>
+										</li>
+										<li><a href="service-detail.html">Additional Services</a></li>
+										
+										
 									</ul>
 								</li>
-								<li class="dropdown"><a href="#">Edu</a>
+								
+								<li class="dropdown"><a href="#">Result</a>
 									<ul>
-										<li><a href="portfolio.html">USA</a></li>
-										<li><a href="portfolio-detail.html">CANADA</a></li>
+										<li><a href="portfolio.html">Recent Results</a></li>
+										<li><a href="portfolio-detail.html">Testimonials</a></li>
 									</ul>
 								</li>
 								<li class="dropdown"><a href="#">Calender</a>
@@ -605,6 +646,84 @@
 		</div>
 	</section>
 	<!-- End About Section -->
+
+	<!-- Price Page Section -->
+	<section class="price-page-section">
+		<div class="auto-container">
+			<div class="row clearfix">
+				
+				<!-- Price Block -->
+				<div class="price-block col-lg-3 col-md-6 col-sm-12">
+					<div class="inner-box">
+						<div class="title">Super Early Bird</div>
+						<div class="price"><sup>$</sup>49</div>
+						<div class="date">until February 10, 2022</div>
+						<ul class="price-options">
+							<li><span>Language: </span>English.</li>
+							<li>We will provide translation</li>
+							<li>devices if needed.</li>
+						</ul>
+						<div class="button-box text-center">
+							<a href="#" class="purchase-btn theme-btn">Purchase Now</a>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Price Block -->
+				<div class="price-block col-lg-3 col-md-6 col-sm-12">
+					<div class="inner-box">
+						<div class="title">Early Bird</div>
+						<div class="price"><sup>$</sup>199</div>
+						<div class="date">until February 10, 2022</div>
+						<ul class="price-options">
+							<li><span>Language: </span>English.</li>
+							<li>We will provide translation</li>
+							<li>devices if needed.</li>
+						</ul>
+						<div class="button-box text-center">
+							<a href="#" class="purchase-btn theme-btn">Purchase Now</a>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Price Block -->
+				<div class="price-block col-lg-3 col-md-6 col-sm-12">
+					<div class="inner-box">
+						<div class="title">Regular Deal</div>
+						<div class="price"><sup>$</sup>249</div>
+						<div class="date">until February 10, 2022</div>
+						<ul class="price-options">
+							<li><span>Language: </span>English.</li>
+							<li>We will provide translation</li>
+							<li>devices if needed.</li>
+						</ul>
+						<div class="button-box text-center">
+							<a href="#" class="purchase-btn theme-btn">Purchase Now</a>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Price Block -->
+				<div class="price-block col-lg-3 col-md-6 col-sm-12">
+					<div class="inner-box">
+						<div class="title">Team Birds</div>
+						<div class="price"><sup>$</sup>399</div>
+						<div class="date">until February 10, 2022</div>
+						<ul class="price-options">
+							<li><span>Language: </span>English.</li>
+							<li>We will provide translation</li>
+							<li>devices if needed.</li>
+						</ul>
+						<div class="button-box text-center">
+							<a href="#" class="purchase-btn theme-btn">Purchase Now</a>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	<!-- End Faq's Page Section -->
 	
 	<!-- Services Section -->
 	<section class="services-section">
@@ -1146,8 +1265,7 @@
                                 <div class="footer-widget info-widget">
 									<h5>Get In Touch</h5>
 									<ul class="contact-info-list">
-										<li><span>Head Office</span><a href="#">12/North Hall Tower, <br> NYC, UK</a></li>
-										<li><span>Sub Office</span><a href="#">34, A/Front Tower, <br> London, UK</a></li>
+										<li><span>Head Office</span><a href="#">Shophouse A26, Sunshine City, Ciputra, Bac Tu Liem, Ha Noi, 100000</a></li>
 									</ul>
 								</div>
 							</div>
@@ -1178,7 +1296,7 @@
 			<div class="footer-bottom">
 				<div class="clearfix">
 					<div class="pull-left">
-						<div class="copyright">Copyright By &copy; <a href="https://themeforest.net/user/themexriver">Themexriver</a> - 2022</div>
+						<div class="copyright">Copyright By &copy; <a href="https://themeforest.net/user/themexriver">Kylan</a> - 2024</div>
 					</div>
 					<div class="pull-right">
 						<div class="payments"><img src="assets/images/icons/payment.png" alt="" /></div>
