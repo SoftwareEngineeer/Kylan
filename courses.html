@@ -11,6 +11,7 @@
 <link href="assets/css/responsive.css" rel="stylesheet">
 
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet">
+<link href="https://db.onlinewebfonts.com/c/8784ec149f84f77ada651e2dd98e0943?family=MusticaPro-SemiBold" rel="stylesheet">
 
 <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
 <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
@@ -59,7 +60,289 @@
 		left: 100%;
 		top: 0;
 	}
-</style>
+	
+	body {
+		font-family: 'Roboto', sans-serif;
+		background-color: #f2f2f2;
+		margin: 0;
+		padding: 0;
+		color: #333;
+	}
+	.section-container {
+        background: #87CEEB; /* Sky blue background color */
+        color: #fff;
+        padding: 60px 30px;
+        text-align: center;
+        border-radius: 20px;
+        margin: 50px auto;
+        width: 90%;
+        max-width: 1200px;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        position: relative;
+    }
+	.section-title {
+		font-family: 'MusticaPro-SemiBold', sans-serif; /* Apply Mustica Pro */
+		font-size: 38px;
+		font-weight: 600;
+		margin-bottom: 20px;
+		text-transform: uppercase;
+		letter-spacing: 1.5px;
+		text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+		line-height: 1.3;
+		transition: transform 0.3s ease-in-out; /* Add transition for smooth animation */
+	}
+	.section-title:hover {
+		transform: translateY(-10px); /* Move the title up by 10px on hover */
+	}
+	.section-subtitle {
+		font-family: 'Roboto', sans-serif;
+		font-size: 24px;
+		font-weight: 300;
+		margin-bottom: 40px;
+		color: #f0f0f0;
+		font-style: italic;
+		line-height: 1.4;
+	}
+	.statistics {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		margin-top: 20px;
+	}
+	.stat-item {
+		background-color: rgba(255, 255, 255, 0.2);
+		border-radius: 15px;
+		padding: 30px;
+		margin: 10px;
+		width: 45%;
+		max-width: 500px;
+		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+		font-family: 'Roboto', sans-serif;
+		font-size: 20px;
+		color: #fff;
+		text-align: left;
+		transition: transform 0.3s ease;
+		line-height: 1.6;
+	}
+	.stat-item:hover {
+		transform: translateY(-10px);
+	}
+	.stat-item span {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 28px;
+		font-weight: 700;
+		color: #ffe500;
+	}
+	.image-container {
+		margin-top: 50px;
+		text-align: center;
+	}
+	.image-container img {
+		border-radius: 15px;
+		width: 320px;
+		height: auto;
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+		transition: transform 0.3s ease;
+	}
+	.image-container img:hover {
+		transform: scale(1.05);
+	}
+	.courses-page-section {
+        background-image: url('assets/images/background.jpg'); /* Path to your background image */
+        background-size: cover; /* Ensure the image covers the entire section */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Prevent repeating */
+        padding: 60px 0; /* Adjust the padding as needed */
+    }
+	.admissions-services-section {
+        background: #f8f9fa; /* Light background color */
+        padding: 60px 30px;
+        text-align: center;
+    }
+
+    .admissions-services-section .section-title {
+        font-family: 'MusticaPro-SemiBold', sans-serif;
+        font-size: 36px;
+        color: #333;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+    }
+
+    .services-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    .service-item {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        width: 250px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-item img {
+        max-width: 100px;
+        margin-bottom: 20px;
+    }
+
+    .service-item h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .service-item p {
+        font-size: 16px;
+        color: #666;
+    }
+
+    .service-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+	
+		.pricing-packages-section {
+			background: #f9f9f9; /* Light background for contrast */
+			padding: 70px 0;
+			text-align: center;
+		}
+	
+		.pricing-packages-section .section-title {
+			font-family: 'MusticaPro-SemiBold', sans-serif;
+			font-size: 36px;
+			color: #333;
+			margin-bottom: 50px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+	
+		.packages-grid {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			gap: 30px;
+		}
+	
+		.package-card {
+			background: #ffffff;
+			border-radius: 10px;
+			box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+			padding: 30px;
+			width: 300px;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+			position: relative;
+		}
+	
+		.package-card h3 {
+			font-size: 22px;
+			margin-bottom: 10px;
+			color: #1e3a8a; /* Dark blue for the package title */
+		}
+	
+		.package-card p {
+			font-size: 16px;
+			color: #666;
+			margin-bottom: 15px;
+		}
+	
+		.package-card .package-details {
+			background: #f3f4f6;
+			border-radius: 8px;
+			padding: 15px;
+		}
+	
+		.package-card .package-details p {
+			font-size: 14px;
+			color: #333;
+			margin-bottom: 10px;
+		}
+	
+		.package-card strong {
+			color: #1e3a8a; /* Matching the title color */
+		}
+	
+		.package-card:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+		}
+	
+			.top-universities-section {
+				background: #f8f9fa; /* Light background for contrast */
+				padding: 70px 0;
+				text-align: center;
+			}
+		
+			.top-universities-section .section-title {
+				font-family: 'MusticaPro-SemiBold', sans-serif;
+				font-size: 36px;
+				color: #333;
+				text-align: center;
+				margin-bottom: 50px;
+				text-transform: uppercase;
+			}
+		
+			.university-category {
+				margin-bottom: 40px;
+			}
+		
+			.university-category h3 {
+				font-size: 24px;
+				color: #1e3a8a;
+				margin-bottom: 20px;
+				text-align: center;
+			}
+		
+			.scrollable-universities {
+				display: flex;
+				justify-content: center; /* Center the logos */
+				overflow-x: auto;
+				gap: 20px;
+				padding: 20px 0;
+				scrollbar-width: thin;
+				scrollbar-color: #007bff #f8f9fa;
+			}
+		
+			.scrollable-universities::-webkit-scrollbar {
+				height: 8px;
+			}
+		
+			.scrollable-universities::-webkit-scrollbar-thumb {
+				background-color: #007bff;
+				border-radius: 4px;
+			}
+		
+			.university-logo {
+				flex: 0 0 auto;
+				width: 150px;
+				height: 100px;
+				background: #ffffff;
+				border-radius: 10px;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+		
+			.university-logo img {
+				max-width: 100%;
+				max-height: 80px;
+				object-fit: contain;
+			}
+		
+			.university-logo:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+			}
+		</style>
+		
+
 </head>
 
 <body class="hidden-bar-wrapper">
@@ -289,300 +572,184 @@
 		<div class="auto-container">
 			
 			<!-- Order Box -->
-			<div class="order-box">
-				<div class="clearfix">
-					<div class="pull-left">
-						<div class="text">Showing 1-6 of 14 results</div>
+			<div class="section-container">
+				<div class="section-title">Hunting for Scholarships to Study in the US 70-100%</div>
+				<div class="section-subtitle">
+					Kylan Consulting Success Stories
+				</div>
+				<div class="statistics">
+					<div class="stat-item">
+						<span>85%</span> of Kylan Consulting students are accepted into at least 1 of their top 4 colleges each year.
 					</div>
-					<div class="pull-right clearfix">
-					
-						<!-- Search -->
-                        <div class="order-search-box">
-                        	<form method="post" action="https://html.themexriver.com/avarton/contact.html">
-                                <div class="form-group">
-                                    <input type="search" name="search-field" value="" placeholder="Search here..." required>
-                                    <button type="submit"><span class="icon fa fa-search"></span></button>
-                                </div>
-                            </form>
-						</div>
-						
-						<!-- Search Dropdown -->
-						<div class="search-dropdown form-group">
-							<select name="country" class="custom-select-box">
-								<option>Select Order</option>
-								<option>Order 01</option>
-								<option>Order 02</option>
-								<option>Order 03</option>
-								<option>Order 04</option>
-							</select>
-						</div>
-						
+					<div class="stat-item">
+						Since 2002, we've guided over <span>1,000</span> students to gain over <span>$30 million</span> in financial aid and scholarships.
 					</div>
 				</div>
-			</div>
-			<!-- End Order Box -->
-			
-			<div class="row clearfix">
-			
-				<!-- Course Block -->
-				<div class="course-block col-xl-3 col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box">
-						<div class="image">
-							<a href="course-detail.html"><img class="transition-500ms" src="assets/images/resource/course-5.jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<h5><a href="course-detail.html">How to success through market segmentation</a></h5>
-							<ul class="post-info">
-								<li><span class="icon flaticon-book-1"></span>3 Chapter</li>
-								<li><span class="icon flaticon-trophy"></span>10 Lessons</li>
-							</ul>
-						</div>
-					</div>
+				<div class="image-container">
+					<img src="your-image-url.jpg" alt="Successful student">
 				</div>
-				
-				<!-- Course Block -->
-				<div class="course-block col-xl-3 col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box">
-						<div class="image">
-							<a href="course-detail.html"><img class="transition-500ms" src="assets/images/resource/course-6.jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<h5><a href="course-detail.html">How to success through market segmentation</a></h5>
-							<ul class="post-info">
-								<li><span class="icon flaticon-book-1"></span>3 Chapter</li>
-								<li><span class="icon flaticon-trophy"></span>10 Lessons</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Course Block -->
-				<div class="course-block col-xl-3 col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box">
-						<div class="image">
-							<a href="course-detail.html"><img class="transition-500ms" src="assets/images/resource/course-7.jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<h5><a href="course-detail.html">How to success through market segmentation</a></h5>
-							<ul class="post-info">
-								<li><span class="icon flaticon-book-1"></span>3 Chapter</li>
-								<li><span class="icon flaticon-trophy"></span>10 Lessons</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Course Block -->
-				<div class="course-block col-xl-3 col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box">
-						<div class="image">
-							<a href="course-detail.html"><img class="transition-500ms" src="assets/images/resource/course-8.jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<h5><a href="course-detail.html">How to success through market segmentation</a></h5>
-							<ul class="post-info">
-								<li><span class="icon flaticon-book-1"></span>3 Chapter</li>
-								<li><span class="icon flaticon-trophy"></span>10 Lessons</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Course Block -->
-				<div class="course-block col-xl-3 col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box">
-						<div class="image">
-							<a href="course-detail.html"><img class="transition-500ms" src="assets/images/resource/course-9.jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<h5><a href="course-detail.html">How to success through market segmentation</a></h5>
-							<ul class="post-info">
-								<li><span class="icon flaticon-book-1"></span>3 Chapter</li>
-								<li><span class="icon flaticon-trophy"></span>10 Lessons</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Course Block -->
-				<div class="course-block col-xl-3 col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box">
-						<div class="image">
-							<a href="course-detail.html"><img class="transition-500ms" src="assets/images/resource/course-10.jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<h5><a href="course-detail.html">How to success through market segmentation</a></h5>
-							<ul class="post-info">
-								<li><span class="icon flaticon-book-1"></span>3 Chapter</li>
-								<li><span class="icon flaticon-trophy"></span>10 Lessons</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Course Block -->
-				<div class="course-block col-xl-3 col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box">
-						<div class="image">
-							<a href="course-detail.html"><img class="transition-500ms" src="assets/images/resource/course-11.jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<h5><a href="course-detail.html">How to success through market segmentation</a></h5>
-							<ul class="post-info">
-								<li><span class="icon flaticon-book-1"></span>3 Chapter</li>
-								<li><span class="icon flaticon-trophy"></span>10 Lessons</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Course Block -->
-				<div class="course-block col-xl-3 col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box">
-						<div class="image">
-							<a href="course-detail.html"><img class="transition-500ms" src="assets/images/resource/course-12.jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<h5><a href="course-detail.html">How to success through market segmentation</a></h5>
-							<ul class="post-info">
-								<li><span class="icon flaticon-book-1"></span>3 Chapter</li>
-								<li><span class="icon flaticon-trophy"></span>10 Lessons</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Course Block -->
-				<div class="course-block col-xl-3 col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box">
-						<div class="image">
-							<a href="course-detail.html"><img class="transition-500ms" src="assets/images/resource/course-13.jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<h5><a href="course-detail.html">How to success through market segmentation</a></h5>
-							<ul class="post-info">
-								<li><span class="icon flaticon-book-1"></span>3 Chapter</li>
-								<li><span class="icon flaticon-trophy"></span>10 Lessons</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Course Block -->
-				<div class="course-block col-xl-3 col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box">
-						<div class="image">
-							<a href="course-detail.html"><img class="transition-500ms" src="assets/images/resource/course-14.jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<h5><a href="course-detail.html">How to success through market segmentation</a></h5>
-							<ul class="post-info">
-								<li><span class="icon flaticon-book-1"></span>3 Chapter</li>
-								<li><span class="icon flaticon-trophy"></span>10 Lessons</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Course Block -->
-				<div class="course-block col-xl-3 col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box">
-						<div class="image">
-							<a href="course-detail.html"><img class="transition-500ms" src="assets/images/resource/course-15.jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<h5><a href="course-detail.html">How to success through market segmentation</a></h5>
-							<ul class="post-info">
-								<li><span class="icon flaticon-book-1"></span>3 Chapter</li>
-								<li><span class="icon flaticon-trophy"></span>10 Lessons</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Course Block -->
-				<div class="course-block col-xl-3 col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box">
-						<div class="image">
-							<a href="course-detail.html"><img class="transition-500ms" src="assets/images/resource/course-16.jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<h5><a href="course-detail.html">How to success through market segmentation</a></h5>
-							<ul class="post-info">
-								<li><span class="icon flaticon-book-1"></span>3 Chapter</li>
-								<li><span class="icon flaticon-trophy"></span>10 Lessons</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Course Block -->
-				<div class="course-block col-xl-3 col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box">
-						<div class="image">
-							<a href="course-detail.html"><img class="transition-500ms" src="assets/images/resource/course-17.jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<h5><a href="course-detail.html">How to success through market segmentation</a></h5>
-							<ul class="post-info">
-								<li><span class="icon flaticon-book-1"></span>3 Chapter</li>
-								<li><span class="icon flaticon-trophy"></span>10 Lessons</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Course Block -->
-				<div class="course-block col-xl-3 col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box">
-						<div class="image">
-							<a href="course-detail.html"><img class="transition-500ms" src="assets/images/resource/course-18.jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<h5><a href="course-detail.html">How to success through market segmentation</a></h5>
-							<ul class="post-info">
-								<li><span class="icon flaticon-book-1"></span>3 Chapter</li>
-								<li><span class="icon flaticon-trophy"></span>10 Lessons</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Course Block -->
-				<div class="course-block col-xl-3 col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box">
-						<div class="image">
-							<a href="course-detail.html"><img class="transition-500ms" src="assets/images/resource/course-19.jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<h5><a href="course-detail.html">How to success through market segmentation</a></h5>
-							<ul class="post-info">
-								<li><span class="icon flaticon-book-1"></span>3 Chapter</li>
-								<li><span class="icon flaticon-trophy"></span>10 Lessons</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Course Block -->
-				<div class="course-block col-xl-3 col-lg-4 col-md-6 col-sm-12">
-					<div class="inner-box">
-						<div class="image">
-							<a href="course-detail.html"><img class="transition-500ms" src="assets/images/resource/course-20.jpg" alt="" /></a>
-						</div>
-						<div class="lower-content">
-							<h5><a href="course-detail.html">How to success through market segmentation</a></h5>
-							<ul class="post-info">
-								<li><span class="icon flaticon-book-1"></span>3 Chapter</li>
-								<li><span class="icon flaticon-trophy"></span>10 Lessons</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				
 			</div>
 		</div>
 	</section>
+
+	<section class="admissions-services-section">
+		<div class="auto-container">
+			<div class="section-title">College Admissions Services</div>
+			<div class="services-grid">
+				<div class="service-item">
+					<img src="assets/images/roadmap.jpg" alt="Roadmap Creation">
+					<h3>Roadmap Creation</h3>
+					<p>Craft a personalized roadmap for your college admissions journey.</p>
+				</div>
+				<div class="service-item">
+					<img src="assets/images/summer_programs.jpg" alt="Summer Programs">
+					<h3>Summer Program Selection</h3>
+					<p>Get guidance on selecting the best summer programs to enhance your profile.</p>
+				</div>
+				<div class="service-item">
+					<img src="assets/images/financial_aid.jpg" alt="Financial Aid Advice">
+					<h3>Financial Aid Advice</h3>
+					<p>Receive expert advice on financial aid and scholarship opportunities.</p>
+				</div>
+				<div class="service-item">
+					<img src="assets/images/application_strategy.jpg" alt="Application Strategy">
+					<h3>Application Strategy</h3>
+					<p>Develop a winning strategy for your college applications.</p>
+				</div>
+				<!-- Add more services as needed -->
+				 <hr>
+			</div>
+		</div>
+	</section>
+	<section class="pricing-packages-section">
+		<div class="auto-container">
+			<div class="section-title">Our Packages</div>
+			<div class="packages-grid">
+				<div class="package-card">
+					<h3>Essentials Package</h3>
+					<p>(2 application portals and up to 8 college submissions)</p>
+					<div class="package-details">
+						<p><strong>2 application portals:</strong> Common App, Coalition, UC, UCAS, Korea, Hong Kong, Singapore, Japan, etc.</p>
+						<p><strong>8 college applications:</strong> Choose to submit up to 8 colleges within the 2 application portals.</p>
+						<p>For colleges/universities with their independent application site, students can apply to 1 independent school application and 7 colleges in the other 2 application portals.</p>
+					</div>
+				</div>
+				<div class="package-card">
+					<h3>Enhanced Package</h3>
+					<p>(4 application portals and up to 14 college submissions)</p>
+					<div class="package-details">
+						<p><strong>4+ application portals:</strong> Common App, Coalition, UC, UCAS, Korea, Hong Kong, Singapore, Japan, etc.</p>
+						<p><strong>14 college applications:</strong> Choose to submit up to 14 colleges within the 4 main application portals and other independent application sites.</p>
+					</div>
+				</div>
+				<div class="package-card">
+					<h3>Comprehensive Package</h3>
+					<p>(Up to 25 college submissions on any application portal)</p>
+					<div class="package-details">
+						<p><strong>4+ application portals:</strong> Common App, Coalition, UC, UCAS, Korea, Hong Kong, Singapore, Japan, etc.</p>
+						<p><strong>25 college applications:</strong> Choose to submit up to 25 colleges on any application portal and other independent application sites.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Bottom Section List of Universities-->
+	<section class="top-universities-section">
+		<div class="auto-container">
+			<div class="section-title">List of Top Universities</div>
+			
+			<div class="university-category">
+				<h3>United States</h3>
+				<div class="scrollable-universities">
+					<div class="university-logo">
+						<a href="https://www.harvard.edu" target="_blank">
+							<img src="assets/images/harward_uni.jpg" alt="Harvard University">
+						</a>
+					</div>
+					
+					<div class="university-logo">
+						<a href="https://www.stanford.edu/" target="_blank">
+							<img src="assets/images/stanford_uni.png" alt="Stanford University">
+						</a>
+					</div>
+					<div class="university-logo">
+						<a href="https://www.mit.edu/" target="_blank">
+							<img src="assets/images/mit_uni.png" alt="MIT University">
+						</a>
+					</div>
+					<!-- Add more university logos as needed -->
+				</div>
+			</div>
+	
+			<div class="university-category">
+				<h3>United Kingdom</h3>
+				<div class="scrollable-universities">
+					<div class="university-logo">
+						<a href="https://www.ox.ac.uk/" target="_blank">
+							<img src="assets/images/University_of_Oxford.png" alt="University of Oxford">
+						</a>
+					</div>
+					<div class="university-logo">
+						<a href="https://www.cam.ac.uk/" target="_blank">
+							<img src="assets/images/cambridge_uni.jpg" alt="University of Cambridge">
+						</a>
+					</div>		
+					<div class="university-logo">
+						<a href="https://www.lse.ac.uk/" target="_blank">
+							<img src="assets/images/London_school_of_economics.png" alt="London School of Economics">
+						</a>
+					</div>				
+					<!-- Add more university logos as needed -->
+				</div>
+			</div>
+	
+			<div class="university-category">
+				<h3>Australia</h3>
+				<div class="scrollable-universities">
+					<div class="university-logo">
+						<a href="https://www.unimelb.edu.au/" target="_blank">
+							<img src="assets/images/the-university-of-melbourne.png" alt="University of Melbourne">
+						</a>
+					</div>
+					<div class="university-logo">
+						<a href="https://www.sydney.edu.au/" target="_blank">
+							<img src="assets/images/university-of-sydney.png" alt="University of Sydney">
+						</a>
+					</div>
+					<div class="university-logo">
+						<a href="https://www.anu.edu.au/" target="_blank">
+							<img src="assets/images/australian-national-university.png" alt="Australian National University">
+						</a>
+					</div>					
+					<!-- Add more university logos as needed -->
+				</div>
+			</div>
+	
+			<div class="university-category">
+				<h3>Asia</h3>
+				<div class="scrollable-universities">
+					<div class="university-logo">
+						<a href="https://nus.edu.sg/" target="_blank">
+							<img src="assets/images/nus.png" alt="National University of Singapore">
+						</a>
+					</div>
+					<div class="university-logo">
+						<a href="https://www.u-tokyo.ac.jp/en/" target="_blank">
+							<img src="assets/images/University_of_Tokyo.png" alt="University of Tokyo">
+						</a>
+					</div>
+					<div class="university-logo">
+						<a href="https://www.tsinghua.edu.cn/en/" target="_blank">
+							<img src="assets/images/Tsinghua_University.png" alt="Tsinghua University">
+						</a>
+					</div>		
+					<!-- Add more university logos as needed -->
+				</div>
+			</div>
+		</div>
+	</section>
+	
 	<!-- End Courses Page Section -->
 	
 	<!-- Main Footer -->
