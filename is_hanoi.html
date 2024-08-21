@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from html.themexriver.com/avarton/faq.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2024 08:01:50 GMT -->
+<head>
+<meta charset="utf-8">
+<title>International Schools Hanoi</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+<!-- Stylesheets -->
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/responsive.css" rel="stylesheet">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+
+<link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+<link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+
+<style>
+	.dropdown {
+		position: relative;
+		display: inline-block;
+	}
+
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #f9f9f9;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+	}
+
+	.dropdown-content a {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+	}
+
+	.dropdown-content a:hover {background-color: #f1f1f1;}
+
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+
+	.dropdown-submenu {
+		position: relative;
+	}
+
+	.dropdown-submenu:hover .dropdown-content {
+		display: block;
+		left: 100%;
+		top: 0;
+	}
+	body {
+		font-family: 'Roboto', sans-serif;
+		margin: 0;
+		padding: 0;
+		background-color: #f4f4f4;
+	}
+
+	.header {
+		text-align: center;
+		padding: 50px 20px 20px;
+		background-color: #fff;
+		border-bottom: 1px solid #ddd;
+	}
+
+	.header h1 {
+		font-size: 36px;
+		color: #333;
+		margin-bottom: 20px;
+	}
+
+	.header p {
+		font-size: 16px;
+		color: #777;
+		max-width: 800px;
+		margin: 0 auto 20px;
+		line-height: 1.5;
+	}
+
+	.filter-section {
+		padding: 30px 20px;
+		background-color: #fff;
+		border: 1px solid #ddd;
+		border-radius: 8px;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+		max-width: 1200px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	.filter-section .filter-group {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	.filter-section label {
+		font-size: 14px;
+		margin-bottom: 8px;
+		display: block;
+		color: #555;
+	}
+
+	.filter-section select,
+	.filter-section input {
+		padding: 10px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		width: 100%;
+		box-sizing: border-box;
+		font-size: 14px;
+	}
+
+	.filter-section .filter-input {
+		flex-grow: 1;
+		flex-basis: calc(20% - 20px);
+		min-width: 180px;
+		margin-bottom: 20px;
+		padding-right: 10px;
+	}
+
+	.filter-section .filter-button {
+		flex-grow: 1;
+		text-align: center;
+		padding-left: 10px;
+		margin-top: 20px;
+		margin-bottom: 0;
+	}
+
+	.filter-section .filter-button button {
+		padding: 12px 30px;
+		font-size: 16px;
+		color: #fff;
+		background-color: #007bff;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+		width: 100%;
+		max-width: 200px;
+		box-sizing: border-box;
+	}
+
+	.filter-section .filter-button button:hover {
+		background-color: #0056b3;
+	}
+
+	.select2-container .select2-selection--single {
+		height: 40px;
+		display: flex;
+		align-items: center;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+	}
+
+	.select2-container--default .select2-selection--single .select2-selection__rendered {
+		line-height: 36px;
+		color: #333;
+		padding-left: 10px;
+	}
+
+	.select2-container--default .select2-selection--single .select2-selection__arrow {
+		height: 36px;
+		right: 10px;
+	}
+
+	.select2-container--default .select2-results__option--selected {
+		background-color: #f1f1f1;
+		color: #333;
+	}
+
+	.select2-container--default .select2-results__option:hover {
+		background-color: #f1f1f1;
+		color: #333;
+	}
+
+	.select2-dropdown {
+		border-radius: 5px;
+		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+	}
+
+	.select2-container .select2-selection--multiple {
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		padding: 5px;
+		height: auto;
+		min-height: 38px;
+	}
+
+	.select2-container--default .select2-selection--multiple .select2-selection__choice {
+		color: #333;
+		background-color: #e9ecef;
+		border: 1px solid #adb5bd;
+		border-radius: 4px;
+		padding: 3px 10px;
+		margin: 3px;
+	}
+
+	.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+		color: #ff6b6b;
+		margin-right: 5px;
+	}
+
+	@media (max-width: 768px) {
+		.filter-section {
+			padding: 20px 15px;
+		}
+
+		.filter-section .filter-input {
+			flex-basis: 100%;
+			padding-right: 0;
+		}
+
+		.filter-section .filter-button {
+			margin-top: 20px;
+		}
+	}
+	.school-card {
+		display: flex;
+		border: 1px solid #ddd;
+		padding: 15px;
+		margin-bottom: 20px;
+		border-radius: 8px;
+		background-color: #fff;
+	}
+	
+	.school-image img {
+		width: 200px;
+		height: auto;
+		border-radius: 8px;
+		margin-right: 15px;
+	}
+	
+	.school-content {
+		flex: 2;
+		margin-right: 20px;
+	}
+	
+	.school-header {
+		display: flex;
+		align-items: center;
+	}
+	
+	.school-header h3 {
+		margin: 0;
+		font-size: 1.5em;
+	}
+	
+	.verified-badge {
+		background-color: #d9534f;
+		color: #fff;
+		font-size: 0.9em;
+		margin-left: 10px;
+		padding: 2px 6px;
+		border-radius: 4px;
+	}
+	
+	.school-details {
+		flex: 1;
+		font-size: 0.9em;
+		color: #555;
+	}
+	
+	.school-details p {
+		margin: 5px 0;
+	}
+	
+	.rating-stars {
+		color: #f0ad4e;
+		font-size: 1.2em;
+	}
+	
+	.calculate-score {
+		color: #0275d8;
+		font-weight: bold;
+		text-decoration: none;
+	}
+	
+	.calculate-score:hover {
+		text-decoration: underline;
+	}
+	/* General Styles for All School Cards */
+.card-container {
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    max-width: 100%;
+}
+
+.card-image {
+    width: 300px; /* Fixed width */
+    height: 420px; /* Fixed height */
+    object-fit: cover; /* Ensures the image covers the dimensions without distortion */
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+
+.card-content {
+    width: 60%;
+}
+
+.card-content h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.card-content p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.card-content .info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px dashed #ccc;
+}
+
+.card-content .info div {
+    width: 48%;
+    line-height: 1.6;
+}
+
+.card-content .info strong {
+    display: block;
+    margin-bottom: 5px;
+}
+.see-more-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #87CEEB; /* Sky blue color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.see-more-btn:hover {
+    background-color: #00BFFF; /* Darker sky blue on hover */
+}
+.button-container {
+    text-align: center;
+    margin-top: 20px; /* Adjust the spacing as needed */
+}
+
+.see-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #87CEEB; /* Sky blue color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.see-more-btn:hover {
+    background-color: #00BFFF; /* Darker sky blue on hover */
+}
+.map-container {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+</style>
+</head>
+
+<body class="hidden-bar-wrapper">
+
+<div class="page-wrapper">
+ 	
+	<!-- Preloader -->
+    <div class="preloader"></div>
+	<!-- End Preloader -->
+ 	
+ 	<!-- Header Style One -->
+	 <header class="main-header">
+    	
+		<!-- Header Top -->
+        <div class="header-top">
+            <div class="auto-container">
+                <div class="inner-container clearfix">
+					<!-- Top Left -->
+					<div class="top-left clearfix">
+						<div class="text"><span>Working time:</span> Monday to Friday 9 AM - 5 PM</div>
+					</div>
+					
+					<!-- Top Right -->
+                    <div class="top-right pull-right clearfix">
+						<!-- Social Box -->
+						<ul class="social-box">
+							<li><a href="https://www.facebook.com/share/nanbA8kA8TZNrpFv/?mibextid=LQQJ4d" class="fa fa-facebook"></a></li>
+							<li><a href="https://www.instagram.com/kylanconsulting.vn?igsh=MXZpcjRmbGg1amR2Mg==" class="fa fa-instagram"></a></li>
+							<li><a href="https://youtube.com/" class="fa fa-youtube-play"></a></li>
+							
+						</ul>
+						<a href="consultant.html" class="btn btn-consultation">Free Consultation</a>
+
+                    </div>
+					
+                </div>
+            </div>
+        </div>
+		
+		<!-- Header Lower -->
+        <div class="header-lower">
+        	<div class="auto-container clearfix">
+            	
+				<!-- Logo Box -->
+				<div class="pull-left logo-box">
+					<div class="logo"><a href="index.html"><img src="assets/images/logo.png" alt="" title=""></a></div>
+				</div>
+				
+				<!-- Nav Outer -->
+				<div class="nav-outer clearfix">
+					<!-- Mobile Navigation Toggler -->
+					<div class="mobile-nav-toggler"><span class="icon flaticon-menu"></span></div>
+					<!-- Main Menu -->
+					<nav class="main-menu navbar-expand-md">
+						<div class="navbar-header">
+							<!-- Toggle Button -->
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						
+						<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+							<ul class="navigation clearfix">
+								
+									
+										<li><a href="index.html">Home</a></li>
+											
+										
+									
+								</li>
+								<li class="dropdown"><a href="#">About</a>
+									<ul>
+										<li><a href="about.html">Who We Are</a></li>
+										<li><a href="faq.html">What We Specialize In</a></li>
+										<li><a href="mentors.html">Our Team</a></li>
+										
+									</ul>
+								</li>
+								<li class="dropdown"><a href="#">Services</a>
+									<ul class="dropdown-content">
+										<li><a href="courses.html">College Admissions</a></li>
+										<li class="dropdown"><a href="#">Boarding School</a>
+											<ul class="dropdown-content">
+											
+													<ul class="dropdown-content">
+														<li><a href="mentors.html">USA</a></li>
+														<li><a href="mentor-detail.html">Canada</a></li>
+													</ul></li>
+												
+												</li>
+											</ul>
+										</li>
+										<li><a href="is_hanoi.html">International Schools Hanoi</a></li>
+										<li><a href="service-detail.html">Additional Services</a></li>
+										
+										
+									</ul>
+								</li>
+								
+								<li class="dropdown"><a href="#">Results</a>
+									<ul>
+										<li><a href="portfolio.html">Recent Results</a></li>
+										<li><a href="portfolio-detail.html">Testimonials</a></li>
+									</ul>
+								</li>
+								<li><a href="consultant.html">Contact Us</a></li>
+						
+						</div>
+					</nav>
+					
+					<!-- Main Menu End-->
+					<div class="outer-box clearfix">
+						
+						<!-- Search Btn -->
+						<div class="search-box-btn transition-300ms"><span class="icon fa fa-search"></span></div>
+						
+						<!-- Nav Btn -->
+						<div class="nav-btn navSidebar-button transition-300ms"><span class="icon flaticon-menu-1"></span></div>
+							
+					</div>
+				</div>
+				
+            </div>
+        </div>
+        <!-- End Header Lower -->
+        
+		<!-- Sticky Header  -->
+        <div class="sticky-header">
+            <div class="auto-container clearfix">
+                <!--Logo-->
+                <div class="logo pull-left">
+                    <a href="index.html" title=""><img src="assets/images/logo-small.png" alt="" title=""></a>
+                </div>
+                <!--Right Col-->
+                <div class="pull-right">
+				
+                    <!-- Main Menu -->
+                    <nav class="main-menu">
+                        <!--Keep This Empty / Menu will come through Javascript-->
+                    </nav>
+					<!-- Main Menu End-->
+					
+					<!-- Mobile Navigation Toggler -->
+					<div class="mobile-nav-toggler"><span class="icon flaticon-menu-1"></span></div>
+					
+                </div>
+            </div>
+        </div><!-- End Sticky Menu -->
+    
+		<!-- Mobile Menu  -->
+        <div class="mobile-menu">
+            <div class="menu-backdrop"></div>
+            <div class="close-btn"><span class="icon flaticon-multiply"></span></div>
+            
+            <nav class="menu-box">
+                <div class="nav-logo"><a href="index.html"><img src="assets/images/logo-small.png" alt="" title=""></a></div>
+                <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
+            </nav>
+        </div><!-- End Mobile Menu -->
+	
+    </header>
+    <!-- End Main Header -->
+	
+	<!-- Sidebar Cart Item -->
+	<div class="xs-sidebar-group info-group">
+		<div class="xs-overlay xs-bg-black"></div>
+		<div class="xs-sidebar-widget">
+			<div class="sidebar-widget-container">
+				<div class="widget-heading">
+					<a href="#" class="close-side-widget">
+						X
+					</a>
+				</div>
+				<div class="sidebar-textwidget">
+					
+					<!-- Sidebar Info Content -->
+					<div class="sidebar-info-contents">
+						<div class="content-inner">
+							<div class="logo">
+								<a href="index.html"><img src="assets/images/logo.png" alt="" /></a>
+							</div>
+							<div class="content-box">
+								<h4>About Us</h4>
+								<p class="text">I am glad that you have made it here to send a distress signal, and inform the Senate that all on board killed. Dantooine. I’m not going to Alderaan. I really got to go. But that to me.</p>
+								<a href="contact.html" class="theme-btn btn-style-one"><span class="txt">Consultation</span></a>
+							</div>
+							<div class="contact-info">
+								<h4>Contact Info</h4>
+								<ul class="list-style-one">
+									<li><span class="icon fa fa-location-arrow"></span>Chicago 12, Melborne City, USA</li>
+									<li><span class="icon fa fa-phone"></span>(111) 111-111-1111</li>
+									<li><span class="icon fa fa-envelope"></span>avarton@gmail.com</li>
+									<li><span class="icon fa fa-clock-o"></span>Week Days: 09.00 to 18.00 Sunday: Closed</li>
+								</ul>
+							</div>
+							<!-- Social Box -->
+							<ul class="social-box">
+								<li><a href="https://www.facebook.com/" class="fa fa-facebook-f"></a></li>
+								<li><a href="https://www.twitter.com/" class="fa fa-twitter"></a></li>
+								<li><a href="https://www.linkedin.com/" class="fa fa-linkedin"></a></li>
+								<li><a href="https://youtube.com/" class="fa fa-youtube-play"></a></li>
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END sidebar widget item -->
+	
+	<!-- Page Title Section -->
+	<section class="page-title" style="background-image: url(assets/images/background/2.jpg)">
+		<div class="auto-container">
+			<div class="content">
+				<div class="text">Welcome to Kylan</div>
+				<h1>International Schools Hanoi</h1>
+			</div>
+			
+		</div>
+	</section>
+	<!-- End Page Title Section -->
+	
+	<!-- Faq's Page Section -->
+	<section class="faq-page-section">
+		<div class="auto-container">
+			<div class="header">
+				<h1>Find the best International School in Hanoi, Vietnam</h1>
+				<p>All the key information about the 27 International Schools in Hanoi, Vietnam: Extracurricular activities, if teachers are native, class sizes, fees, school bus availability, etc.</p>
+				<p>Enter your preferences and find the best international school in Hanoi for your children.</p>
+		
+			
+			
+			<div class="filter-section">
+				<div class="filter-group">
+					<div class="filter-input">
+						<label for="language">Language</label>
+						<select id="language" class="select2">
+							<option value="all">All languages</option>
+							<option value="English">English (26)</option>
+							<option value="Vietnamese">Vietnamese (11)</option>
+							<option value="French">French (1)</option>
+							<option value="Japanese">Japanese (1)</option>
+							<!-- Add more languages as needed -->
+						</select>
+					</div>
+					<div class="filter-input">
+						<label for="ages">Children Ages (e.g. 6, 9)</label>
+						<input type="text" id="ages" placeholder="e.g. 6, 9">
+					</div>
+					<div class="filter-input">
+						<label for="currency">Currency</label>
+						<select id="currency" class="select2">
+							<option value="USD">USD - United States Dollar</option>
+							<option value="EUR">EUR - Euro</option>
+							<option value="VND">VND - Vietnamese Dong</option>
+							<option value="JPY">JPY - Japanese Yen</option>
+							<option value="GBP">GBP - British Pound</option>
+							<!-- Include all currencies here -->
+						</select>
+					</div>
+					<div class="filter-input">
+						<label for="curriculum">Curriculums</label>
+						<select id="curriculum" class="select2" multiple="multiple">
+							<option value="British">British (15)</option>
+							<option value="Vietnamese">Vietnamese (9)</option>
+							<option value="American">American (7)</option>
+							<option value="IB">IB - International Baccalaureate (6)</option>
+							<option value="International">International (6)</option>
+							<option value="Singaporean">Singaporean (3)</option>
+							<option value="Canadian">Canadian (1)</option>
+							<option value="French">French (1)</option>
+							<option value="Japanese">Japanese (1)</option>
+							<!-- Add more curriculums as needed -->
+						</select>
+					</div>
+					<div class="filter-input">
+						<label for="boarding">Boarding</label>
+						<input type="checkbox" id="boarding">
+					</div>
+					<div class="filter-button">
+						<button>Filter Schools</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<h4>There are 27 international schools in Hanoi</h4>
+		<div class="card-container">
+			<img src="assets/images/schools/school1.png" class="card-image" alt="School Image">
+			<div class="card-content">
+				<h3>Westlink International School Hanoi</h3>
+				<p>Built on a 2.5 hectare property, our modern campus and state-of-the-art facilities set the stage for all WIS students and allow them to dream of a bright future...</p>
+				<div class="info">
+					<div>
+						<strong>Curriculum:</strong> IB, Vietnamese<br>
+						<strong>Languages of instruction:</strong> English, Vietnamese<br>
+						<strong>Ages:</strong> 5 to 16<br>
+						<strong>Yearly fees - 2024/2025:</strong><br>
+						from: 361,200,000 ₫<br>
+						to: 558,700,000 ₫
+					</div>
+					<div>
+						<strong>Reviews:</strong> <span style="color: orange;">★★★★☆</span> (3 reviews)<br>
+						<strong>Your personal score:</strong> <a href="#">Calculate!</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card-container">
+			<img src="assets/images/schools/school2.jpg" class="card-image" alt="School Image">
+			<div class="card-content">
+				<h3>British International School Hanoi</h3>
+				<p>BIS Hanoi is an IB World School delivering a rigorous British international curriculum that inspires creative original thinkers and caring global citizens. Here we all learn through enquiry, perseverance and reflection. We aim to make excellence a habit.</p>
+				<div class="info">
+					<div>
+						<strong>Curriculum:</strong> IB, British<br>
+						<strong>Languages of instruction:</strong> English<br>
+						<strong>Ages:</strong> 2 to 18<br>
+						<strong>Yearly fees - 2024/2025:</strong><br>
+						from: 317,200,000 ₫<br>
+						to: 896,900,000 ₫
+					</div>
+					<div>
+						<strong>Reviews:</strong> <span style="color: orange;">★★★★☆</span> (1 review)<br>
+						<strong>Your personal score:</strong> <a href="#">Calculate!</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card-container">
+			<img src="assets/images/schools/school3.png" class="card-image" alt="School Image">
+			<div class="card-content">
+				<h3>United Nations International School Hanoi</h3>
+				<p>With more than 60 nationalities represented at UNIS Hanoi and as many as 35 home languages spoken among the student body, UNIS Hanoi is the most diverse school in Vietnam.</p>
+				<div class="info">
+					<div>
+						<strong>Curriculum:</strong> IB<br>
+						<strong>Languages of instruction:</strong> English<br>
+						<strong>Ages:</strong> 3 to 18<br>
+						<strong>Yearly fees - 2024/2025:</strong><br>
+						from: 319,403,700 ₫<br>
+						to: 938,137,200 ₫
+					</div>
+					<div>
+						
+						<strong>Your personal score:</strong> <a href="#">Calculate!</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card-container">
+			<img src="assets/images/schools/school4.jpg" class="card-image" alt="School Image">
+			<div class="card-content">
+				<h3>Dwight School Hanoi</h3>
+				<p>Dwight School Hanoi is built to foster the next generation of global leaders who can thrive anywhere in the world.
+					Each Dwight School shares the same deep commitment to igniting the spark of genius in every child, inspiring students to discover and pursue their passions within and beyond the classroom. This singular educational philosophy and our proven track record of success have long set Dwight’s global network apart.
+					We are committed to educating without limitations and our community of master educators embraces innovation and the latest instructional models and uses them to optimize learning for our students. We strive daily to provide an unrivaled education for our students.</p>
+				<div class="info">
+					<div>
+						<strong>Curriculum:</strong> International<br>
+						<strong>Languages of instruction:</strong> English<br>
+						<strong>Ages:</strong> 3 to 16<br>
+						<strong>Yearly fees - 2024/2025:</strong><br>
+						from: 325,000,000 ₫<br>
+						to: 845,000,000 ₫
+					</div>
+					<div>
+						<strong>Reviews:</strong> <span style="color: orange;">★★★★☆</span> (1 review)<br>
+						<strong>Your personal score:</strong> <a href="#">Calculate!</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card-container">
+			<img src="assets/images/schools/school5.jpg" class="card-image" alt="School Image">
+			<div class="card-content">
+				<h3>Hanoi International School</h3>
+				<p>Hanoi International School enables all students to realise their full potential in a caring and positive learning environment. Through its broad and balanced, international curriculum HIS endeavours to develop responsible, globally conscious citizens. HIS strives to develop the whole child as a life-long learner with a strong sense of self worth.</p>
+				<div class="info">
+					<div>
+						<strong>Curriculum:</strong> IB<br>
+						<strong>Languages of instruction:</strong> English<br>
+						<strong>Ages:</strong> 4 to 18<br>
+						<strong>Yearly fees - 2024/2025:</strong><br>
+						from: 418,400,000 ₫<br>
+						to: 738,400,000 ₫
+					</div>
+					<div>
+						
+						<strong>Your personal score:</strong> <a href="#">Calculate!</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card-container">
+			<img src="assets/images/schools/school6.jpg" class="card-image" alt="School Image">
+			<div class="card-content">
+				<h3>TH School</h3>
+				<p>TH School is a PreK - 12 independent, co-educational boarding and day school which offers an internationally focused college preparatory education. TH School features a holistic English medium educational program which honors a deep appreciation of Vietnamese language, literature, history and culture. TH School is committed to serving the families who desire a high quality holistic education and seek outstanding preparation for universities and colleges in Vietnam and throughout the world.</p>
+				<div class="info">
+					<div>
+						<strong>Curriculum:</strong>British, International<br>
+						<strong>Languages of instruction:</strong> English<br>
+						<strong>Ages:</strong> 2 to 18<br>
+						<strong>Yearly fees - 2024/2025:</strong><br>
+						from: 273,000,000 ₫<br>
+						to: 639,000,000 ₫
+					</div>
+					<div>
+						
+						<strong>Your personal score:</strong> <a href="#">Calculate!</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card-container">
+			<img src="assets/images/schools/school7.jpg" class="card-image" alt="School Image">
+			<div class="card-content">
+				<h3>Concordia International School Hanoi</h3>
+				<p>Concordia is a dynamic international learning community based on a U.S. curriculum that includes Advanced Placement (AP) and advanced learning lab courses.</p>
+				<div class="info">
+					<div>
+						<strong>Curriculum:</strong>American<br>
+						<strong>Languages of instruction:</strong> English<br>
+						<strong>Ages:</strong> 4 to 18<br>
+						<strong>Yearly fees - Not public</strong>
+					</div>
+					<div>
+						
+						<strong>Your personal score:</strong> <a href="#">Calculate!</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="button-container">
+			<a href="https://www.international-schools-database.com/in/hanoi" class="see-more-btn">See More</a>
+		</div>
+		<div class="map-container">
+			<div id="hanoi-schools-map" style="height: 500px;"></div>
+		</div>
+		
+		
+		
+		
+		
+	</section>
+	<!-- End Faq's Page Section -->
+	
+	<!-- Main Footer -->
+    <footer class="main-footer">
+    	<div class="auto-container">
+        	<!-- Widgets Section -->
+            <div class="widgets-section">
+            	<div class="row clearfix">
+                	
+                    <!-- Column -->
+                    <div class="big-column col-lg-6 col-md-12 col-sm-12">
+						<div class="row clearfix">
+						
+                        	<!-- Footer Column -->
+                            <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                                <div class="footer-widget logo-widget">
+									<div class="logo">
+										<a href="index.html"><img src="assets/images/footer-logo.png" alt="" /></a>
+									</div>
+									<div class="text">In social science, agency is defined as the capacity of individuals to act free & to make their own free choices. One's agency is one's independent capability or ability to act on one's will.</div>
+								</div>
+							</div>
+							
+							<!-- Footer Column -->
+                            <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                                <div class="footer-widget links-widget">
+									<h5>Pages</h5>
+									<div class="row clearfix">
+										<!-- Column -->
+										<div class="column col-lg-6 col-md-6 col-sm-12">
+											<ul class="list-link">
+												<li><a href="#">Home</a></li>
+												<li><a href="#">Services</a></li>
+												<li><a href="#">Courses</a></li>
+												<li><a href="#">Blog Insight</a></li>
+												<li><a href="#">Contact</a></li>
+											</ul>
+										</div>
+										<!-- Column -->
+										<div class="column col-lg-6 col-md-6 col-sm-12">
+											<ul class="list-link">
+												<li><a href="#">Term & Condition</a></li>
+												<li><a href="#">Careers</a></li>
+												<li><a href="#">Support</a></li>
+												<li><a href="#">Price & Plans</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					
+					<!-- Column -->
+                    <div class="big-column col-lg-6 col-md-12 col-sm-12">
+						<div class="row clearfix">
+							
+							<!-- Footer Column -->
+                            <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                                <div class="footer-widget info-widget">
+									<h5>Get In Touch</h5>
+									<ul class="contact-info-list">
+										<li><span>Head Office</span><a href="https://maps.app.goo.gl/q7fX7Pw97DjcX6Q57">Shophouse A26, Sunshine City, Ciputra, Bac Tu Liem, Ha Noi, 100000</a></li>
+									</ul>
+								</div>
+							</div>
+							
+							<!-- Footer Column -->
+                            <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                                <div class="footer-widget newsletter-widget">
+									<h5>Newsletter</h5>
+									<!-- Newsletter Form -->
+									<div class="newsletter-form">
+										<form method="post" action="https://html.themexriver.com/avarton/contact.html">
+											<div class="form-group">
+												<span class="icon flaticon-email"></span>
+												<input type="email" name="search-field" value="" placeholder="Email address" required>
+												<button type="submit" class="theme-btn submit-btn">Subscribe Now<span class="arrow flaticon-right-arrow-1"></span></button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
+			<div class="footer-bottom">
+				<div class="clearfix">
+					<div class="pull-left">
+						<div class="copyright">Copyright By &copy; <a href="https://themeforest.net/user/themexriver">Kylan</a> - 2024</div>
+					</div>
+					
+				</div>
+			</div>
+			
+		</div>
+	</footer>
+	<!-- End Main Footer -->
+	
+</div>
+<!-- End PageWrapper -->
+
+<!-- Search Popup -->
+<div class="search-popup">
+	<button class="close-search style-two"><span class="flaticon-cancel-1"></span></button>
+	<button class="close-search"><span class="flaticon-up-arrow"></span></button>
+	<form method="post" action="https://html.themexriver.com/avarton/blog.html">
+		<div class="form-group">
+			<input type="search" name="search-field" value="" placeholder="Search Here" required="">
+			<button type="submit"><i class="fa fa-search"></i></button>
+		</div>
+	</form>
+</div>
+<!-- End Header Search -->
+
+<!-- Scroll To Top -->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-up"></span></div>
+
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<!-- Revolution Slider -->
+<script src="assets/plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script src="assets/plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="assets/plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="assets/plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="assets/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="assets/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="assets/plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+<script src="assets/plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="assets/plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="assets/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="assets/plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
+<script src="assets/plugins/revolution/js/main-slider-script.js"></script>
+<!-- For Js Library -->
+
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/jquery.fancybox.js"></script>
+<script src="assets/js/appear.js"></script>
+<script src="assets/js/parallax.min.js"></script>
+<script src="assets/js/tilt.jquery.min.js"></script>
+<script src="assets/js/jquery.paroller.min.js"></script>
+<script src="assets/js/owl.js"></script>
+<script src="assets/js/wow.js"></script>
+<script src="assets/js/mixitup.js"></script>
+<script src="assets/js/nav-tool.js"></script>
+<script src="assets/js/jquery-ui.js"></script>
+<script src="assets/js/script.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.select2').select2({
+            placeholder: "Select Curriculums",
+            allowClear: true,
+            closeOnSelect: false,
+            width: '100%' // Ensure the dropdown takes full width
+        });
+    });
+</script>
+<script>
+    // Initialize the map and set its view to Hanoi
+    var map = L.map('hanoi-schools-map').setView([21.0285, 105.8542], 11);
+
+    // Add a tile layer to add to our map, in this case it's a map from OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Array of school locations, you can fill it with the actual coordinates and names
+    var schools = [
+        { "name": "Westlink International School Hanoi", "lat": 21.0465, "lng": 105.8048 },
+        { "name": "British International School Hanoi", "lat": 21.0185, "lng": 105.8300 },
+        { "name": "United Nations International School of Hanoi (UNIS)", "lat": 21.0475, "lng": 105.8035 },
+        { "name": "Hanoi International School (HIS)", "lat": 21.0272, "lng": 105.8320 },
+        { "name": "British International School (BIS) Hanoi", "lat": 21.0278, "lng": 105.8186 },
+        { "name": "Singapore International School (SIS) @ Ciputra", "lat": 21.0714, "lng": 105.7832 },
+        { "name": "The International School @ ParkCity Hanoi (ISPH)", "lat": 20.9804, "lng": 105.7849 },
+        { "name": "St. Paul American School Hanoi", "lat": 21.0685, "lng": 105.7931 },
+        { "name": "Lycee Francais Alexandre Yersin", "lat": 21.0469, "lng": 105.8281 },
+        { "name": "Concordia International School Hanoi", "lat": 21.0300, "lng": 105.8500 },
+        { "name": "International Montessori Kindergarten (IMK)", "lat": 21.0308, "lng": 105.8199 },
+        { "name": "Australian International School Hanoi", "lat": 21.0282, "lng": 105.8456 },
+        { "name": "International School of Vietnam (ISV)", "lat": 20.9987, "lng": 105.8466 },
+        { "name": "Japanese International School (JIS)", "lat": 21.0735, "lng": 105.7847 },
+        { "name": "KinderWorld International Kindergarten", "lat": 21.0530, "lng": 105.8256 },
+        { "name": "Greenwich Vietnam International School", "lat": 21.0280, "lng": 105.8390 },
+        { "name": "Vietnam Australia School (VAS Hanoi)", "lat": 21.0174, "lng": 105.8120 },
+        { "name": "British Vietnamese International School (BVIS)", "lat": 21.0737, "lng": 105.7838 },
+        { "name": "Asian International School (AIS)", "lat": 21.0275, "lng": 105.8390 },
+        { "name": "International School Hanoi Westlake", "lat": 21.0689, "lng": 105.8031 },
+        { "name": "Canadian International School (CIS) Hanoi", "lat": 21.0272, "lng": 105.8226 },
+        { "name": "Wellspring International School", "lat": 21.0388, "lng": 105.8837 },
+        { "name": "Singapore International School @ Gamuda Gardens", "lat": 20.9661, "lng": 105.8482 },
+        { "name": "Sakura Montessori International School", "lat": 21.0142, "lng": 105.8288 },
+        { "name": "The Olympia Schools", "lat": 21.0134, "lng": 105.7848 },
+        { "name": "Hanoi Academy International Bilingual School", "lat": 21.0733, "lng": 105.7840 },
+        { "name": "Blue Sky International School", "lat": 21.0206, "lng": 105.7981 },
+        { "name": "KinderWorld International Kindergarten @ Royal City", "lat": 21.0025, "lng": 105.8157 },
+        { "name": "EtonHouse International School Hanoi", "lat": 21.0285, "lng": 105.8481 }
+    ];
+
+    // Loop through the schools array and add markers to the map
+    schools.forEach(function(school) {
+        L.marker([school.lat, school.lng]).addTo(map)
+            .bindPopup('<b>' + school.name + '</b>')
+            .openPopup();
+    });
+</script>
+
+
+
+
+</body>
+
+<!-- Mirrored from html.themexriver.com/avarton/faq.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2024 08:01:51 GMT -->
+</html>
