@@ -24,322 +24,616 @@
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 
 <style>
-	.dropdown {
-		position: relative;
-		display: inline-block;
-	}
+	/* Global Styles */
+/* General Styles */
+/* Body Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
 
-	.dropdown-content {
-		display: none;
-		position: absolute;
-		background-color: #f9f9f9;
-		min-width: 160px;
-		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-		z-index: 1;
-	}
+/* Section Container */
+.section-container {
+    background-color: #ffffff;
+    padding: 60px 30px;
+    margin: 30px auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
 
-	.dropdown-content a {
-		color: black;
-		padding: 12px 16px;
-		text-decoration: none;
-		display: block;
-	}
+.section-title {
+    font-family: 'MusticaPro-SemiBold', sans-serif;
+    font-size: 34px;
+    color: #333;  /* Match this color with College Admissions Services */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+}
 
-	.dropdown-content a:hover {background-color: #f1f1f1;}
 
-	.dropdown:hover .dropdown-content {
-		display: block;
-	}
+.section-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+    font-style: italic;
+    text-align: center;
+}
 
-	.dropdown-submenu {
-		position: relative;
-	}
+.statistics, .services-grid, .packages-grid, .scrollable-universities {
+    margin-top: 30px;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
-	.dropdown-submenu:hover .dropdown-content {
-		display: block;
-		left: 100%;
-		top: 0;
-	}
-	
-	body {
-		font-family: 'Roboto', sans-serif;
-		background-color: #f2f2f2;
-		margin: 0;
-		padding: 0;
-		color: #333;
-	}
-	.section-container {
-        background: #87CEEB; /* Sky blue background color */
-        color: #fff;
-        padding: 60px 30px;
-        text-align: center;
-        border-radius: 20px;
-        margin: 50px auto;
-        width: 90%;
-        max-width: 1200px;
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-        position: relative;
+/* Statistic Item */
+.stat-item {
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.stat-item span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #007bff;
+}
+
+/* Improved Button Styles */
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Section Separator */
+hr.section-separator {
+    border: 0;
+    height: 2px;
+    background: #f6f5f5;
+    margin: 50px 0;
+}
+
+/* Animation for Section Fade-In */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.section-container {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.section-container:nth-child(odd) {
+    animation-delay: 0.3s;
+}
+
+.section-container:nth-child(even) {
+    animation-delay: 0.6s;
+}
+
+/* Smooth Scroll for Sections */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Improved Spacing */
+.statistics, .services-grid, .packages-grid, .scrollable-universities {
+    margin-top: 20px;
+    gap: 20px;
+}
+
+hr.section-separator {
+    border: 0;
+    height: 2px;
+    background: #ddd;
+    margin: 0px 0;
+}
+
+/* Animation for Section Fade-In */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.section-container {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.section-container:nth-child(odd) {
+    animation-delay: 0.3s;
+}
+
+.section-container:nth-child(even) {
+    animation-delay: 0.6s;
+}
+
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu:hover .dropdown-content {
+    display: block;
+    left: 100%;
+    top: 0;
+}
+
+/* Section Container */
+.section-container {
+    background: #ffffff;
+    color: #333333;
+    padding: 60px 30px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Title */
+.section-title {
+    font-family: 'MusticaPro-SemiBold', sans-serif;
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    line-height: 1.3;
+    transition: transform 0.3s ease-in-out;
+}
+
+.section-title:hover {
+    transform: translateY(-10px);
+}
+
+/* Section Subtitle */
+.section-subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    color: #f0f0f0;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+/* Statistics Section */
+.statistics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+/* Statistic Item */
+.stat-item {
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 10px;
+    width: 45%;
+    max-width: 500px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #333333;
+    text-align: left;
+    transition: transform 0.3s ease;
+    line-height: 1.6;
+}
+
+.stat-item:hover {
+    transform: translateY(-10px);
+}
+
+.stat-item span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #007bff;
+}
+
+/* Image Container */
+.image-container img {
+    border-radius: 15px;
+    width: 320px;
+    height: auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Admissions Services Section */
+.admissions-services-section {
+    background: #f8f9fa;
+    padding: 60px 30px;
+    text-align: center;
+}
+
+.admissions-services-section .section-title {
+    font-family: 'MusticaPro-SemiBold', sans-serif;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.service-item {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-item img {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Pricing Packages Section */
+.pricing-packages-section {
+    background: #f9f9f9;
+    padding: 70px 0;
+    text-align: center;
+}
+
+.pricing-packages-section .section-title {
+    font-family: 'MusticaPro-SemiBold', sans-serif;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.packages-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.package-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.package-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.package-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #1e3a8a;
+}
+
+.package-card p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.package-card .package-details {
+    background: #f3f4f6;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.package-card .package-details p {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Top Universities Section */
+.top-universities-section {
+    background: #f8f9fa;
+    padding: 70px 0;
+    text-align: center;
+}
+
+.top-universities-section .section-title {
+    font-family: 'MusticaPro-SemiBold', sans-serif;
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.university-category h3 {
+    font-size: 24px;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.scrollable-universities {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+    scrollbar-width: thin;
+    scrollbar-color: #007bff #f8f9fa;
+}
+
+.scrollable-universities::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scrollable-universities::-webkit-scrollbar-thumb {
+    background-color: #007bff;
+    border-radius: 4px;
+}
+
+.university-logo {
+    flex: 0 0 auto;
+    width: 150px;
+    height: 100px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.university-logo img {
+    max-width: 100%;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+.university-logo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Scroll Arrows */
+.scroll-arrow {
+    cursor: pointer;
+    font-size: 30px;
+    color: #f0c35b; /* Consider changing this to a more visible color */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20; /* Increase if needed */
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Adds a background */
+    border-radius: 50%; /* Optional: Makes the button circular */
+}
+
+.left-arrow {
+    left: 10px; /* Adjust if necessary */
+}
+
+.right-arrow {
+    right: 10px; /* Adjust if necessary */
+}
+
+
+/* Hide scrollbar */
+.scrollable-universities::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollable-universities {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.section-separator {
+    border: 0;
+    height: 1px;
+    background: #ddd; /* Light gray color */
+    margin: 0px 0; /* Adjust the spacing above and below the line */
+}
+/* Celebration Icons */
+
+/* Celebration Icons */
+.celebration-icon {
+    position: absolute;
+    width: 30px;  /* Smaller icon size */
+    height: 30px;
+    background-image: url('assets/images/school.png');  /* Ensure this path is correct */
+    background-size: cover;
+    opacity: 0;
+    animation: popUp 1.5s ease-out forwards, bounce 2s ease-in-out infinite;
+    animation-delay: calc(0.5s + (2 * (random() - 0.5)));
+    z-index: 50; /* Ensure it is above other content */
+}
+
+.top-left {
+    top: -20px; /* Move slightly above the title */
+    left: -50px; /* Position closer to the left edge */
+}
+
+.top-right {
+    top: -20px; /* Move slightly above the title */
+    right: -50px; /* Position closer to the right edge */
+}
+
+/* Fade-In and Bounce Animation */
+@keyframes popUp {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
     }
-	.section-title {
-		font-family: 'MusticaPro-SemiBold', sans-serif; /* Apply Mustica Pro */
-		font-size: 38px;
-		font-weight: 600;
-		margin-bottom: 20px;
-		text-transform: uppercase;
-		letter-spacing: 1.5px;
-		text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-		line-height: 1.3;
-		transition: transform 0.3s ease-in-out; /* Add transition for smooth animation */
-	}
-	.section-title:hover {
-		transform: translateY(-10px); /* Move the title up by 10px on hover */
-	}
-	.section-subtitle {
-		font-family: 'Roboto', sans-serif;
-		font-size: 24px;
-		font-weight: 300;
-		margin-bottom: 40px;
-		color: #f0f0f0;
-		font-style: italic;
-		line-height: 1.4;
-	}
-	.statistics {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around;
-		margin-top: 20px;
-	}
-	.stat-item {
-		background-color: rgba(255, 255, 255, 0.2);
-		border-radius: 15px;
-		padding: 30px;
-		margin: 10px;
-		width: 45%;
-		max-width: 500px;
-		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-		font-family: 'Roboto', sans-serif;
-		font-size: 20px;
-		color: #fff;
-		text-align: left;
-		transition: transform 0.3s ease;
-		line-height: 1.6;
-	}
-	.stat-item:hover {
-		transform: translateY(-10px);
-	}
-	.stat-item span {
-		font-family: 'Montserrat', sans-serif;
-		font-size: 28px;
-		font-weight: 700;
-		color: #ffe500;
-	}
-	.image-container {
-		margin-top: 50px;
-		text-align: center;
-	}
-	.image-container img {
-		border-radius: 15px;
-		width: 320px;
-		height: auto;
-		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-		transition: transform 0.3s ease;
-	}
-	.image-container img:hover {
-		transform: scale(1.05);
-	}
-	.courses-page-section {
-        background-image: url('assets/images/background.jpg'); /* Path to your background image */
-        background-size: cover; /* Ensure the image covers the entire section */
-        background-position: center; /* Center the image */
-        background-repeat: no-repeat; /* Prevent repeating */
-        padding: 60px 0; /* Adjust the padding as needed */
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
     }
-	.admissions-services-section {
-        background: #f8f9fa; /* Light background color */
-        padding: 60px 30px;
-        text-align: center;
+    100% {
+        transform: scale(1);
+        opacity: 1;
     }
+}
 
-    .admissions-services-section .section-title {
-        font-family: 'MusticaPro-SemiBold', sans-serif;
-        font-size: 36px;
-        color: #333;
-        margin-bottom: 40px;
-        text-transform: uppercase;
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
     }
-
-    .services-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        gap: 20px;
-    }
-
-    .service-item {
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        text-align: center;
-        width: 250px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .service-item img {
-        max-width: 100px;
-        margin-bottom: 20px;
-    }
-
-    .service-item h3 {
-        font-size: 22px;
-        margin-bottom: 10px;
-        color: #333;
-    }
-
-    .service-item p {
-        font-size: 16px;
-        color: #666;
-    }
-
-    .service-item:hover {
+    40% {
         transform: translateY(-10px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
+    60% {
+        transform: translateY(-5px);
+    }
+}
 
-	
-		.pricing-packages-section {
-			background: #f9f9f9; /* Light background for contrast */
-			padding: 70px 0;
-			text-align: center;
-		}
-	
-		.pricing-packages-section .section-title {
-			font-family: 'MusticaPro-SemiBold', sans-serif;
-			font-size: 36px;
-			color: #333;
-			margin-bottom: 50px;
-			text-transform: uppercase;
-			letter-spacing: 1px;
-		}
-	
-		.packages-grid {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-around;
-			gap: 30px;
-		}
-	
-		.package-card {
-			background: #ffffff;
-			border-radius: 10px;
-			box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-			padding: 30px;
-			width: 300px;
-			transition: transform 0.3s ease, box-shadow 0.3s ease;
-			position: relative;
-		}
-	
-		.package-card h3 {
-			font-size: 22px;
-			margin-bottom: 10px;
-			color: #1e3a8a; /* Dark blue for the package title */
-		}
-	
-		.package-card p {
-			font-size: 16px;
-			color: #666;
-			margin-bottom: 15px;
-		}
-	
-		.package-card .package-details {
-			background: #f3f4f6;
-			border-radius: 8px;
-			padding: 15px;
-		}
-	
-		.package-card .package-details p {
-			font-size: 14px;
-			color: #333;
-			margin-bottom: 10px;
-		}
-	
-		.package-card strong {
-			color: #1e3a8a; /* Matching the title color */
-		}
-	
-		.package-card:hover {
-			transform: translateY(-10px);
-			box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-		}
-	
-			.top-universities-section {
-				background: #f8f9fa; /* Light background for contrast */
-				padding: 70px 0;
-				text-align: center;
-			}
-		
-			.top-universities-section .section-title {
-				font-family: 'MusticaPro-SemiBold', sans-serif;
-				font-size: 36px;
-				color: #333;
-				text-align: center;
-				margin-bottom: 50px;
-				text-transform: uppercase;
-			}
-		
-			.university-category {
-				margin-bottom: 40px;
-			}
-		
-			.university-category h3 {
-				font-size: 24px;
-				color: #1e3a8a;
-				margin-bottom: 20px;
-				text-align: center;
-			}
-		
-			.scrollable-universities {
-				display: flex;
-				justify-content: center; /* Center the logos */
-				overflow-x: auto;
-				gap: 20px;
-				padding: 20px 0;
-				scrollbar-width: thin;
-				scrollbar-color: #007bff #f8f9fa;
-			}
-		
-			.scrollable-universities::-webkit-scrollbar {
-				height: 8px;
-			}
-		
-			.scrollable-universities::-webkit-scrollbar-thumb {
-				background-color: #007bff;
-				border-radius: 4px;
-			}
-		
-			.university-logo {
-				flex: 0 0 auto;
-				width: 150px;
-				height: 100px;
-				background: #ffffff;
-				border-radius: 10px;
-				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				transition: transform 0.3s ease, box-shadow 0.3s ease;
-			}
-		
-			.university-logo img {
-				max-width: 100%;
-				max-height: 80px;
-				object-fit: contain;
-			}
-		
-			.university-logo:hover {
-				transform: translateY(-5px);
-				box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-			}
+/* College Admissions Services Styles */
+.services-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch; /* Ensure all items have equal height */
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 280px; /* Ensure consistent card width */
+    flex: 1 1 280px; /* Flex property ensures equal width across different screen sizes */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Adjusting Service Item Image Size */
+.service-item img {
+    width: 80px; /* Set a fixed width for all images */
+    height: 80px; /* Set a fixed height for all images */
+    object-fit: contain; /* Ensure the image fits within the defined dimensions */
+    margin: 0 auto 20px auto; /* Center the images */
+    display: block;
+}
+
+
+.service-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    line-height: 1.2;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px; /* Add spacing to balance with the heading */
+    flex-grow: 1; /* Allow text to take up available space */
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+
 		</style>
 		
 
@@ -570,27 +864,44 @@
 	<!-- Courses Page Section -->
 	<section class="courses-page-section">
 		<div class="auto-container">
+			<!-- Celebration Icons -->
+			<div class="celebration-icon top-left"></div>
+			<div class="celebration-icon top-right"></div>
 			
+<<<<<<< HEAD
+			<div id="kylan-consulting-carousel">
+				<div class="section-container">
+					<div class="section-title">Kylan Consulting Success Stories</div>
+					<div class="statistics">
+						<div class="stat-item">
+							<span>85%</span> of Kylan Consulting students are accepted into at least 1 of their top 4 colleges each year.
+						</div>
+						<div class="stat-item">
+							Since 2002, we've guided over <span>1,000</span> students to gain over <span>$30 million</span> in financial aid and scholarships.
+						</div>
+=======
 			<!-- Order Box -->
 			<div class="section-container">
 				<div class="section-title">Kylan Consulting Success Stories</div>
 				<div class="statistics">
 					<div class="stat-item">
 						<span>85%</span> of Kylan Consulting students are accepted into at least 1 of their top 4 colleges each year.
+>>>>>>> 6537a9f48371894243cdc58dfa405a5dc0a9adf2
 					</div>
-					<div class="stat-item">
-						Since 2002, we've guided over <span>1,000</span> students to gain over <span>$30 million</span> in financial aid and scholarships.
+					<div class="image-container">
+						<img src="your-image-url.jpg" alt="Kylan Consulting's Success Stories">
 					</div>
-				</div>
-				<div class="image-container">
-					<img src="your-image-url.jpg" alt="Successful student">
 				</div>
 			</div>
 		</div>
 	</section>
-
+		
+		</div>
+	</section>
+    <hr class="section-separator">
 	<section class="admissions-services-section">
 		<div class="auto-container">
+			<div id="college-admissions-carousel">
 			<div class="section-title">College Admissions Services</div>
 			<div class="services-grid">
 				<div class="service-item">
@@ -614,12 +925,15 @@
 					<p>Develop a winning strategy for your college applications.</p>
 				</div>
 				<!-- Add more services as needed -->
-				 <hr>
 			</div>
 		</div>
+		</div>
 	</section>
+	<hr class="section-separator">
 	<section class="pricing-packages-section">
 		<div class="auto-container">
+			<!-- Our Packages Section -->
+			<div id="our-packages-carousel">
 			<div class="section-title">Our Packages</div>
 			<div class="packages-grid">
 				<div class="package-card">
@@ -651,101 +965,447 @@
 		</div>
 	</section>
 	
+	<hr class="section-separator">
 	<!-- Bottom Section List of Universities-->
 	<section class="top-universities-section">
 		<div class="auto-container">
-			<div class="section-title">List of Top Universities</div>
-			
+			<div class="section-title">Top International Colleges</div>
+	
+			<!-- United States Section -->
 			<div class="university-category">
 				<h3>United States</h3>
-				<div class="scrollable-universities">
-					<div class="university-logo">
-						<a href="https://www.harvard.edu" target="_blank">
-							<img src="assets/images/harward_uni.jpg" alt="Harvard University">
-						</a>
+				<div class="scroll-container">
+					<div class="scroll-arrow left-arrow" onclick="scrollLeft('us-universities')">&#8249;</div>
+					<div id="us-universities" class="scrollable-universities">
+						<!-- Massachusetts Institute of Technology (MIT) -->
+						<div class="university-logo">
+							<a href="https://www.mit.edu/" target="_blank">
+								<img src="assets/images/mit.jpg" alt="Massachusetts Institute of Technology (MIT) - Cambridge, MA">
+							</a>
+						</div>
+						<!-- Stanford University -->
+						<div class="university-logo">
+							<a href="https://www.stanford.edu/" target="_blank">
+								<img src="assets/images/stanford_uni.png" alt="Stanford University - Stanford, CA">
+							</a>
+						</div>
+						<!-- California Institute of Technology (Caltech) -->
+						<div class="university-logo">
+							<a href="https://www.caltech.edu/" target="_blank">
+								<img src="assets/images/caltech.jpg" alt="California Institute of Technology (Caltech) - Pasadena, CA">
+							</a>
+						</div>
+						<!-- University of Chicago -->
+						<div class="university-logo">
+							<a href="https://www.uchicago.edu/" target="_blank">
+								<img src="assets/images/uchicago.png" alt="University of Chicago - Chicago, IL">
+							</a>
+						</div>
+						<!-- Princeton University -->
+						<div class="university-logo">
+							<a href="https://www.princeton.edu/" target="_blank">
+								<img src="assets/images/princeton.png" alt="Princeton University - Princeton, NJ">
+							</a>
+						</div>
+						<!-- Columbia University -->
+						<div class="university-logo">
+							<a href="https://www.columbia.edu/" target="_blank">
+								<img src="assets/images/columbia.png" alt="Columbia University - New York, NY">
+							</a>
+						</div>
+						<!-- Yale University -->
+						<div class="university-logo">
+							<a href="https://www.yale.edu/" target="_blank">
+								<img src="assets/images/yale.png" alt="Yale University - New Haven, CT">
+							</a>
+						</div>
+						<!-- University of Pennsylvania -->
+						<div class="university-logo">
+							<a href="https://www.upenn.edu/" target="_blank">
+								<img src="assets/images/upenn.jpg" alt="University of Pennsylvania - Philadelphia, PA">
+							</a>
+						</div>
+						<!-- University of California, Berkeley -->
+						<div class="university-logo">
+							<a href="https://www.berkeley.edu/" target="_blank">
+								<img src="assets/images/berkeley.png" alt="University of California, Berkeley - Berkeley, CA">
+							</a>
+						</div>
+						<!-- University of California, Los Angeles (UCLA) -->
+						<div class="university-logo">
+							<a href="https://www.ucla.edu/" target="_blank">
+								<img src="assets/images/ucla.jpg" alt="University of California, Los Angeles (UCLA) - Los Angeles, CA">
+							</a>
+						</div>
+						<!-- University of California, San Diego -->
+						<div class="university-logo">
+							<a href="https://ucsd.edu/" target="_blank">
+								<img src="assets/images/ucsd.png" alt="University of California, San Diego - La Jolla, CA">
+							</a>
+						</div>
+						<!-- University of Michigan, Ann Arbor -->
+						<div class="university-logo">
+							<a href="https://umich.edu/" target="_blank">
+								<img src="assets/images/umich.png" alt="University of Michigan, Ann Arbor - Ann Arbor, MI">
+							</a>
+						</div>
+						<!-- University of Southern California (USC) -->
+						<div class="university-logo">
+							<a href="https://www.usc.edu/" target="_blank">
+								<img src="assets/images/usc.jpg" alt="University of Southern California (USC) - Los Angeles, CA">
+							</a>
+						</div>
+						<!-- University of Washington -->
+						<div class="university-logo">
+							<a href="https://www.washington.edu/" target="_blank">
+								<img src="assets/images/washington.png" alt="University of Washington - Seattle, WA">
+							</a>
+						</div>
+						<!-- Johns Hopkins University -->
+						<div class="university-logo">
+							<a href="https://www.jhu.edu/" target="_blank">
+								<img src="assets/images/jhu.jpg" alt="Johns Hopkins University - Baltimore, MD">
+							</a>
+						</div>
+						<!-- University of California, San Francisco -->
+						<div class="university-logo">
+							<a href="https://www.ucsf.edu/" target="_blank">
+								<img src="assets/images/ucsf.jpg" alt="University of California, San Francisco - San Francisco, CA">
+							</a>
+						</div>
+						<!-- University of Virginia -->
+						<div class="university-logo">
+							<a href="https://www.virginia.edu/" target="_blank">
+								<img src="assets/images/virginia.png" alt="University of Virginia - Charlottesville, VA">
+							</a>
+						</div>
+						<!-- University of North Carolina at Chapel Hill -->
+						<div class="university-logo">
+							<a href="https://www.unc.edu/" target="_blank">
+								<img src="assets/images/unc.jpg" alt="University of North Carolina at Chapel Hill - Chapel Hill, NC">
+							</a>
+						</div>
+						<!-- Duke University -->
+						<div class="university-logo">
+							<a href="https://www.duke.edu/" target="_blank">
+								<img src="assets/images/duke.jpg" alt="Duke University - Durham, NC">
+							</a>
+						</div>
+						<!-- University of Illinois at Urbana-Champaign -->
+						<div class="university-logo">
+							<a href="https://illinois.edu/" target="_blank">
+								<img src="assets/images/illinois.jpg" alt="University of Illinois at Urbana-Champaign - Urbana, IL">
+							</a>
+						</div>
+						<!-- University of Wisconsin-Madison -->
+						<div class="university-logo">
+							<a href="https://www.wisc.edu/" target="_blank">
+								<img src="assets/images/wisconsin.jpg" alt="University of Wisconsin-Madison - Madison, WI">
+							</a>
+						</div>
+						<!-- New York University (NYU) -->
+						<div class="university-logo">
+							<a href="https://www.nyu.edu/" target="_blank">
+								<img src="assets/images/nyu.png" alt="New York University (NYU) - New York, NY">
+							</a>
+						</div>
+						<!-- University of Texas at Austin -->
+						<div class="university-logo">
+							<a href="https://www.utexas.edu/" target="_blank">
+								<img src="assets/images/utexas.png" alt="University of Texas at Austin - Austin, TX">
+							</a>
+						</div>
+						<!-- University of California, Davis -->
+						<div class="university-logo">
+							<a href="https://www.ucdavis.edu/" target="_blank">
+								<img src="assets/images/ucdavis.jpg" alt="University of California, Davis - Davis, CA">
+							</a>
+						</div>
+						<!-- University of Florida -->
+						<div class="university-logo">
+							<a href="https://www.ufl.edu/" target="_blank">
+								<img src="assets/images/ufl.png" alt="University of Florida - Gainesville, FL">
+							</a>
+						</div>
+						<!-- Rice University -->
+						<div class="university-logo">
+							<a href="https://www.rice.edu/" target="_blank">
+								<img src="assets/images/rice.png" alt="Rice University - Houston, TX">
+							</a>
+						</div>
+						<!-- University of Pittsburgh -->
+						<div class="university-logo">
+							<a href="https://www.pitt.edu/" target="_blank">
+								<img src="assets/images/pitt.jpg" alt="University of Pittsburgh - Pittsburgh, PA">
+							</a>
+						</div>
+						<!-- University of Minnesota, Twin Cities -->
+						<div class="university-logo">
+							<a href="https://twin-cities.umn.edu/" target="_blank">
+								<img src="assets/images/minnesota.jpg" alt="University of Minnesota, Twin Cities - Minneapolis, MN">
+							</a>
+						</div>
+						<!-- University of Arizona -->
+						<div class="university-logo">
+							<a href="https://www.arizona.edu/" target="_blank">
+								<img src="assets/images/arizona.jpg" alt="University of Arizona - Tucson, AZ">
+							</a>
+						</div>
 					</div>
-					
-					<div class="university-logo">
-						<a href="https://www.stanford.edu/" target="_blank">
-							<img src="assets/images/stanford_uni.png" alt="Stanford University">
-						</a>
-					</div>
-					<div class="university-logo">
-						<a href="https://www.mit.edu/" target="_blank">
-							<img src="assets/images/mit_uni.png" alt="MIT University">
-						</a>
-					</div>
-					<!-- Add more university logos as needed -->
+					<div class="scroll-arrow right-arrow" onclick="scrollRight('us-universities')">&#8250;</div>
 				</div>
 			</div>
 	
+			<!-- Canada Section -->
+			<div class="university-category">
+				<h3>Canada</h3>
+				<div class="scroll-container">
+					<div class="scroll-arrow left-arrow" onclick="scrollLeft('canada-universities')">&#8249;</div>
+					<div id="canada-universities" class="scrollable-universities">
+						<div class="university-logo">
+							<a href="https://www.utoronto.ca/" target="_blank">
+								<img src="assets/images/University_of_Toronto.png" alt="University of Toronto">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.ubc.ca/" target="_blank">
+								<img src="assets/images/UBC.jpg" alt="University of British Columbia">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.mcgill.ca/" target="_blank">
+								<img src="assets/images/mcgill.jpg" alt="McGill University">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.uwo.ca/" target="_blank">
+								<img src="assets/images/western.jpg" alt="Western University">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.mcmaster.ca/" target="_blank">
+								<img src="assets/images/mcmaster.jpg" alt="McMaster University">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.ualberta.ca/" target="_blank">
+								<img src="assets/images/alberta.png" alt="University of Alberta">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.uvic.ca/" target="_blank">
+								<img src="assets/images/uvic.jpg" alt="University of Victoria">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.queensu.ca/" target="_blank">
+								<img src="assets/images/queens.png" alt="Queen's University">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.dal.ca/" target="_blank">
+								<img src="assets/images/dalhousie.png" alt="Dalhousie University">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.uottawa.ca/en" target="_blank">
+								<img src="assets/images/uottawa.jpg" alt="University of Ottawa">
+							</a>
+						</div>
+						<!-- Add more university logos (total 10) -->
+					</div>
+					<div class="scroll-arrow right-arrow" onclick="scrollRight('canada-universities')">&#8250;</div>
+				</div>
+			</div>
+	
+			<!-- United Kingdom Section -->
 			<div class="university-category">
 				<h3>United Kingdom</h3>
-				<div class="scrollable-universities">
-					<div class="university-logo">
-						<a href="https://www.ox.ac.uk/" target="_blank">
-							<img src="assets/images/University_of_Oxford.png" alt="University of Oxford">
-						</a>
+				<div class="scroll-container">
+					<div class="scroll-arrow left-arrow" onclick="scrollLeft('uk-universities')">&#8249;</div>
+					<div id="uk-universities" class="scrollable-universities">
+						<div class="university-logo">
+							<a href="https://www.ox.ac.uk/" target="_blank">
+								<img src="assets/images/University_of_Oxford.png" alt="University of Oxford">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.cam.ac.uk/" target="_blank">
+								<img src="assets/images/cambridge_uni.jpg" alt="University of Cambridge">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.lse.ac.uk/" target="_blank">
+								<img src="assets/images/London_school_of_economics.png" alt="London School of Economics">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.imperial.ac.uk/" target="_blank">
+								<img src="assets/images/imperial.jpg" alt="Imperial College London">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.ucl.ac.uk/" target="_blank">
+								<img src="assets/images/ucl.jpg" alt="University College London (UCL)">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.kcl.ac.uk/" target="_blank">
+								<img src="assets/images/kcl.jpg" alt="King's College London">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.ed.ac.uk/" target="_blank">
+								<img src="assets/images/edinburgh.jpg" alt="University of Edinburgh">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.manchester.ac.uk/" target="_blank">
+								<img src="assets/images/manchester.png" alt="University of Manchester">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.bristol.ac.uk/" target="_blank">
+								<img src="assets/images/bristol.jpg" alt="University of Bristol">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.warwick.ac.uk/" target="_blank">
+								<img src="assets/images/warwick.jpg" alt="University of Warwick">
+							</a>
+						</div>
 					</div>
-					<div class="university-logo">
-						<a href="https://www.cam.ac.uk/" target="_blank">
-							<img src="assets/images/cambridge_uni.jpg" alt="University of Cambridge">
-						</a>
-					</div>		
-					<div class="university-logo">
-						<a href="https://www.lse.ac.uk/" target="_blank">
-							<img src="assets/images/London_school_of_economics.png" alt="London School of Economics">
-						</a>
-					</div>				
-					<!-- Add more university logos as needed -->
+					<div class="scroll-arrow right-arrow" onclick="scrollRight('uk-universities')">&#8250;</div>
 				</div>
 			</div>
-	
+			
+			<!-- Australia Section -->
 			<div class="university-category">
 				<h3>Australia</h3>
-				<div class="scrollable-universities">
-					<div class="university-logo">
-						<a href="https://www.unimelb.edu.au/" target="_blank">
-							<img src="assets/images/the-university-of-melbourne.png" alt="University of Melbourne">
-						</a>
+				<div class="scroll-container">
+					<div class="scroll-arrow left-arrow" onclick="scrollLeft('australia-universities')">&#8249;</div>
+					<div id="australia-universities" class="scrollable-universities">
+						<div class="university-logo">
+							<a href="https://www.unimelb.edu.au/" target="_blank">
+								<img src="assets/images/the-university-of-melbourne.png" alt="University of Melbourne">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.sydney.edu.au/" target="_blank">
+								<img src="assets/images/university-of-sydney.png" alt="University of Sydney">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.anu.edu.au/" target="_blank">
+								<img src="assets/images/australian-national-university.png" alt="Australian National University">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.unsw.edu.au/" target="_blank">
+								<img src="assets/images/unsw.jpg" alt="University of New South Wales (UNSW)">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.uq.edu.au/" target="_blank">
+								<img src="assets/images/uq.jpg" alt="University of Queensland">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.monash.edu/" target="_blank">
+								<img src="assets/images/monash.jpg" alt="Monash University">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.adelaide.edu.au/" target="_blank">
+								<img src="assets/images/adelaide.jpg" alt="University of Adelaide">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.utas.edu.au/" target="_blank">
+								<img src="assets/images/tasmania.jpg" alt="University of Tasmania">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.uwa.edu.au/" target="_blank">
+								<img src="assets/images/uwa.png" alt="University of Western Australia">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.rmit.edu.au/" target="_blank">
+								<img src="assets/images/rmit.jpg" alt="RMIT University">
+							</a>
+						</div>
 					</div>
-					<div class="university-logo">
-						<a href="https://www.sydney.edu.au/" target="_blank">
-							<img src="assets/images/university-of-sydney.png" alt="University of Sydney">
-						</a>
-					</div>
-					<div class="university-logo">
-						<a href="https://www.anu.edu.au/" target="_blank">
-							<img src="assets/images/australian-national-university.png" alt="Australian National University">
-						</a>
-					</div>					
-					<!-- Add more university logos as needed -->
+					<div class="scroll-arrow right-arrow" onclick="scrollRight('australia-universities')">&#8250;</div>
 				</div>
 			</div>
+			
 	
+			<!-- Asia Section -->
 			<div class="university-category">
 				<h3>Asia</h3>
-				<div class="scrollable-universities">
-					<div class="university-logo">
-						<a href="https://nus.edu.sg/" target="_blank">
-							<img src="assets/images/nus.png" alt="National University of Singapore">
-						</a>
+				<div class="scroll-container">
+					<div class="scroll-arrow left-arrow" onclick="scrollLeft('asia-universities')">&#8249;</div>
+					<div id="asia-universities" class="scrollable-universities">
+						<div class="university-logo">
+							<a href="https://nus.edu.sg/" target="_blank">
+								<img src="assets/images/nus.png" alt="National University of Singapore">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.u-tokyo.ac.jp/en/" target="_blank">
+								<img src="assets/images/University_of_Tokyo.png" alt="University of Tokyo">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.tsinghua.edu.cn/en/" target="_blank">
+								<img src="assets/images/Tsinghua_University.png" alt="Tsinghua University">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.kaist.ac.kr/" target="_blank">
+								<img src="assets/images/kaist.png" alt="KAIST (Korea Advanced Institute of Science and Technology)">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.hku.hk/" target="_blank">
+								<img src="assets/images/hku.png" alt="University of Hong Kong">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.cuhk.edu.hk/" target="_blank">
+								<img src="assets/images/cuhk.png" alt="Chinese University of Hong Kong">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.ntu.edu.sg/" target="_blank">
+								<img src="assets/images/ntu.png" alt="Nanyang Technological University, Singapore">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.snu.ac.kr/index.html" target="_blank">
+								<img src="assets/images/snu.jpg" alt="Seoul National University">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.pku.edu.cn/" target="_blank">
+								<img src="assets/images/pku.jpg" alt="Peking University">
+							</a>
+						</div>
+						<div class="university-logo">
+							<a href="https://www.iitm.ac.in/" target="_blank">
+								<img src="assets/images/iit-madras.jpg" alt="Indian Institute of Technology Madras">
+							</a>
+						</div>
 					</div>
-					<div class="university-logo">
-						<a href="https://www.u-tokyo.ac.jp/en/" target="_blank">
-							<img src="assets/images/University_of_Tokyo.png" alt="University of Tokyo">
-						</a>
-					</div>
-					<div class="university-logo">
-						<a href="https://www.tsinghua.edu.cn/en/" target="_blank">
-							<img src="assets/images/Tsinghua_University.png" alt="Tsinghua University">
-						</a>
-					</div>		
-					<!-- Add more university logos as needed -->
+					<div class="scroll-arrow right-arrow" onclick="scrollRight('asia-universities')">&#8250;</div>
 				</div>
 			</div>
+			
+	
 		</div>
 	</section>
+	
 	
 	<!-- End Courses Page Section -->
 	
@@ -900,6 +1560,25 @@
 <script src="assets/js/nav-tool.js"></script>
 <script src="assets/js/jquery-ui.js"></script>
 <script src="assets/js/script.js"></script>
+
+<script>
+function scrollLeft(id) {
+    document.getElementById(id).scrollBy({
+        left: -300, // Adjust the scroll distance as needed
+        behavior: 'smooth'
+    });
+}
+
+function scrollRight(id) {
+    document.getElementById(id).scrollBy({
+        left: 300, // Adjust the scroll distance as needed
+        behavior: 'smooth'
+    });
+}
+
+</script>
+</body>
+</body>
 
 </body>
 
