@@ -117,6 +117,139 @@
             display: block; /* Ensures the image is displayed as a block element */
             margin-bottom:-150px; /* Adds space between the logo and the text */
         }
+        /* Global Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Section Styling */
+.section-ko1 {
+    padding: 40px 0;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.container-qwj, .container-vye {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Heading Styling */
+.title-hyv {
+    font-size: 28px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Text Styling */
+.text-kw4 p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Image Styling */
+.animated-image {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.animated-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Core Values Section */
+.section-ko1 .column-va6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.section-ko1 .column-va6 h3 {
+    color: #0073e6;
+    margin-bottom: 15px;
+}
+
+.section-ko1 .column-va6 p {
+    font-size: 15px;
+    color: #666;
+    padding: 0 10px;
+}
+
+/* Core Values - Image and Content Wrapper */
+.wrapper-jm8 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.wrapper-jm8:hover {
+    background-color: #e0e0e0;
+}
+
+.content-9z5 {
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Font Styling for Specific Elements */
+.style-heading {
+    color: #444;
+}
+
+.style-zrLjQ, .style-XdxJC, .style-UIRAW, .style-hkbpf {
+    color: #333;
+}
+
+.style-aoocD, .style-jF67z, .style-hHMdR, .style-N2Gkq {
+    color: #555;
+}
+
+/* Button Hover Effects */
+a:hover {
+    text-decoration: underline;
+    color: #0073e6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .column-va6 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .title-hyv {
+        font-size: 24px;
+    }
+    
+    .text-kw4 p {
+        font-size: 14px;
+    }
+    
+    .animated-image {
+        width: 100%;
+        height: auto;
+    }
+}
+
     </style>
 </head>
 
@@ -191,7 +324,7 @@
                                         <ul>
                                             <li><a href="about.html">Who We Are</a></li>
                                             <li><a href="faq.html">What We Specialize In</a></li>
-                                            <li><a href="mentors.html">Our Team</a></li>
+                                            <li><a href="team.html">Our Team</a></li>
                                             
                                         </ul>
                                     </li>
@@ -426,10 +559,6 @@
 
         <!-- About American Study Section -->
         <section class="section-ko1 elementor-isd elementor-element-6ke section-f2a">
-            <div class="container-vye">
-                <div class="column-va6 col-wra elementor-isd elementor-element-8pg">
-                    <div class="elementor-widget-72h elementor-element-3p5">
-                        <div class="elementor-isd elementor-element-dke elementor-9oa elementor-widget-e8g">
                             <div class="container-qwj">
                                 <h3 class="title-hyv style-heading" style="font-weight: bold; font-size: 24px;">
                                     About Kylan

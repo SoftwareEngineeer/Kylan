@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 
-<!-- Mirrored from html.themexriver.com/avarton/blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2024 08:02:03 GMT -->
+<!-- Mirrored from html.themexriver.com/avarton/faq.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2024 08:01:50 GMT -->
 <head>
 <meta charset="utf-8">
-<title>Averon HTML-5 Template | Blog</title>
+<title>Averon HTML-5 Template | Faq's</title>
 <!-- Stylesheets -->
 <link href="assets/css/bootstrap.css" rel="stylesheet">
 <link href="assets/css/style.css" rel="stylesheet">
@@ -84,8 +84,118 @@
 		display: block; /* Ensures the image is displayed as a block element */
 		margin-bottom:-150px; /* Adds space between the logo and the text */
 	}
+    /* Team Section Styles */
+.team-section {
+    background-color: #f9f9ff;
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .team-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .team-member {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+    position: relative;
+    border: 2px solid #e0e0e0;
+    transition: transform 0.3s ease;
+  }
+  
+  .team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #ddd;
+  }
+  
+  .team-member h3 {
+    font-size: 1.5rem;
+    margin: 10px 0 5px;
+    color: #333;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .team-member p {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  /* Enhanced Bio Popup Styles */
+.bio-popup {
+    display: none; /* Hidden by default */
+    position: absolute;
+    z-index: 1000;
+    background-color: #ffffff; /* White background for a clean look */
+    padding: 20px; /* More padding for better spacing */
+    border-radius: 12px; /* Rounded corners for a modern look */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for a subtle 3D effect */
+    max-width: 300px; /* Limiting the width for readability */
+    text-align: left;
+    animation: fadeIn 0.3s ease-out, slideIn 0.5s ease-out; /* Combined animations for fade-in and slide-in effect */
+    border: 1px solid #e0e0e0; /* Light border for a subtle effect */
+    transform: translateY(-20px); /* Adjust pop-up to move up slightly */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern and clean font */
+    color: #333; /* Text color */
+  }
+  
+  .bio-content {
+    font-size: 1rem;
+    color: #444; /* Darker text for better contrast */
+    line-height: 1.6; /* Increased line height for readability */
+  }
+  
+  .bio-popup::before {
+    content: ''; /* Decorative arrow element */
+    position: absolute;
+    top: 100%; /* Position at the bottom of the pop-up */
+    left: 15%; /* Center it horizontally */
+    margin-left: -5px; /* Offset by half the width */
+    border-width: 6px; /* Triangle size */
+    border-style: solid;
+    border-color: #ffffff transparent transparent transparent; /* White arrow */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-20px) scale(0.95);
+    }
+    to {
+      transform: translateY(0) scale(1);
+    }
+  }
+  
 </style>
-
 </head>
 
 <body class="hidden-bar-wrapper">
@@ -162,7 +272,7 @@
 									<ul>
 										<li><a href="about.html">Who We Are</a></li>
 										<li><a href="faq.html">What We Specialize In</a></li>
-										<li><a href="team.html">Our Team</a></li>
+										<li><a href="mentors.html">Our Team</a></li>
 										
 									</ul>
 								</li>
@@ -301,315 +411,71 @@
 	<section class="page-title" style="background-image: url(assets/images/background/2.jpg)">
 		<div class="auto-container">
 			<div class="content">
-				<div class="text">Welcome to our company</div>
-				<h1>News Feeds</h1>
+				<div class="text">Welcome to Kylan</div>
+				<h1>Meet Our Team</h1>
 			</div>
 			
 		</div>
 	</section>
 	<!-- End Page Title Section -->
 	
-	<!-- Sidebar Page Container -->
-    <div class="sidebar-page-container">
-    	<div class="auto-container">
-        	<div class="row clearfix">
-				
-				<!-- Content Side -->
-                <div class="content-side col-lg-8 col-md-12 col-sm-12">
-					<div class="blog-classic">
-						<!-- News Block Two -->
-						<div class="news-block-two">
-							<div class="inner-box">
-								<div class="image">
-									<a href="blog-detail.html"><img class="transition-500ms" src="assets/images/resource/news-1.jpg" alt="" /></a>
-								</div>
-								<div class="lower-content">
-									<div class="category">Business</div>
-									<div class="author-box">
-										<div class="box-inner">
-											<div class="author-image">
-												<img src="assets/images/resource/author-4.jpg" alt="" />
-											</div>
-											by Hetmayar
-										</div>
-									</div>
-									<h3><a href="blog-detail.html">Dharma Home Suites at Novia offers fully plain furnished apartments to fit</a></h3>
-									<div class="text">Novia's spaciously two bedroom apartments are perfect for families and even business partners. Look out into the Manhattan skyline from the open fully equipped kitchen.</div>
-									<ul class="post-meta">
-										<li><span class="icon fa fa-eye"></span>100 Views</li>
-										<li><span class="icon fa fa-comments"></span>30 comments</li>
-										<li><span class="icon fa fa-calendar"></span>24th March 2022</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<!-- End News Block Two -->
-						
-						<!-- News Block Two -->
-						<div class="news-block-two">
-							<div class="inner-box">
-								<div class="image">
-									<img class="transition-500ms" src="assets/images/resource/news-2.jpg" alt="" />
-									<a href="https://www.youtube.com/watch?v=kxPCFljwJws" class="lightbox-image overlay-box"><span class="flaticon-play-arrow"><i class="ripple"></i></span></a>
-								</div>
-								<div class="lower-content">
-									<div class="category">Business</div>
-									<div class="author-box">
-										<div class="box-inner">
-											<div class="author-image">
-												<img src="assets/images/resource/author-4.jpg" alt="" />
-											</div>
-											by Hetmayar
-										</div>
-									</div>
-									<h3><a href="blog-detail.html">Dharma Home Suites at Novia offers fully plain furnished apartments to fit</a></h3>
-									<div class="text">Novia's spaciously two bedroom apartments are perfect for families and even business partners. Look out into the Manhattan skyline from the open fully equipped kitchen.</div>
-									<ul class="post-meta">
-										<li><span class="icon fa fa-eye"></span>100 Views</li>
-										<li><span class="icon fa fa-comments"></span>30 comments</li>
-										<li><span class="icon fa fa-calendar"></span>24th March 2022</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<!-- End News Block Two -->
-						
-						<!-- News Block Two -->
-						<div class="news-block-two">
-							<div class="inner-box">
-								<div class="image">
-									<a href="blog-detail.html"><img class="transition-500ms" src="assets/images/resource/news-3.jpg" alt="" /></a>
-								</div>
-								<div class="lower-content">
-									<div class="category">Business</div>
-									<div class="author-box">
-										<div class="box-inner">
-											<div class="author-image">
-												<img src="assets/images/resource/author-4.jpg" alt="" />
-											</div>
-											by Hetmayar
-										</div>
-									</div>
-									<h3><a href="blog-detail.html">Dharma Home Suites at Novia offers fully plain furnished apartments to fit</a></h3>
-									<div class="text">Novia's spaciously two bedroom apartments are perfect for families and even business partners. Look out into the Manhattan skyline from the open fully equipped kitchen.</div>
-									<ul class="post-meta">
-										<li><span class="icon fa fa-eye"></span>100 Views</li>
-										<li><span class="icon fa fa-comments"></span>30 comments</li>
-										<li><span class="icon fa fa-calendar"></span>24th March 2022</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<!-- End News Block Two -->
-						
-						<!-- News Block Two -->
-						<div class="news-block-two">
-							<div class="inner-box">
-								<div class="image">
-									<a href="blog-detail.html"><img class="transition-500ms" src="assets/images/resource/news-4.jpg" alt="" /></a>
-								</div>
-								<div class="lower-content">
-									<h3><a href="blog-detail.html">Dharma Home Suites at Novia offers fully plain furnished apartments to fit</a></h3>
-									<div class="text">Novia's spaciously two bedroom apartments are perfect for families and even business partners. Look out into the Manhattan skyline from the open fully equipped kitchen.</div>
-									<ul class="post-meta">
-										<li><span class="icon fa fa-eye"></span>100 Views</li>
-										<li><span class="icon fa fa-comments"></span>30 comments</li>
-										<li><span class="icon fa fa-calendar"></span>24th March 2022</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<!-- End News Block Two -->
-						
-						<!-- News Block Two / Style Two -->
-						<div class="news-block-two style-two">
-							<div class="inner-box">
-								<div class="lower-content">
-									<h3><a href="blog-detail.html">Dharma Home Suites at Novia offers fully plain furnished apartments to fit</a></h3>
-									<div class="text">Novia's spaciously two bedroom apartments are perfect for families and even business partners. Look out into the Manhattan skyline from the open fully equipped kitchen.</div>
-									<ul class="post-meta">
-										<li><span class="icon fa fa-eye"></span>100 Views</li>
-										<li><span class="icon fa fa-comments"></span>30 comments</li>
-										<li><span class="icon fa fa-calendar"></span>24th March 2022</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<!-- End News Block Two -->
-						
-						<!-- News Block Three -->
-						<div class="news-block-three">
-							<div class="inner-box">
-								<div class="content">
-									<span class="quote-icon flaticon-quote-3"></span>
-									<h3><a href="blog-detail.html">Dharma Home Suites at Novia offers fully plain furnished apartments to fit</a></h3>
-								</div>
-							</div>
-						</div>
-						<!-- End News Block Three -->
-						
-						<!--Styled Pagination-->
-						<ul class="styled-pagination text-center">
-							<li class="prev"><a href="#"><span class="fa fa-angle-double-left"></span></a></li>
-							<li><a href="#">1</a></li>
-							<li><a href="#" class="active">2</a></li>
-							<li><a href="#">3</a></li>
-							<li class="next"><a href="#"><span class="fa fa-angle-double-right"></span></a></li>
-						</ul>                
-						<!--End Styled Pagination-->
-						
-					</div>
-				</div>
-				
-				<!-- Sidebar Side -->
-                <div class="sidebar-side col-lg-4 col-md-12 col-sm-12">
-                	<aside class="sidebar sticky-top">
-						
-						<!-- Sidebar Widget / About Widget -->
-						<div class="sidebar-widget-two about-widget">
-							<div class="widget-content">
-								<!-- Sidebar Title -->
-								<div class="sidebar-title-two">
-									<h5>About Me</h5>
-								</div>
-								<div class="image">
-									<img src="assets/images/resource/about-widget.jpg" alt="" />
-								</div>
-								<div class="lower-content">
-									<h6>Rosalina D. Willaimson</h6>
-									<div class="text">Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</div>
-									<!-- Social Box -->
-									<ul class="social-box">
-										<li><a href="https://www.facebook.com/" class="fa fa-facebook-f"></a></li>
-										<li><a href="https://www.twitter.com/" class="fa fa-twitter"></a></li>
-										<li><a href="https://www.behance.com/" class="fa fa-behance"></a></li>
-										<li><a href="https://www.linkedin.com/" class="fa fa-linkedin"></a></li>
-										<li><a href="https://youtube.com/" class="fa fa-youtube-play"></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<!-- End Sidebar Widget / About Widget -->
-						
-						<!-- Sidebar Widget / Search Widget -->
-						<div class="sidebar-widget-two about-widget">
-							<div class="widget-content">
-								<!-- Sidebar Title -->
-								<div class="sidebar-title-two">
-									<h5>Search Here</h5>
-								</div>
-								
-								<!-- Search -->
-								<div class="sidebar-widget search-box">
-									<form method="post" action="https://html.themexriver.com/avarton/contact.html">
-										<div class="form-group">
-											<input type="search" name="search-field" value="" placeholder="Search your keyword..." required>
-											<button type="submit"><span class="icon fa fa-search"></span></button>
-										</div>
-									</form>
-								</div>
-								
-							</div>
-						</div>
-						<!-- End Sidebar Widget / Search Widget -->
-						
-						<!-- Sidebar Widget / Popular Posts -->
-						<div class="sidebar-widget-two popular-posts">
-							<div class="widget-content">
-								<!-- Sidebar Title -->
-								<div class="sidebar-title-two">
-									<h5>Popular Feeds</h5>
-								</div>
-								
-								<article class="post">
-									<figure class="post-thumb"><img src="assets/images/resource/post-thumb-1.jpg" alt=""><a href="blog-detail.html" class="overlay-box"><span class="icon fa fa-link"></span></a></figure>
-									<div class="text"><a href="blog-detail.html">Lorem ipsum dolor sit cised do something.</a></div>
-									<div class="post-info">24th March 2022</div>
-								</article>
+	<!-- Faq's Page Section -->
+	<section id="team" class="team-section">
+        <div class="container">
+          <h2>Get to Know Us</h2>
+          <div class="team-grid">
+            <!-- Team Member 1 -->
+            <div class="team-member">
+              <img src="assets/images/team/Charles.jpg" alt="Charles Kim">
+              <h3 class="member-name" data-bio="CHARLES KIM (FOUNDER)
+      Lead: Test Prep and Admissions
+      B.A. Social Administration at the University of California Riverside
+      20 years experience in Test Prep: SAT I/II, ACT, AP Exams, TOEFL/IELTS, etc.
+      12 years experience in Admission Consulting for application to universities, boarding and international schools
+      Head of Test Prep department at Point Avenue
+      Director at Icon Institute, Bundang, Korea
+      Assistant Director at Chase Academy, Seoul, Korea">Charles Kim</h3>
+              <p>Founder</p>
+            </div>
+      
+            <!-- Team Member 2 -->
+            <div class="team-member">
+              <img src="assets/images/team/Dan.jpg" alt="Dan Stone">
+              <h3 class="member-name" data-bio="DAN STONE
+      Co-Founder & International Admissions Consultant
+      B.A. Psychology, Minor in Education - UMass Amherst
+      10+ Years teaching, advising, developing curriculum
+      Former Center Director & Writing teacher at Point Avenue
+      Experience supporting over 400 students with college applications to undergraduate and master's programs in Europe, North America, and Asia, including guidance with visa preparations, scholarship applications, interviews, and resumes.">Dan Stone</h3>
+              <p>Co-Founder Consultant</p>
+            </div>
+      
+            <!-- Team Member 3 -->
+            <div class="team-member">
+              <img src="assets/images/team/Ryan.jpg" alt="Ryan Bleich">
+              <h3 class="member-name" data-bio="RYAN BLEICH 
+      Senior Management Consultant: Boarding School/International School Admissions
+      Ridley College Graduate
+      B.A. History/Geography, and B.Education, Lakehead University
+      Ontario Certified Teacher with over 10+ years experience in Secondary Schooling
+      IB certified teacher: History DP - Route II
+      Academic Consultant partnered with CAIS schools in Canada for over 5+ years
+      Founder of 2 English Academies in Seoul">Ryan Bleich</h3>
+              <p>Senior Management Consultant</p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Bio Popup -->
+        <div id="bio-popup" class="bio-popup">
+          <div class="bio-content">
+            <p id="bio-text"></p>
+          </div>
+        </div>
+      </section>
+      
 
-								<article class="post">
-									<figure class="post-thumb"><img src="assets/images/resource/post-thumb-2.jpg" alt=""><a href="blog-detail.html" class="overlay-box"><span class="icon fa fa-link"></span></a></figure>
-									<div class="text"><a href="blog-detail.html">Lorem ipsum dolor sit cised do something.</a></div>
-									<div class="post-info">24th March 2022</div>
-								</article>
-								
-								<article class="post">
-									<figure class="post-thumb"><img src="assets/images/resource/post-thumb-3.jpg" alt=""><a href="blog-detail.html" class="overlay-box"><span class="icon fa fa-link"></span></a></figure>
-									<div class="text"><a href="blog-detail.html">Lorem ipsum dolor sit cised do something.</a></div>
-									<div class="post-info">24th March 2022</div>
-								</article>
-								
-								<article class="post">
-									<figure class="post-thumb"><img src="assets/images/resource/post-thumb-4.jpg" alt=""><a href="blog-detail.html" class="overlay-box"><span class="icon fa fa-link"></span></a></figure>
-									<div class="text"><a href="blog-detail.html">Lorem ipsum dolor sit cised do something.</a></div>
-									<div class="post-info">24th March 2022</div>
-								</article>
-								
-							</div>
-						</div>
-						<!-- End Sidebar Widget / Popular Posts -->
-						
-						<!-- Sidebar Widget / Category Widget -->
-						<div class="sidebar-widget-two category-widget-two">
-							<div class="widget-content">
-								<!-- Sidebar Title -->
-								<div class="sidebar-title-two">
-									<h5>Categories</h5>
-								</div>
-								<ul class="cat-list-two">
-									<li><a href="#">Business<span>26</span></a></li>
-									<li><a href="#">Consultant<span>30</span></a></li>
-									<li><a href="#">Creative<span>71</span></a></li>
-									<li><a href="#">UI/UX<span>56</span></a></li>
-									<li><a href="#">Technology<span>60</span></a></li>
-								</ul>
-							</div>
-						</div>
-						<!-- End Sidebar Widget / Category Widget -->
-						
-						<!-- Sidebar Widget / Instagram Widget -->
-						<div class="sidebar-widget-two instagram-widget">
-							<div class="widget-content">
-								<!-- Sidebar Title -->
-								<div class="sidebar-title-two">
-									<h5>Categories</h5>
-								</div>
-								<a href="#">Popular</a>
-								<a href="#">Design</a>
-								<a href="#">ux</a>
-								<a href="#">Usability</a>
-								<a href="#">Develop</a>
-								<a href="#">Icon</a>
-								<a href="#">Business</a>
-								<a href="#">Consult</a>
-								<a href="#">Kit</a>
-								<a href="#">Keyboard</a>
-								<a href="#">Mouse</a>
-								<a href="#">Tech</a>
-							</div>
-						</div>
-						<!-- End Sidebar Widget / Instagram Widget -->
-						
-						<!-- Sidebar Widget / Add Widget -->
-						<div class="sidebar-widget-two add-widget">
-							<div class="widget-content">
-								<!-- Sidebar Title -->
-								<div class="sidebar-title-two">
-									<h5>Sponsor Adds</h5>
-								</div>
-								<div class="add-image">
-									<img src="assets/images/resource/add.jpg" alt="" />
-									<div class="add-size">270x240</div>
-								</div>
-							</div>
-						</div>
-						
-					</aside>
-				</div>
-				                                                                    
-			</div>
-		</div>
-	</div>
+	<!-- End Faq's Page Section -->
 	
 	<!-- Main Footer -->
     <footer class="main-footer">
@@ -736,16 +602,67 @@
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 
+<!-- Revolution Slider -->
+<script src="assets/plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script src="assets/plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="assets/plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="assets/plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="assets/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="assets/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="assets/plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+<script src="assets/plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="assets/plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="assets/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="assets/plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
+<script src="assets/plugins/revolution/js/main-slider-script.js"></script>
+<!-- For Js Library -->
+
 <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="assets/js/jquery.fancybox.js"></script>
 <script src="assets/js/appear.js"></script>
+<script src="assets/js/parallax.min.js"></script>
+<script src="assets/js/tilt.jquery.min.js"></script>
+<script src="assets/js/jquery.paroller.min.js"></script>
 <script src="assets/js/owl.js"></script>
 <script src="assets/js/wow.js"></script>
+<script src="assets/js/mixitup.js"></script>
 <script src="assets/js/nav-tool.js"></script>
 <script src="assets/js/jquery-ui.js"></script>
 <script src="assets/js/script.js"></script>
 
+<script>
+    document.querySelectorAll('.member-name').forEach(member => {
+      member.addEventListener('mouseenter', function () {
+        const bioPopup = document.getElementById('bio-popup');
+        const bioText = document.getElementById('bio-text');
+  
+        // Set the bio text from the data-bio attribute
+        bioText.textContent = this.getAttribute('data-bio');
+  
+        // Position the popup near the hovered element at the upper right side
+        const rect = this.closest('.team-member').getBoundingClientRect(); // Get the bounding rectangle of the whole team member card
+        bioPopup.style.top = `${rect.top + window.scrollY - 10}px`; // Position slightly above the card
+        bioPopup.style.left = `${rect.right + window.scrollX + 10}px`; // Position to the right of the card
+  
+        // Show the popup
+        bioPopup.style.display = 'block';
+      });
+  
+      member.addEventListener('mouseleave', function () {
+        const bioPopup = document.getElementById('bio-popup');
+        // Hide the popup when the mouse leaves the name
+        bioPopup.style.display = 'none';
+      });
+    });
+  </script>
+  
+  
+  
+  
+  
+  
+
 </body>
 
-<!-- Mirrored from html.themexriver.com/avarton/blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2024 08:02:05 GMT -->
+<!-- Mirrored from html.themexriver.com/avarton/faq.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2024 08:01:51 GMT -->
 </html>

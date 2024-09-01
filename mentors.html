@@ -1,229 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
-    <title>Prestigious University</title>
+    <title>Our Team</title>
     <!-- Stylesheets -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap"
+        rel="stylesheet">
 
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
     <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+
 
     <!-- Responsive -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
     <style>
-        body {
-            font-family: 'Merriweather', serif;
-            color: #333;
-            background-color: #f4f4f9;
-        }
+        /* General Body Styling */
+body {
+    font-family: 'Merriweather', serif;
+    color: #333;
+    background-color: #f4f4f9;
+}
 
-        .main-header .header-top {
-            background-color: #002147;
-            color: white;
-        }
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-        .main-header .header-top .text {
-            color: white;
-        }
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
-        .main-header .header-top .top-right .text a {
-            color: #ffc72c;
-        }
+/* Animation Effects */
+.animated-image {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
 
-        .main-header .header-lower .logo-box .logo img {
-            max-height: 80px;
-        }
+.fade-in {
+    animation-name: fadeIn;
+}
 
-        .main-slider .rev_slider_wrapper {
-            max-height: 600px;
-        }
+.slide-in {
+    animation-name: slideIn;
+}
 
-        .main-slider .rev-slidebg {
-            opacity: 0.8;
-        }
+/* Dropdown Menu Styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
 
-        .sec-title .title {
-            color: #002147;
-            font-weight: bold;
-        }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
 
-        .sec-title h2 {
-            font-size: 36px;
-            color: #333;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
 
-        .team-section .team-block .inner-box {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-            text-align: center;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
 
-        .team-section .team-block .inner-box:hover {
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            transform: translateY(-5px);
-        }
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
-        .team-section .team-block .image img {
-            border-radius: 50%;
-            border: 5px solid #002147;
-            max-width: 100%;
-            height: auto;
-            transition: transform 0.3s ease;
-        }
+.dropdown-submenu {
+    position: relative;
+}
 
-        .team-section .team-block .inner-box:hover .image img {
-            transform: scale(1.05);
-        }
+.dropdown-submenu:hover .dropdown-content {
+    display: block;
+    left: 100%;
+    top: 0;
+}
 
-        .team-section .team-block .lower-content h4 a {
-            color: #002147;
-            font-weight: bold;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
+/* Logo Styling */
+.logo {
+    position: relative;
+    top: -80px;
+    margin-right: 20px;
+}
 
-        .team-section .team-block .lower-content h4 a:hover {
-            color: #ffc72c;
-        }
+.logo img {
+    height: 300px;
+    width: auto;
+}
 
-        .team-section .team-block .lower-content .designation {
-            color: #666;
-            font-style: italic;
-        }
+/* Footer Logo Styling */
+.footer-widget.logo-widget {
+    text-align: left;
+    margin-bottom: 20px;
+}
 
-        .bio-modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            padding-top: 100px;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgb(0, 0, 0);
-            background-color: rgba(0, 0, 0, 0.4);
-        }
+.footer-widget .logo img {
+    height: 200px;
+    width: auto;
+    display: block;
+    margin-bottom: -150px;
+}
 
-        .bio-modal .bio-content {
-            background-color: #fefefe;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 600px;
-            border-radius: 10px;
-        }
+/* Main Slider Styling */
+.main-slider {
+    position: relative;
+}
 
-        .bio-modal .bio-content .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
+.main-slider .rev-slidebg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
-        .bio-modal .bio-content .close:hover,
-        .bio-modal .bio-content .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
+.main-slider .logo-overlay {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
 
-        .button-box a.theme-btn {
-            background-color: #002147;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
+.main-slider h1 {
+    font-size: 50px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    line-height: 1.2;
+}
 
-        .button-box a.theme-btn:hover {
-            background-color: #ffc72c;
-            color: #002147;
-        }
-           .dropdown {
-                position: relative;
-                display: inline-block;
-            }
-        
-            .dropdown-content {
-                display: none;
-                position: absolute;
-                background-color: #f9f9f9;
-                min-width: 160px;
-                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                z-index: 1;
-            }
-        
-            .dropdown-content a {
-                color: black;
-                padding: 12px 16px;
-                text-decoration: none;
-                display: block;
-            }
-        
-            .dropdown-content a:hover {background-color: #f1f1f1;}
-        
-            .dropdown:hover .dropdown-content {
-                display: block;
-            }
-        
-            .dropdown-submenu {
-                position: relative;
-            }
-        
-            .dropdown-submenu:hover .dropdown-content {
-                display: block;
-                left: 100%;
-                top: 0;
-            }
-            .logo {
-                position: relative; /* Allows positioning adjustments */
-                top: -80px; /* Moves the logo upwards more */
-                margin-right: 20px; /* Adds some spacing between the logo and the navigation */
-            }
-            
-            .logo img {
-                height: 300px; /* Adjust the height to make the logo smaller */
-                width: auto; /* Maintain the aspect ratio */
-            }
-            /* Footer Logo Styling */
-            /* Footer Logo Styling */
-            /* Footer Logo Styling */
-            .footer-widget.logo-widget {
-                text-align: left; /* Aligns content to the left */
-                margin-bottom: 20px; /* Adds space below the logo */
-            }
-            
-            /* Logo Image Styling */
-            .footer-widget .logo img {
-                height: 200px; /* Increase the height to make the logo larger */
-                width: auto; /* Maintain aspect ratio */
-                display: block; /* Ensures the image is displayed as a block element */
-                margin-bottom:-150px; /* Adds space between the logo and the text */
-            }
-        
+.main-slider .text {
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.main-slider .button-box {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.theme-btn.btn-style-two {
+    background-color: #004a2f;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.theme-btn.btn-style-two:hover {
+    background-color: #ffc72c;
+    color: #004a2f;
+}
+
+/* Team Section Styling */
+.team-section .team-block .inner-box {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-section .team-block .inner-box:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.team-section .team-block .image img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #0e0e0b;
+    transition: transform 0.3s ease;
+}
+
+.team-section .team-block .inner-box:hover .image img {
+    transform: scale(1.05);
+}
+
+.team-section .team-block .lower-content h4 a {
+    color: #002147;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-top: 10px;
+}
+
+.team-section .team-block .lower-content {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.team-section .team-block .lower-content h4 a:hover {
+    color: #ffc72c;
+}
+
+.team-section .team-block .lower-content .designation {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.team-section .row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Bio Modal Styling */
+.bio-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.bio-modal.show {
+    display: block;
+    opacity: 1;
+}
+
+.bio-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px 40px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    transform: scale(0.95);
+}
+
+.bio-content p {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 20px;
+    color: #030404;
+}
+
+.bio-content p i {
+    margin-right: 10px;
+}
+
+.bio-content h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.bio-modal.show .bio-content {
+    transform: scale(1);
+}
+
+/* Close Button Styling */
+.bio-content .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.bio-content .close:hover,
+.bio-content .close:focus {
+    color: black;
+    text-decoration: none;
+}
+
     </style>
 </head>
 
 <body class="hidden-bar-wrapper">
 
     <div class="page-wrapper">
-        <!-- Header Style One -->
+
+        <!-- Header Section -->
+
         <header class="main-header">
     	
             <!-- Header Top -->
@@ -289,7 +396,7 @@
                                         <ul>
                                             <li><a href="about.html">Who We Are</a></li>
                                             <li><a href="faq.html">What We Specialize In</a></li>
-                                            <li><a href="mentors.html">Our Team</a></li>
+                                            <li><a href="team.html">Our Team</a></li>
                                             
                                         </ul>
                                     </li>
@@ -375,136 +482,159 @@
         
         </header>
         <!-- End Main Header -->
-
+        
+        <!-- Sidebar Cart Item -->
+        <div class="xs-sidebar-group info-group">
+            <div class="xs-overlay xs-bg-black"></div>
+            <div class="xs-sidebar-widget">
+                <div class="sidebar-widget-container">
+                    <div class="widget-heading">
+                        <a href="#" class="close-side-widget">
+                            X
+                        </a>
+                    </div>
+                    <div class="sidebar-textwidget">
+                        <!-- Sidebar Info Content -->
+                        <div class="sidebar-info-contents">
+                            <div class="content-inner">
+                                <div class="logo">
+                                    <a href="index.html"><img src="assets/images/logo.png" alt="" /></a>
+                                </div>
+                                <div class="content-box">
+                                    <h4>About Us</h4>
+                                    <p class="text">I am glad that you have made it here to send a distress signal, and inform the Senate that all on board killed. Dantooine. I’m not going to Alderaan. I really got to go. But that to me.</p>
+                                    <a href="consultant.html" class="theme-btn btn-style-one"><span class="txt">Consultation</span></a>
+                                </div>
+                                <div class="contact-info">
+                                    <h4>Contact Info</h4>
+                                    <ul class="list-style-one">
+                                        <li><span class="icon fa fa-location-arrow"></span>Chicago 12, Melborne City, USA</li>
+                                        <li><span class="icon fa fa-phone"></span>(111) 111-111-1111</li>
+                                        <li><span class="icon fa fa-envelope"></span>avarton@gmail.com</li>
+                                        <li><span class="icon fa fa-clock-o"></span>Week Days: 09.00 to 18.00 Sunday: Closed</li>
+                                    </ul>
+                                </div>
+                                <!-- Social Box -->
+                                <ul class="social-box">
+                                    <li><a href="https://www.facebook.com/" class="fa fa-facebook-f"></a></li>
+                                    <li><a href="https://www.twitter.com/" class="fa fa-twitter"></a></li>
+                                    <li><a href="https://www.linkedin.com/" class="fa fa-linkedin"></a></li>
+                                    <li><a href="https://youtube.com/" class="fa fa-youtube-play"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END sidebar widget item -->
+        
         <!-- Main Slider -->
-        <section class="main-slider">
-            <div class="rev_slider_wrapper fullwidthbanner-container" id="rev_slider_one_wrapper" data-source="gallery">
-                <div class="rev_slider fullwidthabanner" id="rev_slider_one" data-version="5.4.1">
-                    <ul>
-                        <li data-transition="slidingoverlayhorizontal" data-description="Slide Description" data-index="rs-1688" data-slotamount="default" data-thumb="assets/images/main-slider/image-1.jpg" data-title="Slide Title">
-                            <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="assets/images/main-slider/image-1.jpg">
+        <!-- Main Slider -->
+<!-- Main Slider -->
+<section class="main-slider">
+    <div class="rev_slider_wrapper fullwidthbanner-container" id="rev_slider_one_wrapper" data-source="gallery">
+        <div class="rev_slider fullwidthabanner" id="rev_slider_one" data-version="5.4.1">
+            <ul>
+                <!-- Slide -->
+                <li data-transition="slidingoverlayhorizontal" data-description="Slide Description" data-index="rs-1688"
+                    data-slotamount="default" data-thumb="assets/images/main-slider/image-1.jpg"
+                    data-title="Slide Title">
+                    <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10"
+                        data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina=""
+                        src="assets/images/main-slider/image-1.jpg">
 
-                            <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['1100','800','800','500']" data-whitespace="normal" data-hoffset="['15','15','15','15']" data-voffset="['-150','-240','-210','-210']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="">
-                                <div class="title">Welcome to Our University</div>
-                            </div>
-
-                            <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['1100','800','800','500']" data-whitespace="normal" data-hoffset="['15','15','15','15']" data-voffset="['-30','-100','-100','-110']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"delay":0,"split":"chars","splitdelay":0.05,"speed":2000,"frame":"0","from":"x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"power4.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"power3.inOut"}]' style="">
-                                <h1>Excellence in <br> Education</h1>
-                            </div>
-
-                            <div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['1100','800','800','500']" data-whitespace="normal" data-hoffset="['15','15','15','15']" data-voffset="['100','40','15','0']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"delay":0,"speed":1500,"frame":"0","from":"x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;","mask":"x:[-100%];y:0;s:inherit;e:inherit;","to":"o:1;","ease":"power3.out"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"power3.inOut"}]' style="">
-                                <div class="text">Join us on a journey of academic excellence and personal growth.</div>
-                            </div>
-
-                            <div class="tp-caption tp-resizeme" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-width="['700','700','700','500']" data-whitespace="normal" data-hoffset="['15','15','15','15']" data-voffset="['190','150','105','100']" data-x="['left','left','left','left']" data-y="['middle','middle','middle','middle']" data-textalign="['top','top','top','top']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' style="">
-                                <div class="button-box">
-                                    <a href="services.html" class="theme-btn btn-style-two"><span class="txt">Get Started</span></a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <!-- End Main Slider -->
-
-        <!-- About Section -->
-        <section class="about-section">
-            <div class="auto-container">
-                <div class="row clearfix">
-                    <!-- Image Column -->
-                    <div class="image-column col-lg-5 col-md-12 col-sm-12">
-                        <div class="inner-column">
-                            <div class="image" data-tilt data-tilt-max="3">
-                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\school.jpg" alt="" />
-                            </div>
-                        </div>
+                    <!-- Overlay content -->
+                    <div class="tp-caption logo-overlay"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="image"
+                        data-height="none"
+                        data-width="['auto']"
+                        data-whitespace="normal"
+                        data-hoffset="['0','0','0','0']"
+                        data-voffset="['-130','-100','-100','-110']"
+                        data-x="['center','center','center','center']"
+                        data-y="['top','top','top','top']"
+                        data-textalign="['center','center','center','center']"
+                        data-frames='[{"delay":0,"speed":1500,"frame":"0","from":"x:0px;y:-100px;z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"}]'
+                        style="z-index: 5;">
+                        <img src="assets/images/logo.png" alt="Kylan Logo">
                     </div>
 
-                    <!-- Content Column -->
-                    <div class="content-column col-lg-7 col-md-12 col-sm-12">
-                        <div class="inner-column">
-                            <div class="sec-title">
-                                <div class="title">About Us</div>
-                                <h2>Empowering Future Leaders</h2>
-                                <div class="text">We are dedicated to nurturing the minds and talents of our students, helping them to become the best versions of themselves. Join us on a journey of growth and excellence.</div>
-                            </div>
-                            <div class="row clearfix">
-                                <!-- Column -->
-                                <div class="column col-lg-4 col-md-4 col-sm-12">
-                                    <ul class="option-list">
-                                        <li>
-                                            <span class="icon transition-500ms flaticon-check"></span>
-                                            Flexible <br> Schedules
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- Column -->
-                                <div class="column col-lg-4 col-md-4 col-sm-12">
-                                    <ul class="option-list">
-                                        <li>
-                                            <span class="icon transition-500ms flaticon-check"></span>
-                                            24/7 Online <br> Support
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- Column -->
-                                <div class="column col-lg-4 col-md-4 col-sm-12">
-                                    <ul class="option-list">
-                                        <li>
-                                            <span class="icon transition-500ms flaticon-check"></span>
-                                            Personalized <br> Guidance
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                    <!-- Text content -->
+                    <div class="tp-caption"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="text"
+                        data-height="none"
+                        data-width="['1100','800','800','500']"
+                        data-whitespace="normal"
+                        data-hoffset="['15','15','15','15']"
+                        data-voffset="['-30','-100','-100','-110']"
+                        data-x="['center','center','center','center']"
+                        data-y="['middle','middle','middle','middle']"
+                        data-textalign="['center','center','center','center']"
+                        data-frames='[{"delay":0,"speed":1500,"frame":"0","from":"x:0px;y:-100px;z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"}]'
+                        style="">
+                        <h1>Kylan</h1>
+                    </div>
 
-                            <!-- Counter Box -->
-                            <div class="counter-box">
-                                <!-- Fact Counter -->
-                                <div class="fact-counter">
-                                    <div class="row clearfix">
-                                        <!-- Column -->
-                                        <div class="counter-column col-lg-4 col-md-4 col-sm-12">
-                                            <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                                                <div class="content">
-                                                    <div class="count-outer count-box">
-                                                        <span class="count-text" data-speed="2500" data-stop="10">0</span>k
-                                                    </div>
-                                                    <div class="counter-title">Active Students <br> Worldwide</div>
-                                                </div>
-                                            </div>
-                                        </div>
+                    <!-- Subtitle Text -->
+                    <div class="tp-caption"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="text"
+                        data-height="none"
+                        data-width="['1100','800','800','500']"
+                        data-whitespace="normal"
+                        data-hoffset="['15','15','15','15']"
+                        data-voffset="['100','40','15','0']"
+                        data-x="['center','center','center','center']"
+                        data-y="['middle','middle','middle','middle']"
+                        data-textalign="['center','center','center','center']"
+                        data-frames='[{"delay":500,"speed":1500,"frame":"0","from":"x:[-100%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"}]'
+                        style="">
+                        <div class="text">Empowering empathetic, independent thinkers to uphold values and forge a positive future.</div>
+                    </div>
 
-                                        <!-- Column -->
-                                        <div class="counter-column col-lg-4 col-md-4 col-sm-12">
-                                            <div class="inner wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
-                                                <div class="content">
-                                                    <div class="count-outer count-box">
-                                                        <span class="count-text" data-speed="2500" data-stop="10">0</span>k
-                                                    </div>
-                                                    <div class="counter-title">Campus Locations <br> Globally</div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Column -->
-                                        <div class="counter-column col-lg-4 col-md-4 col-sm-12">
-                                            <div class="inner wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
-                                                <div class="content">
-                                                    <div class="count-outer count-box">
-                                                      
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Counter Box -->
+                    <!-- Button -->
+                    <div class="tp-caption tp-resizeme"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="text"
+                        data-height="none"
+                        data-width="['700','700','700','500']"
+                        data-whitespace="normal"
+                        data-hoffset="['0','0','0','0']"
+                        data-voffset="['190','150','105','100']"
+                        data-x="['center','center','center','center']"
+                        data-y="['middle','middle','middle','middle']"
+                        data-textalign="['center','center','center','center']"
+                        data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"}]'
+                        style="">
+                        <div class="button-box">
+                            <a href="service-detail.html" class="theme-btn btn-style-two"><span class="txt">Check Our Services</span></a>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
         <!-- End About Section -->
 
         <!-- Team Section -->
@@ -514,16 +644,20 @@
                     <div class="title">Our Team</div>
                     <h2>Get to Know Us</h2>
                 </div>
+                <div class="center-image">
+                    <img src="assets\images\team.jpg" alt="Central Image" class="central-img">
+                    <p class="quote">"We highly recommend Kylan's consultant."</p>
+                </div>
                 <div class="row clearfix">
                     <!-- Team Block -->
                     <div class="team-block col-lg-3 col-md-6 col-sm-12">
                         <div class="inner-box">
                             <div class="image">
-                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\" alt="Peter Chi" />
+                                <img src="assets\images\team\Charles.jpg" alt="Charles" />
                             </div>
                             <div class="lower-content">
-                                <h4><a href="#" class="open-bio" data-bio="teacher1-bio">Peter Chi</a></h4>
-                                <div class="designation">Managing Director</div>
+                                <h4><a href="#" class="open-bio" data-bio="teacher1-bio">Charles Kim</a></h4>
+                                <div class="designation">Founder</div>
                             </div>
                         </div>
                     </div>
@@ -531,11 +665,11 @@
                     <div class="team-block col-lg-3 col-md-6 col-sm-12">
                         <div class="inner-box">
                             <div class="image">
-                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\Hye-Ju.jpg" alt="Hyeju Yoon" />
+                                <img src="assets\images\team\Dan.jpg" alt="Dan Stone" />
                             </div>
                             <div class="lower-content">
-                                <h4><a href="#" class="open-bio" data-bio="teacher2-bio">Hyeju Yoon</a></h4>
-                                <div class="designation">Director</div>
+                                <h4><a href="#" class="open-bio" data-bio="teacher2-bio">Dan Stone</a></h4>
+                                <div class="designation">Co-Founder Consultant</div>
                             </div>
                         </div>
                     </div>
@@ -546,152 +680,8 @@
                                 <img src="assets\images\team\Ryan.jpg" alt="Ryan Stewart" />
                             </div>
                             <div class="lower-content">
-                                <h4><a href="#" class="open-bio" data-bio="teacher3-bio">RYAN BLEICH </a></h4>
-                                <div class="designation">Admissions Consultant</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team-block col-lg-3 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image">
-                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\Sarang.jpg" alt="Sarang Lee" />
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="#" class="open-bio" data-bio="teacher4-bio">Sarang Lee</a></h4>
-                                <div class="designation">Admissions Consultant</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team-block col-lg-3 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image">
-                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\Richard.jpg" alt="Richard Koh" />
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="#" class="open-bio" data-bio="teacher5-bio">Richard Koh</a></h4>
-                                <div class="designation">Admissions Consultant</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team-block col-lg-3 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image">
-                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\Peter-Lee.jpg" alt="Peter Lee" />
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="#" class="open-bio" data-bio="teacher6-bio">Peter Lee</a></h4>
-                                <div class="designation">Admissions Consultant</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team-block col-lg-3 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image">
-                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\Christina.jpg" alt="Christina Kwon" />
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="#" class="open-bio" data-bio="teacher7-bio">Christina Kwon</a></h4>
-                                <div class="designation">Admissions Consultant</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team-block col-lg-3 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image">
-                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\Suzie.jpg" alt="Suzie Im" />
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="#" class="open-bio" data-bio="teacher8-bio">Suzie Im</a></h4>
-                                <div class="designation">Client Relations Manager</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team-block col-lg-3 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image">
-                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\Boyoon.jpg" alt="Boyoon Kim" />
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="#" class="open-bio" data-bio="teacher9-bio">Boyoon Kim</a></h4>
-                                <div class="designation">Client Relations Officer</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team-block col-lg-3 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image">
-                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\Suyeon.jpg" alt="Suyeon Hwang" />
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="#" class="open-bio" data-bio="teacher10-bio">Suyeon Hwang</a></h4>
-                                <div class="designation">Administrative Officer</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team-block col-lg-3 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image">
-                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\Ben.jpg" alt="Ben Coz" />
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="#" class="open-bio" data-bio="teacher11-bio">Ben Coz</a></h4>
-                                <div class="designation">Admissions Consultant</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team-block col-lg-3 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image">
-                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\Eli.jpg" alt="Eli Lee" />
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="#" class="open-bio" data-bio="teacher12-bio">Eli Lee</a></h4>
-                                <div class="designation">Admissions Consultant</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team-block col-lg-3 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image">
-                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\Jaimin.jpg" alt="Jaimin Yoon" />
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="#" class="open-bio" data-bio="teacher13-bio">Jaimin Yoon</a></h4>
-                                <div class="designation">Admissions Consultant</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team-block col-lg-3 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image">
-                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\Jae.jpg" alt="Jae Chang" />
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="#" class="open-bio" data-bio="teacher14-bio">Jae Chang</a></h4>
-                                <div class="designation">Admissions Consultant</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team-block col-lg-3 col-md-6 col-sm-12">
-                        <div class="inner-box">
-                            <div class="image">
-                                <img src="C:\Users\phuc_\Desktop\KylanUpdate\Kylan\assets\images\team\Henry.jpg" alt="Henry Byun" />
-                            </div>
-                            <div class="lower-content">
-                                <h4><a href="#" class="open-bio" data-bio="teacher15-bio">Henry Byun</a></h4>
-                                <div class="designation">Admissions Consultant</div>
+                                <h4><a href="#" class="open-bio" data-bio="teacher3-bio">Ryan Bleich </a></h4>
+                                <div class="designation">Senior Management Consultant</div>
                             </div>
                         </div>
                     </div>
@@ -700,111 +690,52 @@
         </section>
 
         <!-- Bio Modals -->
+
         <div id="teacher1-bio" class="bio-modal">
             <div class="bio-content">
                 <span class="close">&times;</span>
-                <h2>Peter Chi</h2>
-                <p>Bio details...</p>
+                <h2>Charles Kim</h2>
+                <p><strong>Lead: Test Prep and Admissions</strong></p>
+                <p>&#10003; B.A. Social Administration at the University of California Riverside</p>
+                <p>&#10003; 20 years experience in Test Prep: SAT I/II, ACT, AP Exams, TOEFL/IELTS, etc.</p>
+                <p>&#10003; 12 years experience in Admission Consulting for applications to universities, boarding, and
+                    international schools</p>
+                <p>&#10003; Head of Test Prep department at Point Avenue</p>
+                <p>&#10003; Director at Icon Institute, Bundang, Korea</p>
+                <p>&#10003; Assistant Director at Chase Academy, Seoul, Korea</p>
             </div>
         </div>
+
         <div id="teacher2-bio" class="bio-modal">
             <div class="bio-content">
                 <span class="close">&times;</span>
-                <h2>Hyeju Yoon</h2>
-                <p>Bio details...</p>
+                <h2>Dan Stone</h2>
+                <p><strong>Co-Founder & International Admissions Consultant</strong></p>
+                <p>&#10003; B.A. Psychology, Minor in Education - UMass Amherst</p>
+                <p>&#10003; 10+ Years teaching, advising, developing curriculum</p>
+                <p>&#10003; Former Center Director & Writing teacher at Point Avenue</p>
+                <p>&#10003; Experience supporting 400+ students with college applications to undergraduate and master's
+                    programs in Europe, North America, and Asia, including guidance with visa preparations, scholarship
+                    applications, interviews, and resumes.</p>
             </div>
         </div>
+
         <div id="teacher3-bio" class="bio-modal">
             <div class="bio-content">
                 <span class="close">&times;</span>
-                <h2>John Char</h2>
-                <p>Bio details...</p>
+                <h2>Ryan Bleich</h2>
+                <p><strong>Senior Management Consultant: Boarding School/International School Admissions</strong></p>
+                <p>&#10003; Ridley College Graduate</p>
+                <p>&#10003; B.A. History/Geography, and B.Education, Lakehead University</p>
+                <p>&#10003; Ontario Certified Teacher with over 10+ years experience in Secondary Schooling</p>
+                <p>&#10003; IB certified teacher: History DP - Route II</p>
+                <p>&#10003; Academic Consultant partnered with CAIS schools in Canada for over 5+ years</p>
+                <p>&#10003; Founder of 2 English Academies in Seoul</p>
             </div>
         </div>
-        <div id="teacher4-bio" class="bio-modal">
-            <div class="bio-content">
-                <span class="close">&times;</span>
-                <h2>Sarang Lee</h2>
-                <p>Bio details...</p>
-            </div>
-        </div>
-        <div id="teacher5-bio" class="bio-modal">
-            <div class="bio-content">
-                <span class="close">&times;</span>
-                <h2>Richard Koh</h2>
-                <p>Bio details...</p>
-            </div>
-        </div>
-        <div id="teacher6-bio" class="bio-modal">
-            <div class="bio-content">
-                <span class="close">&times;</span>
-                <h2>Peter Lee</h2>
-                <p>Bio details...</p>
-            </div>
-        </div>
-        <div id="teacher7-bio" class="bio-modal">
-            <div class="bio-content">
-                <span class="close">&times;</span>
-                <h2>Christina Kwon</h2>
-                <p>Bio details...</p>
-            </div>
-        </div>
-        <div id="teacher8-bio" class="bio-modal">
-            <div class="bio-content">
-                <span class="close">&times;</span>
-                <h2>Suzie Im</h2>
-                <p>Bio details...</p>
-            </div>
-        </div>
-        <div id="teacher9-bio" class="bio-modal">
-            <div class="bio-content">
-                <span class="close">&times;</span>
-                <h2>Boyoon Kim</h2>
-                <p>Bio details...</p>
-            </div>
-        </div>
-        <div id="teacher10-bio" class="bio-modal">
-            <div class="bio-content">
-                <span class="close">&times;</span>
-                <h2>Suyeon Hwang</h2>
-                <p>Bio details...</p>
-            </div>
-        </div>
-        <div id="teacher11-bio" class="bio-modal">
-            <div class="bio-content">
-                <span class="close">&times;</span>
-                <h2>Ben Coz</h2>
-                <p>Bio details...</p>
-            </div>
-        </div>
-        <div id="teacher12-bio" class="bio-modal">
-            <div class="bio-content">
-                <span class="close">&times;</span>
-                <h2>Eli Lee</h2>
-                <p>Bio details...</p>
-            </div>
-        </div>
-        <div id="teacher13-bio" class="bio-modal">
-            <div class="bio-content">
-                <span class="close">&times;</span>
-                <h2>Jaimin Yoon</h2>
-                <p>Bio details...</p>
-            </div>
-        </div>
-        <div id="teacher14-bio" class="bio-modal">
-            <div class="bio-content">
-                <span class="close">&times;</span>
-                <h2>Jae Chang</h2>
-                <p>Bio details...</p>
-            </div>
-        </div>
-        <div id="teacher15-bio" class="bio-modal">
-            <div class="bio-content">
-                <span class="close">&times;</span>
-                <h2>Henry Byun</h2>
-                <p>Bio details...</p>
-            </div>
-        </div>
+
+
+
 
         <!-- JavaScript for Modals -->
         <script>
@@ -816,24 +747,37 @@
                 openButtons.forEach(function (button) {
                     button.addEventListener('click', function () {
                         var bioId = button.getAttribute('data-bio');
-                        document.getElementById(bioId).style.display = 'block';
+                        var modal = document.getElementById(bioId);
+                        modal.style.display = 'block';
+                        setTimeout(function () {
+                            modal.classList.add('show');
+                        }, 10); // Small delay to trigger the CSS transition
                     });
                 });
 
                 closeButtons.forEach(function (button) {
                     button.addEventListener('click', function () {
-                        button.parentElement.parentElement.style.display = 'none';
+                        var modal = button.closest('.bio-modal');
+                        modal.classList.remove('show');
+                        setTimeout(function () {
+                            modal.style.display = 'none';
+                        }, 300); // Match delay to the transition duration
                     });
                 });
 
                 window.addEventListener('click', function (event) {
                     modals.forEach(function (modal) {
                         if (event.target == modal) {
-                            modal.style.display = 'none';
+                            modal.classList.remove('show');
+                            setTimeout(function () {
+                                modal.style.display = 'none';
+                            }, 300); // Match delay to the transition duration
                         }
                     });
                 });
             });
+
+
         </script>
 
         <!-- Scroll To Top -->
@@ -845,21 +789,24 @@
                 <!-- Widgets Section -->
                 <div class="widgets-section">
                     <div class="row clearfix">
-                        
+
                         <!-- Column -->
                         <div class="big-column col-lg-6 col-md-12 col-sm-12">
                             <div class="row clearfix">
-                            
+
                                 <!-- Footer Column -->
                                 <div class="footer-column col-lg-6 col-md-6 col-sm-12">
                                     <div class="footer-widget logo-widget">
                                         <div class="logo">
                                             <a href="index.html"><img src="assets/images/logo.png" alt="" /></a>
                                         </div>
-                                        <div class="text">Kylan Consulting is a team of education consultants, admissions strategists, and trusted friends and family. We partner with families to simplify admissions processes and guide students toward personal, academic, and extracurricular success.</div>
+                                        <div class="text">Kylan Consulting is a team of education consultants,
+                                            admissions strategists, and trusted friends and family. We partner with
+                                            families to simplify admissions processes and guide students toward
+                                            personal, academic, and extracurricular success.</div>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Footer Column -->
                                 <div class="footer-column col-lg-6 col-md-6 col-sm-12">
                                     <div class="footer-widget links-widget">
@@ -887,56 +834,62 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
-                        
+
                         <!-- Column -->
                         <div class="big-column col-lg-6 col-md-12 col-sm-12">
                             <div class="row clearfix">
-                                
+
                                 <!-- Footer Column -->
                                 <div class="footer-column col-lg-6 col-md-6 col-sm-12">
                                     <div class="footer-widget info-widget">
                                         <h5>Get In Touch</h5>
                                         <ul class="contact-info-list">
-                                            <li><span>Head Office</span><a href="https://maps.app.goo.gl/q7fX7Pw97DjcX6Q57">Shophouse A26, Sunshine City, Ciputra, Bac Tu Liem, Ha Noi, 100000</a></li>
+                                            <li><span>Head Office</span><a
+                                                    href="https://maps.app.goo.gl/q7fX7Pw97DjcX6Q57">Shophouse A26,
+                                                    Sunshine City, Ciputra, Bac Tu Liem, Ha Noi, 100000</a></li>
                                         </ul>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Footer Column -->
                                 <div class="footer-column col-lg-6 col-md-6 col-sm-12">
                                     <div class="footer-widget newsletter-widget">
                                         <h5>Newsletter</h5>
                                         <!-- Newsletter Form -->
                                         <div class="newsletter-form">
-                                            <form method="post" action="https://html.themexriver.com/avarton/contact.html">
+                                            <form method="post"
+                                                action="https://html.themexriver.com/avarton/contact.html">
                                                 <div class="form-group">
                                                     <span class="icon flaticon-email"></span>
-                                                    <input type="email" name="search-field" value="" placeholder="Email address" required>
-                                                    <button type="submit" class="theme-btn submit-btn">Subscribe Now<span class="arrow flaticon-right-arrow-1"></span></button>
+                                                    <input type="email" name="search-field" value=""
+                                                        placeholder="Email address" required>
+                                                    <button type="submit" class="theme-btn submit-btn">Subscribe
+                                                        Now<span class="arrow flaticon-right-arrow-1"></span></button>
                                                 </div>
                                             </form>
                                         </div>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
-                
+
                 <div class="footer-bottom">
                     <div class="clearfix">
                         <div class="pull-left">
-                            <div class="copyright">Copyright By &copy; <a href="https://themeforest.net/user/themexriver">Kylan</a> - 2024</div>
+                            <div class="copyright">Copyright By &copy; <a
+                                    href="https://themeforest.net/user/themexriver">Kylan</a> - 2024</div>
                         </div>
-                        
+
                     </div>
                 </div>
-                
+
             </div>
         </footer>
         <!-- End Footer -->
@@ -958,4 +911,5 @@
         <script src="assets/js/script.js"></script>
     </div>
 </body>
+
 </html>
