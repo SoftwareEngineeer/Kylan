@@ -101,6 +101,118 @@
 .icon-input input {
     padding-left: 40px; /* Adjust as needed to prevent text overlay on the icon */
 }
+.lower-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.lower-box ul li {
+    margin: 5px 0;
+}
+
+.lower-box ul li a {
+    text-decoration: none;
+    color: #007bff; /* Adjust color as needed */
+    transition: color 0.3s;
+}
+
+.lower-box ul li a:hover {
+    color: #0056b3; /* Adjust hover color as needed */
+}
+.heading-with-dropdown {
+    position: relative;
+    cursor: pointer; /* Show pointer cursor on hover */
+    margin-bottom: 0;
+    text-align: center; /* Center the heading text */
+}
+
+.dropdown-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0; /* Space the dropdown list below the heading */
+    display: none; /* Hide by default */
+    text-align: center; /* Center dropdown items */
+}
+
+.lower-box:hover .dropdown-list {
+    display: block; /* Show on hover */
+    position: absolute; /* Position it relative to the heading */
+    left: 50%; 
+    transform: translateX(-50%);
+    background: #fff; /* Add background for better visibility */
+    border: 1px solid #ddd; /* Optional: Add a border */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
+    padding: 10px 0; /* Padding inside dropdown */
+    z-index: 10; /* Ensure dropdown is on top */
+}
+
+.dropdown-list li {
+    margin: 5px 0; /* Space between items */
+}
+
+.dropdown-list li a {
+    text-decoration: none;
+    color: #007bff; /* Link color */
+    display: block; /* Make the whole line clickable */
+    padding: 5px 20px; /* Space around links */
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.dropdown-list li a:hover {
+    background-color: #f0f0f0; /* Highlight on hover */
+    color: #0056b3; /* Change color on hover */
+}
+/* Set the desired width and height for all service images */
+/* Set the desired width and height for all service images */
+/* Set uniform size for images */
+.service-block .image img {
+    width: 100%; /* Full width of the container */
+    height: 300px; /* Set the desired height */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    transition: transform 0.5s ease; /* Smooth transition for the image */
+}
+
+/* Set hover effect for the entire service block */
+.service-block {
+    transition: transform 0.5s ease; /* Smooth transition for the entire block */
+}
+
+/* Zoom-out effect on hover */
+.service-block:hover {
+    transform: scale(1.05); /* Slightly zoom out the entire block */
+}
+
+/* Optional: Hover effect for the image to make it smoother */
+.service-block .image img:hover {
+    transform: scale(1.1); /* Slightly zoom out the image on hover */
+}
+/* Logo Styling */
+.logo {
+    position: relative; /* Allows positioning adjustments */
+    top: -80px; /* Moves the logo upwards more */
+    margin-right: 20px; /* Adds some spacing between the logo and the navigation */
+}
+
+.logo img {
+    height: 300px; /* Adjust the height to make the logo smaller */
+    width: auto; /* Maintain the aspect ratio */
+}
+/* Footer Logo Styling */
+/* Footer Logo Styling */
+/* Footer Logo Styling */
+.footer-widget.logo-widget {
+    text-align: left; /* Aligns content to the left */
+    margin-bottom: 20px; /* Adds space below the logo */
+}
+
+/* Logo Image Styling */
+.footer-widget .logo img {
+    height: 200px; /* Increase the height to make the logo larger */
+    width: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures the image is displayed as a block element */
+    margin-bottom:-150px; /* Adds space between the logo and the text */
+}
+
 
 	</style>
 </head>
@@ -235,9 +347,7 @@
         <div class="sticky-header">
             <div class="auto-container clearfix">
                 <!--Logo-->
-                <div class="logo pull-left">
-                    <a href="index.html" title=""><img src="assets/images/logo-small.png" alt="" title=""></a>
-                </div>
+                
                 <!--Right Col-->
                 <div class="pull-right">
 				
@@ -260,7 +370,7 @@
             <div class="close-btn"><span class="icon flaticon-multiply"></span></div>
             
             <nav class="menu-box">
-                <div class="nav-logo"><a href="index.html"><img src="assets/images/logo-small.png" alt="" title=""></a></div>
+                <div class="nav-logo"><a href="index.html"><img src="assets/images/logo.png" alt="" title=""></a></div>
                 <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
             </nav>
         </div><!-- End Mobile Menu -->
@@ -288,7 +398,7 @@
 							</div>
 							<div class="content-box">
 								<h4>About Us</h4>
-								<p class="text">I am glad that you have made it here to send a distress signal, and inform the Senate that all on board killed. Dantooine. I’m not going to Alderaan. I really got to go. But that to me.</p>
+								<p class="text">Kylan Consulting is a team of education consultants, admissions strategists, and trusted friends and family. We partner with families to simplify admissions processes and guide students toward personal, academic, and extracurricular success.</p>
 								<a href="consultant.html" class="theme-btn btn-style-one"><span class="txt">Consultation</span></a>
 							</div>
 							<div class="contact-info">
@@ -302,9 +412,8 @@
 							</div>
 							<!-- Social Box -->
 							<ul class="social-box">
-								<li><a href="https://www.facebook.com/" class="fa fa-facebook-f"></a></li>
-								<li><a href="https://www.twitter.com/" class="fa fa-twitter"></a></li>
-								<li><a href="https://www.linkedin.com/" class="fa fa-linkedin"></a></li>
+								<li><a href="https://www.facebook.com/share/nanbA8kA8TZNrpFv/?mibextid=LQQJ4d" class="fa fa-facebook-f"></a></li>
+								<li><a href="https://www.instagram.com/kylanconsulting.vn?igsh=MXZpcjRmbGg1amR2Mg==" class="fa fa-instagram"></a></li>
 								<li><a href="https://youtube.com/" class="fa fa-youtube-play"></a></li>
 							</ul>
 						</div>
@@ -529,8 +638,8 @@
 					<div class="inner-column">
 						<div class="sec-title">
 							<div class="title">About Me</div>
-							<h2>I help individuals to become their best version.</h2>
-							<div class="text">I am glad that you have made it here to send a distress signal, and inform the Senate that all on board were killed. Dantooine.  I’m not going to Alderaan. I really got to go. But that to me.</div>
+							<h2>Kylan help students to become their best version.</h2>
+							<div class="text">Are you ready to unlock your full potential? Kylan is here to help you achieve your goals.</div>
 						</div>
 						<div class="row clearfix">
 							<!-- Column -->
@@ -562,53 +671,7 @@
 							</div>
 						</div>
 						
-						<!-- Counter Box -->
-						<div class="counter-box">
-							<!-- Fact Counter -->
-							<div class="fact-counter">
-								<div class="row clearfix">
-
-									<!-- Column -->
-									<div class="counter-column col-lg-4 col-md-4 col-sm-12">
-										<div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-											<div class="content">
-												<div class="count-outer count-box">
-													<span class="count-text" data-speed="2500" data-stop="10">0</span>k
-												</div>
-												<div class="counter-title">Active students <br> worldwide</div>
-											</div>
-										</div>
-									</div>
-
-									<!-- Column -->
-									<div class="counter-column col-lg-4 col-md-4 col-sm-12">
-										<div class="inner wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
-											<div class="content">
-												<div class="count-outer count-box">
-													<span class="count-text" data-speed="2500" data-stop="10">0</span>k
-												</div>
-												<div class="counter-title">Basement <br> in New York</div>
-											</div>
-										</div>
-									</div>
-
-									<!-- Column -->
-									<div class="counter-column col-lg-4 col-md-4 col-sm-12">
-										<div class="inner wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
-											<div class="content">
-												<div class="count-outer count-box">
-													<span class="count-text" data-speed="3000" data-stop="2">0</span>k
-												</div>
-												<div class="counter-title">Cup of tea & <br> coffee</div>
-											</div>
-										</div>
-									</div>
-									
-								</div>
-							</div>
-							
-						</div>
-						<!-- End Counter Box -->
+						
 						
 					</div>
 				</div>
@@ -619,81 +682,7 @@
 	<!-- End About Section -->
 
 	<!-- Price Page Section -->
-	<section class="price-page-section">
-		<div class="auto-container">
-			<div class="row clearfix">
-				
-				<!-- Price Block -->
-				<div class="price-block col-lg-3 col-md-6 col-sm-12">
-					<div class="inner-box">
-						<div class="title">Super Early Bird</div>
-						<div class="price"><sup>$</sup>49</div>
-						<div class="date">until February 10, 2022</div>
-						<ul class="price-options">
-							<li><span>Description: </span>English.</li>
-							<li>We will provide translation</li>
-							<li>devices if needed.</li>
-						</ul>
-						<div class="button-box text-center">
-							<a href="#" class="purchase-btn theme-btn">Purchase Now</a>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Price Block -->
-				<div class="price-block col-lg-3 col-md-6 col-sm-12">
-					<div class="inner-box">
-						<div class="title">Early Bird</div>
-						<div class="price"><sup>$</sup>199</div>
-						<div class="date">until February 10, 2022</div>
-						<ul class="price-options">
-							<li><span>Description: </span>English.</li>
-							<li>We will provide translation</li>
-							<li>devices if needed.</li>
-						</ul>
-						<div class="button-box text-center">
-							<a href="#" class="purchase-btn theme-btn">Purchase Now</a>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Price Block -->
-				<div class="price-block col-lg-3 col-md-6 col-sm-12">
-					<div class="inner-box">
-						<div class="title">Regular Deal</div>
-						<div class="price"><sup>$</sup>249</div>
-						<div class="date">until February 10, 2022</div>
-						<ul class="price-options">
-							<li><span>Description: </span>English.</li>
-							<li>We will provide translation</li>
-							<li>devices if needed.</li>
-						</ul>
-						<div class="button-box text-center">
-							<a href="#" class="purchase-btn theme-btn">Purchase Now</a>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Price Block -->
-				<div class="price-block col-lg-3 col-md-6 col-sm-12">
-					<div class="inner-box">
-						<div class="title">Team Birds</div>
-						<div class="price"><sup>$</sup>399</div>
-						<div class="date">until February 10, 2022</div>
-						<ul class="price-options">
-							<li><span>Description: </span>English.</li>
-							<li>We will provide translation</li>
-							<li>devices if needed.</li>
-						</ul>
-						<div class="button-box text-center">
-							<a href="#" class="purchase-btn theme-btn">Purchase Now</a>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-		</div>
-	</section>
+	
 	<!-- End Faq's Page Section -->
 	
 	<!-- Services Section -->
@@ -701,7 +690,7 @@
 		<div class="auto-container">
 			<div class="sec-title">
 				<div class="title color-two">Services</div>
-				<h2>Explore How can I Help You</h2>
+				<h2>Explore How Kylan can Help Us</h2>
 			</div>
 			<div class="inner-container">
 				<div class="services-carousel owl-carousel owl-theme">
@@ -710,12 +699,12 @@
 					<div class="service-block">
 						<div class="inner-box">
 							<div class="image">
-								<a href="service-detail.html"><img class="transition-500ms" src="assets/images/resource/service-1.jpg" alt="" /></a>
+								<a href="courses.html"><img class="transition-500ms" src="assets/images/resource/service-1.jpg" alt="" /></a>
 							</div>
 							<div class="lower-content">
-								<div class="lessons">20+ Lessons</div>
+								
 								<div class="lower-box">
-									<h4><a href="service-detail.html">Coaching</a></h4>
+									<h4><a href="courses.html">College Admissions</a></h4>
 								</div>
 							</div>
 						</div>
@@ -725,16 +714,23 @@
 					<div class="service-block translate-top">
 						<div class="inner-box">
 							<div class="image">
-								<a href="service-detail.html"><img class="transition-500ms" src="assets/images/resource/service-2.jpg" alt="" /></a>
+								<a href="service-detail.html"><img class="transition-500ms" src="assets/images/resource/Service-2.png" alt="" /></a>
 							</div>
 							<div class="lower-content">
-								<div class="lessons color-two">20+ Lessons</div>
+								
 								<div class="lower-box">
-									<h4><a href="service-detail.html">Self Development</a></h4>
+									<h4 class="heading-with-dropdown">Boarding School</h4>
+									<ul class="dropdown-list">
+										<li><a href="usa.html">USA</a></li>
+										<li><a href="canada.html">Canada</a></li>
+									</ul>
 								</div>
 							</div>
 						</div>
 					</div>
+					
+					
+					
 					
 					<!-- Service Block -->
 					<div class="service-block">
@@ -743,9 +739,9 @@
 								<a href="service-detail.html"><img class="transition-500ms" src="assets/images/resource/service-3.jpg" alt="" /></a>
 							</div>
 							<div class="lower-content">
-								<div class="lessons color-three">20+ Lessons</div>
+								
 								<div class="lower-box">
-									<h4><a href="service-detail.html">Consulting</a></h4>
+									<h4><a href="is_hanoi.html">International Schools</a></h4>
 								</div>
 							</div>
 						</div>
@@ -758,24 +754,9 @@
 								<a href="service-detail.html"><img class="transition-500ms" src="assets/images/resource/service-4.jpg" alt="" /></a>
 							</div>
 							<div class="lower-content">
-								<div class="lessons color-four">20+ Lessons</div>
+								
 								<div class="lower-box">
-									<h4><a href="service-detail.html">Courses</a></h4>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<!-- Service Block -->
-					<div class="service-block">
-						<div class="inner-box">
-							<div class="image">
-								<a href="service-detail.html"><img class="transition-500ms" src="assets/images/resource/service-5.jpg" alt="" /></a>
-							</div>
-							<div class="lower-content">
-								<div class="lessons color-five">20+ Lessons</div>
-								<div class="lower-box">
-									<h4><a href="service-detail.html">Lifetime Support</a></h4>
+									<h4><a href="service-detail.html">Additional Services</a></h4>
 								</div>
 							</div>
 						</div>
@@ -793,7 +774,7 @@
 			<!-- Sec Title -->
 			<div class="sec-title light">
 				<div class="title">Process</div>
-				<h2>Our Solution Process</h2>
+				<h2>The Kylan Process</h2>
 			</div>
 			<div class="row clearfix">
 				
@@ -802,8 +783,8 @@
 					<div class="inner-box transition-300ms">
 						<div class="icon transition-500ms flaticon-planning"></div>
 						<div class="step">step 01</div>
-						<h4><a href="service-detail.html">Plan For Work</a></h4>
-						<div class="text">Through plans, you break down a process into small and identify the things you accomplish..</div>
+						<h4><a href="service-detail.html">Define</a></h4>
+						<div class="text">Arrange a consultation to help us understand the student’s needs, challenges, and goals.</div>
 					</div>
 				</div>
 				
@@ -812,8 +793,8 @@
 					<div class="inner-box transition-300ms">
 						<div class="icon transition-500ms flaticon-implement"></div>
 						<div class="step">step 02</div>
-						<h4><a href="service-detail.html">Implementation</a></h4>
-						<div class="text">Through plans, you break down a process into small and identify the things you accomplish..</div>
+						<h4><a href="service-detail.html">Strategize</a></h4>
+						<div class="text">Meet with admissions coaches to discuss goals, finances, and academic background.</div>
 					</div>
 				</div>
 				
@@ -822,18 +803,20 @@
 					<div class="inner-box transition-300ms">
 						<div class="icon transition-500ms flaticon-friend"></div>
 						<div class="step">step 03</div>
-						<h4><a href="service-detail.html">Consultancy</a></h4>
-						<div class="text">Through plans, you break down a process into small and identify the things you accomplish..</div>
+						<h4><a href="service-detail.html">Plan</a></h4>
+						<div class="text">We pair students with academic services and consulting packages to enhance their competitiveness.
+
+						</div>
 					</div>
 				</div>
 				
 				<!-- Process Block -->
 				<div class="process-block col-xl-3 col-lg-6 col-md-6 col-sm-12">
 					<div class="inner-box transition-300ms">
-						<div class="icon transition-500ms flaticon-finish-line"></div>
+						<div class="icon transition-500ms flaticon-rocket"></div>
 						<div class="step">step 04</div>
-						<h4><a href="service-detail.html">Project Closure</a></h4>
-						<div class="text">Through plans, you break down a process into small and identify the things you accomplish..</div>
+						<h4><a href="service-detail.html">Begin</a></h4>
+						<div class="text">We share an updated personalized roadmap and prepare for a successful admissions process.</div>
 					</div>
 				</div>
 				
@@ -848,7 +831,7 @@
 			<!-- Sec Title -->
 			<div class="sec-title centered">
 				<div class="title color-four">Testimonials</div>
-				<h2>Hear out what my clients <br> say about me.</h2>
+				<h2>Hear from Our CEO and Senior Team</h2>
 			</div>
 			<div class="testimonial-carousel owl-carousel owl-theme">
 				
@@ -864,15 +847,15 @@
 								<span class="fa fa-star"></span>
 								<span class="fa fa-star"></span>
 							</div>
-							<div class="text">" It’s amazing how much easier it has been to meet new people and create instant connection. I have the exact same personality, the only thing that has changed is my mindset and a few behaviors. "</div>
+							<div class="text">" At Kylan Education Consultancy, we strive to make every student’s journey seamless and successful. Our personalized approach ensures that each individual reaches their full potential. "</div>
 						</div>
 						<div class="lower-box">
 							<div class="box-inner">
 								<div class="author-image">
-									<img src="assets/images/resource/author-1.jpg" alt="" />
+									<img src="assets/images/resource/charles.jpg" alt="" />
 								</div>
-								<h5>Alaxis D. Dowson</h5>
-								<div class="designation">Head Of Idea, Kilix Co.</div>
+								<h5>CHARLES KIM</h5>
+								<div class="designation">FOUNDER</div>
 							</div>
 						</div>
 					</div>
@@ -890,15 +873,15 @@
 								<span class="fa fa-star"></span>
 								<span class="fa fa-star"></span>
 							</div>
-							<div class="text">" It’s amazing how much easier it has been to meet new people and create instant connection. I have the exact same personality, the only thing that has changed is my mindset and a few behaviors. "</div>
+							<div class="text">" Guiding students through their educational paths is our passion. We believe in transforming their dreams into achievable goals with our dedicated support and expertise. "</div>
 						</div>
 						<div class="lower-box">
 							<div class="box-inner">
 								<div class="author-image">
-									<img src="assets/images/resource/author-2.jpg" alt="" />
+									<img src="assets/images/resource/Ryan.jpg" alt="" />
 								</div>
-								<h5>Alaxis D. Dowson</h5>
-								<div class="designation">Head Of Idea, Kilix Co.</div>
+								<h5>RYAN BLEICH</h5>
+								<div class="designation">Senior Management Consultant</div>
 							</div>
 						</div>
 					</div>
@@ -916,15 +899,15 @@
 								<span class="fa fa-star"></span>
 								<span class="fa fa-star"></span>
 							</div>
-							<div class="text">" It’s amazing how much easier it has been to meet new people and create instant connection. I have the exact same personality, the only thing that has changed is my mindset and a few behaviors. "</div>
+							<div class="text">" Our commitment is to empower students with the best guidance and resources to excel in their academic pursuits. We are here to support them every step of the way. "</div>
 						</div>
 						<div class="lower-box">
 							<div class="box-inner">
 								<div class="author-image">
-									<img src="assets/images/resource/author-1.jpg" alt="" />
+									<img src="assets/images/resource/Dan.jpg" alt="" />
 								</div>
-								<h5>Alaxis D. Dowson</h5>
-								<div class="designation">Head Of Idea, Kilix Co.</div>
+								<h5>DAN STONE</h5>
+								<div class="designation">Co-Founder & International Admissions Consultant</div>
 							</div>
 						</div>
 					</div>
@@ -942,15 +925,15 @@
 								<span class="fa fa-star"></span>
 								<span class="fa fa-star"></span>
 							</div>
-							<div class="text">" It’s amazing how much easier it has been to meet new people and create instant connection. I have the exact same personality, the only thing that has changed is my mindset and a few behaviors. "</div>
+							<div class="text">" We believe that education is the key to a brighter future. Our experienced team provides tailored advice to ensure every student finds their perfect path. "</div>
 						</div>
 						<div class="lower-box">
 							<div class="box-inner">
 								<div class="author-image">
-									<img src="assets/images/resource/author-2.jpg" alt="" />
+									<img src="assets/images/resource/Chris.jpg" alt="" />
 								</div>
-								<h5>Alaxis D. Dowson</h5>
-								<div class="designation">Head Of Idea, Kilix Co.</div>
+								<h5>CHRIS</h5>
+								<div class="designation">Senior Teacher</div>
 							</div>
 						</div>
 					</div>
@@ -976,9 +959,9 @@
                             <div class="footer-column col-lg-6 col-md-6 col-sm-12">
                                 <div class="footer-widget logo-widget">
 									<div class="logo">
-										<a href="index.html"><img src="assets/images/footer-logo.png" alt="" /></a>
+										<a href="index.html"><img src="assets/images/logo.png" alt="" /></a>
 									</div>
-									<div class="text">In social science, agency is defined as the capacity of individuals to act free & to make their own free choices. One's agency is one's independent capability or ability to act on one's will.</div>
+									<div class="text">Kylan Consulting is a team of education consultants, admissions strategists, and trusted friends and family. We partner with families to simplify admissions processes and guide students toward personal, academic, and extracurricular success.</div>
 								</div>
 							</div>
 							
