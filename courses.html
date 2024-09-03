@@ -4,7 +4,7 @@
 <!-- Mirrored from html.themexriver.com/avarton/courses.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 May 2024 08:01:58 GMT -->
 <head>
 <meta charset="utf-8">
-<title>Averon HTML-5 Template | Course's</title>
+<title>College Admissions</title>
 <!-- Stylesheets -->
 <link href="assets/css/bootstrap.css" rel="stylesheet">
 <link href="assets/css/style.css" rel="stylesheet">
@@ -489,26 +489,7 @@ hr.section-separator {
 }
 
 /* Scroll Arrows */
-.scroll-arrow {
-    cursor: pointer;
-    font-size: 30px;
-    color: #f0c35b; /* Consider changing this to a more visible color */
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 20; /* Increase if needed */
-    padding: 5px;
-    background-color: rgba(255, 255, 255, 0.8); /* Optional: Adds a background */
-    border-radius: 50%; /* Optional: Makes the button circular */
-}
 
-.left-arrow {
-    left: 10px; /* Adjust if necessary */
-}
-
-.right-arrow {
-    right: 10px; /* Adjust if necessary */
-}
 
 
 /* Hide scrollbar */
@@ -543,13 +524,13 @@ hr.section-separator {
 }
 
 .top-left {
-    top: -20px; /* Move slightly above the title */
-    left: -50px; /* Position closer to the left edge */
+    top: 10px; /* Move slightly above the title */
+    left: -350px; /* Position closer to the left edge */
 }
 
 .top-right {
-    top: -20px; /* Move slightly above the title */
-    right: -50px; /* Position closer to the right edge */
+    top: -10px; /* Move slightly above the title */
+    right: -350px; /* Position closer to the right edge */
 }
 
 /* Fade-In and Bounce Animation */
@@ -657,6 +638,71 @@ hr.section-separator {
     display: block; /* Ensures the image is displayed as a block element */
     margin-bottom:-150px; /* Adds space between the logo and the text */
 }
+/* Header Top */
+.header-top {
+    position: relative;
+    z-index: 10; /* Ensure header stays on top */
+    background-color: #336b67; /* Background color to match the header */
+    padding: 10px 20px; /* Adjust padding for better spacing */
+    width: 100%; /* Full width for the header */
+    display: flex; /* Flexbox for better alignment */
+    justify-content: space-between; /* Space between elements */
+    align-items: center; /* Center align elements */
+}
+
+/* Top Left Elements */
+.top-left {
+    flex: 1; /* Allow this section to take up available space */
+    text-align: left; /* Align text to the left */
+    color: #ffffff; /* Text color for contrast */
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Top Right Elements */
+.top-right {
+    display: flex; /* Align items in a row */
+    align-items: center; /* Center vertically */
+    gap: 15px; /* Add spacing between elements */
+    margin-left: auto; /* Push this section to the right */
+}
+
+/* Social Box */
+.social-box {
+    list-style: none;
+    display: flex; /* Align social icons in a row */
+    gap: 10px; /* Space between icons */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.social-box li a {
+    font-size: 18px; /* Adjust icon size */
+    color: #ffffff; /* Icon color */
+    transition: color 0.3s ease;
+    text-decoration: none; /* Remove underline */
+}
+
+.social-box li a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Free Consultation Button */
+.btn-consultation {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the text bold */
+}
+
+.btn-consultation:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+
 
 
 		</style>
@@ -677,29 +723,28 @@ hr.section-separator {
     	
 		<!-- Header Top -->
         <div class="header-top">
-            <div class="auto-container">
-                <div class="inner-container clearfix">
+			<div class="auto-container">
+				<div class="inner-container clearfix">
 					<!-- Top Left -->
-					<div class="top-left clearfix">
+					<div class="top-left">
 						<div class="text"><span>Working time:</span> Monday to Friday 9 AM - 5 PM</div>
 					</div>
 					
 					<!-- Top Right -->
-                    <div class="top-right pull-right clearfix">
+					<div class="top-right">
 						<!-- Social Box -->
 						<ul class="social-box">
 							<li><a href="https://www.facebook.com/share/nanbA8kA8TZNrpFv/?mibextid=LQQJ4d" class="fa fa-facebook"></a></li>
 							<li><a href="https://www.instagram.com/kylanconsulting.vn?igsh=MXZpcjRmbGg1amR2Mg==" class="fa fa-instagram"></a></li>
 							<li><a href="https://youtube.com/" class="fa fa-youtube-play"></a></li>
-							
 						</ul>
 						<a href="consultant.html" class="btn btn-consultation">Free Consultation</a>
-
-                    </div>
-					
-                </div>
-            </div>
-        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
 		
 		<!-- Header Lower -->
         <div class="header-lower">
@@ -1453,11 +1498,11 @@ hr.section-separator {
 										<!-- Column -->
 										<div class="column col-lg-6 col-md-6 col-sm-12">
 											<ul class="list-link">
-												<li><a href="#">Home</a></li>
-												<li><a href="#">Services</a></li>
-												<li><a href="#">Courses</a></li>
-												<li><a href="#">Blog Insight</a></li>
-												<li><a href="#">Contact</a></li>
+												<li><a href="index.html">Home</a></li>
+												<li><a href="about.html">About</a></li>
+												<li><a href="service-detail.html">Services</a></li>
+												<li><a href="portfolio.html">Results</a></li>
+												<li><a href="consultant.html">Contact</a></li>
 											</ul>
 										</div>
 										<!-- Column -->

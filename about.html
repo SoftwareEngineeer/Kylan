@@ -117,54 +117,64 @@
             display: block; /* Ensures the image is displayed as a block element */
             margin-bottom:-150px; /* Adds space between the logo and the text */
         }
-        /* Global Styling */
+       /* Global Styling */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
-    color: #333;
+    color: #333; /* Ensure consistent text color across the site */
 }
 
-/* Section Styling */
-.section-ko1 {
-    padding: 40px 0;
-    background-color: #ffffff;
-    margin-bottom: 20px;
+
+/* Separator Line Styling */
+.separator-line {
+    width: 200px; /* Shorter width */
+    height: 2px; /* Thinner line */
+    background-color: #dddddd; /* Light gray color to match border */
+    margin: 30px auto; /* Centered with reduced top and bottom margin for balance */
+    border-radius: 1px; /* Slightly rounded edges */
 }
 
-.container-qwj, .container-vye {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+
 
 /* Heading Styling */
-.title-hyv {
-    font-size: 28px;
-    color: #333;
+.title-hyv,
+.mission-text h3,
+.vision-text h1,
+.section-ko1 .column-va6 h3 {
+    font-size: 28px; /* Uniform title font size */
+    color: #333; /* Uniform title color */
     font-weight: bold;
     margin-bottom: 20px;
     text-align: center;
 }
 
 /* Text Styling */
-.text-kw4 p {
-    font-size: 16px;
+.text-kw4 p,
+.mission-text p,
+.vision-text p,
+.section-ko1 .column-va6 p {
+    font-size: 20px; /* Uniform text font size */
+    color: #333; /* Uniform text color */
     line-height: 1.8;
     margin-bottom: 20px;
-    color: #555;
+    padding: 0 10px;
 }
 
 /* Image Styling */
-.animated-image {
+.animated-image,
+.vision-image img,
+.grid-item img {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.animated-image:hover {
+.animated-image:hover,
+.vision-image img:hover,
+.grid-item img:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
@@ -176,17 +186,7 @@ body {
     align-items: center;
     margin-bottom: 40px;
     text-align: center;
-}
-
-.section-ko1 .column-va6 h3 {
-    color: #0073e6;
-    margin-bottom: 15px;
-}
-
-.section-ko1 .column-va6 p {
-    font-size: 15px;
-    color: #666;
-    padding: 0 10px;
+    flex: 1;
 }
 
 /* Core Values - Image and Content Wrapper */
@@ -194,11 +194,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     margin-top: 20px;
     padding: 20px;
     background-color: #f1f1f1;
     border-radius: 8px;
     transition: background-color 0.3s;
+    height: 100%;
 }
 
 .wrapper-jm8:hover {
@@ -208,19 +210,23 @@ body {
 .content-9z5 {
     margin-top: 15px;
     text-align: center;
+    flex-grow: 1;
 }
 
 /* Font Styling for Specific Elements */
 .style-heading {
-    color: #444;
+    color: #333; /* Consistent text color */
+    font-size: 20px; /* Adjusted font size for consistency */
 }
 
 .style-zrLjQ, .style-XdxJC, .style-UIRAW, .style-hkbpf {
-    color: #333;
+    color: #333; /* Consistent text color */
+    font-size: 16px; /* Adjusted font size for consistency */
 }
 
 .style-aoocD, .style-jF67z, .style-hHMdR, .style-N2Gkq {
-    color: #555;
+    color: #333; /* Consistent text color */
+    font-size: 16px; /* Adjusted font size for consistency */
 }
 
 /* Button Hover Effects */
@@ -235,18 +241,217 @@ a:hover {
         width: 100%;
         margin-bottom: 20px;
     }
-    
-    .title-hyv {
-        font-size: 24px;
+
+    .title-hyv,
+    .mission-text h3,
+    .vision-text h1,
+    .section-ko1 .column-va6 h3 {
+        font-size: 24px; /* Consistent responsive title font size */
     }
-    
-    .text-kw4 p {
-        font-size: 14px;
+
+    .text-kw4 p,
+    .mission-text p,
+    .vision-text p,
+    .section-ko1 .column-va6 p {
+        font-size: 18px; /* Consistent responsive text font size */
+        color: #333; /* Ensure responsive text is also black */
     }
-    
-    .animated-image {
+
+    .animated-image,
+    .vision-image img,
+    .grid-item img {
         width: 100%;
         height: auto;
+    }
+}
+/* About Kylan Section Styling */
+.about-kylan .container-qwj {
+    background-color: #f9f9f9; /* Slightly off-white background to distinguish this section */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow to lift the content */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-kylan p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #333; /* Ensures readability */
+}
+
+/* Highlighted text styling for key phrases */
+.about-kylan .highlight {
+    font-weight: bold;
+    font-style: italic;
+    color: #2c3e50; /* A dark blue color for emphasis */
+}
+
+/* Hover effect for About Kylan section */
+.about-kylan:hover {
+    background-color: #f4f4f4; /* A slightly darker shade on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow on hover */
+}
+
+/*Mission Section */
+/* Centered Container */
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.grid-container.refined-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+    padding: 40px 20px;
+    max-width: 1200px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.grid-item img:hover {
+    transform: scale(1.05);
+}
+
+.mission-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mission-text h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.mission-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    max-width: 350px;
+}
+
+@media (max-width: 768px) {
+    .grid-container.refined-layout {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .mission-text h3 {
+        font-size: 1.8rem;
+    }
+
+    .mission-text p {
+        font-size: 1rem;
+    }
+}
+
+/* Vision Section */
+.container-vision {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.grid-container.vision-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+    padding: 40px 20px;
+    max-width: 1200px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+/* Grid Item Styles */
+.grid-item.vision-image {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Vision Image Styling */
+.vision-image img {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.vision-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Vision Text Styling */
+.vision-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.vision-text h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.vision-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+    max-width: 450px;
+}
+
+@media (max-width: 768px) {
+    .grid-container.vision-layout {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .vision-text h1 {
+        font-size: 2rem;
+    }
+
+    .vision-text p {
+        font-size: 1rem;
+    }
+
+    .vision-image img {
+        max-height: 250px;
     }
 }
 
@@ -377,36 +582,37 @@ a:hover {
             <!-- End Header Lower -->
             
             <!-- Sticky Header  -->
-            <div class="sticky-header">
-                <div class="auto-container clearfix">
-                    <!--Logo-->
-                    
-                    <!--Right Col-->
-                    <div class="pull-right">
-                    
-                        <!-- Main Menu -->
-                        <nav class="main-menu">
-                            <!--Keep This Empty / Menu will come through Javascript-->
-                        </nav>
-                        <!-- Main Menu End-->
-                        
-                        <!-- Mobile Navigation Toggler -->
-                        <div class="mobile-nav-toggler"><span class="icon flaticon-menu-1"></span></div>
-                        
-                    </div>
-                </div>
-            </div><!-- End Sticky Menu -->
-        
-            <!-- Mobile Menu  -->
-            <div class="mobile-menu">
-                <div class="menu-backdrop"></div>
-                <div class="close-btn"><span class="icon flaticon-multiply"></span></div>
+            <!-- Sticky Header  -->
+        <div class="sticky-header">
+            <div class="auto-container clearfix">
+                <!--Logo-->
                 
-                <nav class="menu-box">
-                    <div class="nav-logo"><a href="index.html"><img src="assets/images/logo.png" alt="" title=""></a></div>
-                    <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
-                </nav>
-            </div><!-- End Mobile Menu -->
+                <!--Right Col-->
+                <div class="pull-right">
+				
+                    <!-- Main Menu -->
+                    <nav class="main-menu">
+                        <!--Keep This Empty / Menu will come through Javascript-->
+                    </nav>
+					<!-- Main Menu End-->
+					
+					<!-- Mobile Navigation Toggler -->
+					<div class="mobile-nav-toggler"><span class="icon flaticon-menu-1"></span></div>
+					
+                </div>
+            </div>
+        </div><!-- End Sticky Menu -->
+    
+		<!-- Mobile Menu  -->
+        <div class="mobile-menu">
+            <div class="menu-backdrop"></div>
+            <div class="close-btn"><span class="icon flaticon-multiply"></span></div>
+            
+            <nav class="menu-box">
+                <div class="nav-logo"><a href="index.html"><img src="assets/images/logo.png" alt="" title=""></a></div>
+                <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
+            </nav>
+        </div><!-- End Mobile Menu -->
         
         </header>
         <!-- End Main Header -->
@@ -430,24 +636,23 @@ a:hover {
                                 </div>
                                 <div class="content-box">
                                     <h4>About Us</h4>
-                                    <p class="text">I am glad that you have made it here to send a distress signal, and inform the Senate that all on board killed. Dantooine. I’m not going to Alderaan. I really got to go. But that to me.</p>
+								    <p class="text">Kylan Consulting is a team of education consultants, admissions strategists, and trusted friends and family. We partner with families to simplify admissions processes and guide students toward personal, academic, and extracurricular success.</p>
                                     <a href="consultant.html" class="theme-btn btn-style-one"><span class="txt">Consultation</span></a>
                                 </div>
                                 <div class="contact-info">
                                     <h4>Contact Info</h4>
                                     <ul class="list-style-one">
-                                        <li><span class="icon fa fa-location-arrow"></span>Chicago 12, Melborne City, USA</li>
-                                        <li><span class="icon fa fa-phone"></span>(111) 111-111-1111</li>
-                                        <li><span class="icon fa fa-envelope"></span>avarton@gmail.com</li>
-                                        <li><span class="icon fa fa-clock-o"></span>Week Days: 09.00 to 18.00 Sunday: Closed</li>
+                                        <li><span class="icon fa fa-location-arrow"></span>Shophouse A26, Sunshine City, Ciputra, Ha Noi</li>
+									    <li><span class="icon fa fa-phone"></span>(111) 111-111-1111</li>
+									    <li><span class="icon fa fa-envelope"></span>kylanconsulting@gmail.com</li>
+									    <li><span class="icon fa fa-clock-o"></span>Week Days: 09.00 to 18.00 Sunday: Closed</li>
                                     </ul>
                                 </div>
                                 <!-- Social Box -->
                                 <ul class="social-box">
-                                    <li><a href="https://www.facebook.com/" class="fa fa-facebook-f"></a></li>
-                                    <li><a href="https://www.twitter.com/" class="fa fa-twitter"></a></li>
-                                    <li><a href="https://www.linkedin.com/" class="fa fa-linkedin"></a></li>
-                                    <li><a href="https://youtube.com/" class="fa fa-youtube-play"></a></li>
+                                    <li><a href="https://www.facebook.com/share/nanbA8kA8TZNrpFv/?mibextid=LQQJ4d" class="fa fa-facebook-f"></a></li>
+								    <li><a href="https://www.instagram.com/kylanconsulting.vn?igsh=MXZpcjRmbGg1amR2Mg==" class="fa fa-instagram"></a></li>
+								    <li><a href="https://youtube.com/" class="fa fa-youtube-play"></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -557,270 +762,231 @@ a:hover {
             </div>
         </section>
 
-        <!-- About American Study Section -->
-        <section class="section-ko1 elementor-isd elementor-element-6ke section-f2a">
-                            <div class="container-qwj">
-                                <h3 class="title-hyv style-heading" style="font-weight: bold; font-size: 24px;">
-                                    About Kylan
-                                </h3>
-                            </div>
-                        </div>
-                        <div class="elementor-isd elementor-element-3ro elementor-9oa text-kw4">
-                            <div class="container-qwj">
-                                <p>
-                                    <font id="style-zrLjQ" class="style-zrLjQ">
-                                        <font id="style-XdxJC" class="style-XdxJC">Kylan Consulting is a community of education consultants, admissions strategists, long-term friends, and even family members. We work with families to demystify complex admissions processes and to guide students toward personal, academic, and extracurricular excellence. 
-
-                                            For over ten years, we have helped students gain acceptance to prestigious international boarding and high schools and colleges in the US, Canada, Hong Kong, Singapore, Australia, and beyond. Our success stories include students who have gone on to excel in their chosen fields, thanks to the guidance and support of Kylan Consulting. With founders from Seoul, Korea, Toronto, Canada, and Boston, USA, Kylan Consulting brings international experience and connections within each country, ensuring our students receive visas, housing, and ongoing mentorship.</font>
-                                    </font>
-                                </p>
-                                <p>
-                                    <font id="style-UIRAW" class="style-UIRAW">
-                                        <font id="style-hkbpf" class="style-hkbpf">An excellent education can be expensive, so we work with families to maximize their potential scholarship and financial aid support. Through our academic advising, admissions strategy development, application assistance, and interview preparation, students receive consistent, experienced coaching. 
-
-                                            Rest assured; we are committed to your success. We hold our students to the highest standards to help them target institutions that will give them the best opportunities in life. </font>
-                                    </font>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+        <!-- About Kylan Section -->
+        <section class="section-ko1 elementor-isd elementor-element-6ke section-f2a about-kylan">
+            <div class="container-qwj">
+                <h3 class="title-hyv style-heading" style="font-weight: bold; font-size: 28px;">
+                    About Kylan
+                </h3>
+            </div>
+            <div class="elementor-isd elementor-element-3ro elementor-9oa text-kw4">
+                <div class="container-qwj">
+                    <p>
+                        <span class="highlight">Kylan Consulting</span> is a community of education consultants, admissions strategists, long-term friends, and even family members. We work with families to <span class="highlight">demystify complex admissions processes</span> and to guide students toward <span class="highlight">personal, academic, and extracurricular excellence</span>.
+                    </p>
+                    <p>
+                        For over ten years, we have helped students gain acceptance to prestigious international boarding and high schools and colleges in the US, Canada, Hong Kong, Singapore, Australia, and beyond. Our success stories include students who have gone on to excel in their chosen fields, thanks to the guidance and support of Kylan Consulting.
+                    </p>
+                    <p>
+                        With founders from Seoul, Korea, Toronto, Canada, and Boston, USA, <span class="highlight">Kylan Consulting</span> brings <span class="highlight">international experience and connections</span> within each country, ensuring our students receive <span class="highlight">visas, housing, and ongoing mentorship</span>.
+                    </p>
+                    <p>
+                        An excellent education can be expensive, so we work with families to <span class="highlight">maximize their potential scholarship and financial aid support</span>. Through our academic advising, admissions strategy development, application assistance, and interview preparation, students receive <span class="highlight">consistent, experienced coaching</span>.
+                    </p>
+                    <p>
+                        <span class="highlight">Rest assured</span>; we are committed to your success. We hold our students to the highest standards to help them target institutions that will give them the best opportunities in life.
+                    </p>
                 </div>
             </div>
         </section>
-
-        <!-- Mission Section -->
-        <section class="section-ko1 elementor-isd elementor-element-omj">
-            <div class="container-vye">
-                <div class="column-va6 col-3w5 elementor-isd elementor-element-qad">
-                    <div class="elementor-widget-72h elementor-element-3p5">
-                        <div class="elementor-isd elementor-element-q4m elementor-9oa image-w7m">
-                            <div class="container-qwj">
-                                <img class="animated-image fade-in" width="400" height="550" src="./images/22.jpg">
-                            </div>
-                        </div>
-                        <div class="elementor-isd elementor-element-wbv elementor-9oa image-w7m">
-                            <div class="container-qwj">
-                                <img class="animated-image slide-in" width="700" height="600" src="./images/1.jpg">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column-va6 col-3w5 elementor-isd elementor-element-oxb">
-                    <div class="elementor-widget-72h elementor-element-3p5">
-                        <div class="elementor-isd elementor-element-92f elementor-9oa image-w7m">
-                            <div class="container-qwj">
-                                <img class="animated-image fade-in" width="600" height="350" src="./images/3.jpg">
-                            </div>
-                        </div>
-                        <div class="elementor-isd elementor-element-ccj elementor-9oa image-w7m">
-                            <div class="container-qwj">
-                                <img class="animated-image slide-in" width="350" height="350" src="./images/44.jpg">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column-va6 col-rnv elementor-isd elementor-element-hoc">
-                    <div class="elementor-widget-72h elementor-element-3p5">
-                        <div class="elementor-isd elementor-element-rp5 elementor-9oa elementor-widget-e8g">
-                            <div class="container-qwj">
-                                <h3 class="title-hyv style-heading">
-                                    Mission
-                                </h3>
-                            </div>
-                        </div>
-                        <div class="elementor-isd elementor-element-69e elementor-widget__width-sec elementor-9oa text-kw4">
-                            <div class="container-qwj">
-                                <p>
-                                    <font id="style-aoocD" class="style-aoocD">
-                                        <font id="style-jF67z" class="style-jF67z">We demystify complex admissions processes and guide students toward personal, academic, and extracurricular excellence.</font>
-                                    </font>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        
+        <div class="separator-line"></div>
+     <!-- Mission Section -->
+<section class="section-ko1 elementor-isd elementor-element-omj">
+    <div class="container-vye centered-container">
+        <div class="grid-container refined-layout">
+            <!-- Image Column 1 -->
+            <div class="grid-item">
+                <img class="animated-image fade-in" src="./images/22.jpg" alt="Image 1">
+                <img class="animated-image slide-in" src="./images/1.jpg" alt="Image 2">
             </div>
-        </section>
 
-        <!-- Vision Section -->
-        <section class="section-ko1 elementor-isd elementor-element-q1b section-f2a">
-            <div class="container-vye">
-                <div class="column-va6 col-rnv elementor-isd elementor-element-66s">
-                    <div class="elementor-widget-72h elementor-element-3p5">
-                        <div class="elementor-isd elementor-element-kvi elementor-9oa elementor-widget-e8g">
-                            <div class="container-qwj">
-                                <h1 class="title-hyv style-heading">
-                                    Vision
-                                </h1>
-                            </div>
-                        </div>
-                        <div class="elementor-isd elementor-element-498 elementor-widget__width-sec elementor-9oa text-kw4">
-                            <div class="container-qwj">
-                                <p>
-                                    <font id="style-hHMdR" class="style-hHMdR">
-                                        <font id="style-N2Gkq" class="style-N2Gkq">We empower independent and empathetic critical thinkers to embody the values of their elders, mentors, and teachers while creating a positive path for future generations.</font>
-                                    </font>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column-va6 col-rnv elementor-isd elementor-element-mne">
-                    <div class="elementor-widget-72h elementor-element-3p5">
-                        <div class="elementor-isd elementor-element-2bh elementor-9oa image-w7m">
-                            <div class="container-qwj">
-                                <img class="animated-image fade-in" width="800" height="469" src="./images/Untitled-1-01-min.jpg">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <!-- Image Column 2 -->
+            <div class="grid-item">
+                <img class="animated-image fade-in" src="./images/3.jpg" alt="Image 3">
+                <img class="animated-image slide-in" src="./images/44.jpg" alt="Image 4">
             </div>
-        </section>
 
-        <!-- Core Values Section -->
-        <section class="section-ko1 elementor-isd fa-zfs section-f2a">
-            <div class="container-vye">
-                <div class="column-va6 col-wra elementor-isd elementor-element-nq4">
-                    <div class="elementor-widget-72h elementor-element-3p5">
-                        <div class="elementor-isd elementor-element-xrw elementor-9oa elementor-widget-e8g">
-                            <div class="container-qwj">
-                                <h2 class="title-hyv style-heading">
-                                    Core values
-                                </h2>
-                            </div>
-                        </div>
-                        <div class="elementor-isd elementor-element-olf elementor-widget__width-sec elementor-9oa text-kw4">
-                            <div class="container-qwj">
-                                <p>
-                                    <font id="style-IDbrz" class="style-IDbrz">
-                                        <font id="style-rZXN6" class="style-rZXN6">Our core values ​​guide all our actions:</font>
-                                    </font>
-                                </p>
-                            </div>
-                        </div>
-                        <section class="section-ko1 elementor-isd elementor-element-dy3">
-                            <div class="container-vye column-hz3">
-                                <div class="column-va6 col-3w5 elementor-isd elementor-element-tk5">
-                                    <div class="elementor-widget-72h elementor-element-3p5">
-                                        <div class="elementor-isd elementor-element-toh elementor-position-m4d elementor-9oa image-nw2">
-                                            <div class="container-qwj">
-                                                <div class="wrapper-jm8">
-                                                    <figure class="image-o2d"><a href="#"><img class="animated-image slide-in" src="./images/Untitled-1-01-qedg4t0cy2vslze6l8isl94dpshi19c7vv3yny5hbc.png" class="row-ioz"></a></figure>
-                                                    <div class="content-9z5">
-                                                        <h4 class="title-qs9"><a href="#">
-                                                            <h3 class="title-hyv style-heading" style="font-weight: bold; font-size: 20px;">
-                                                                Academic Rigor
-                                                            </h3>
-                                                            </a></h4>
-                                                        <p class="image-fdp">
-                                                            <font id="style-LZVvK" class="style-LZVvK">
-                                                                <font id="style-pOvE2" class="style-pOvE2">Work hard and study diligently. Push past limiting beliefs.</font>
-                                                            </font>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column-va6 col-3w5 elementor-isd elementor-element-gog">
-                                    <div class="elementor-widget-72h elementor-element-3p5">
-                                        <div class="elementor-isd elementor-element-xlw elementor-position-m4d elementor-9oa image-nw2">
-                                            <div class="container-qwj">
-                                                <div class="wrapper-jm8">
-                                                    <figure class="image-o2d"><a href="#"><img class="animated-image fade-in" src="./images/Untitled-1-04-qedg4uw1bqyd97bga9c1q8nawk88gnjok4exmi2oyw.png" class="row-ioz"></a></figure>
-                                                    <div class="content-9z5">
-                                                        <h4 class="title-qs9"><a href="#">
-                                                            <h3 class="title-hyv style-heading" style="font-weight: bold; font-size: 20px;">
-                                                                Potential
-                                                            </h3>
-                                                            </a></h4>
-                                                        <p class="image-fdp">
-                                                            <font id="style-qAQ84" class="style-qAQ84">
-                                                                <font id="style-jJsdU" class="style-jJsdU">Learn from failure and explore untapped potential.</font>
-                                                            </font>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column-va6 col-3w5 elementor-isd elementor-element-dqm">
-                                    <div class="elementor-widget-72h elementor-element-3p5">
-                                        <div class="elementor-isd elementor-element-3zm elementor-position-m4d elementor-9oa image-nw2">
-                                            <div class="container-qwj">
-                                                <div class="wrapper-jm8">
-                                                    <figure class="image-o2d"><a href="#"><img class="animated-image slide-in" src="./images/Untitled-1-03-qedg4ty74wx2xlctfqxf5qvub6cv8yfy7zrg584354.png" class="row-ioz"></a></figure>
-                                                    <div class="content-9z5">
-                                                        <h4 class="title-qs9"><a href="#">
-                                                            <h3 class="title-hyv style-heading" style="font-weight: bold; font-size: 20px;">
-                                                                Intellectual Curiosity
-                                                            </h3>
-                                                            </a></h4>
-                                                        <p class="image-fdp">
-                                                            <font id="style-WlD7r" class="style-WlD7r">
-                                                                <font id="style-ZnXqw" class="style-ZnXqw">Find subjects that inspire a love of learning.</font>
-                                                            </font>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column-va6 col-3w5 elementor-isd elementor-element-z9j">
-                                    <div class="elementor-widget-72h elementor-element-3p5">
-                                        <div class="elementor-isd elementor-element-frb elementor-position-m4d elementor-9oa image-nw2">
-                                            <div class="container-qwj">
-                                                <div class="wrapper-jm8">
-                                                    <figure class="image-o2d"><a href="#"><img class="animated-image fade-in" src="./images/Untitled-1-02-qedg4ty74wx2xlctfqxf5qvub6cv8yfy7zrg584354.png" class="row-ioz"></a></figure>
-                                                    <div class="content-9z5">
-                                                        <h4 class="title-qs9"><a href="#">
-                                                            <h3 class="title-hyv style-heading" style="font-weight: bold; font-size: 20px;">
-                                                                Persistence
-                                                            </h3>
-                                                            </a></h4>
-                                                        <p class="image-fdp">
-                                                            <font id="style-EWrEx" class="style-EWrEx">
-                                                                <font id="style-Qe9eB" class="style-Qe9eB">Do hard things consistently, regardless of motivation.</font>
-                                                            </font>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column-va6 col-3w5 elementor-isd elementor-element-z9j">
-                                    <div class="elementor-widget-72h elementor-element-3p5">
-                                        <div class="elementor-isd elementor-element-frb elementor-position-m4d elementor-9oa image-nw2">
-                                            <div class="container-qwj">
-                                                <div class="wrapper-jm8">
-                                                    <figure class="image-o2d"><a href="#"><img class="animated-image slide-in" src="./images/Untitled-1-02-qedg4ty74wx2xlctfqxf5qvub6cv8yfy7zrg584354.png" class="row-ioz"></a></figure>
-                                                    <div class="content-9z5">
-                                                        <h4 class="title-qs9"><a href="#">
-                                                            <h3 class="title-hyv style-heading" style="font-weight: bold; font-size: 20px;">
-                                                                Service
-                                                            </h3>
-                                                            </a></h4>
-                                                        <p class="image-fdp">
-                                                            <font id="style-EWrEx" class="style-EWrEx">
-                                                                <font id="style-Qe9eB" class="style-Qe9eB">Build community. Choose a cause that will help the world. Serve those in need.</font>
-                                                            </font>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
+            <!-- Mission Text Column -->
+            <div class="grid-item mission-text centered-content">
+                <h3 class="title-hyv style-heading">
+                    Mission
+                </h3>
+                <p>
+                    We demystify complex admissions processes and guide students toward personal, academic, and extracurricular excellence.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="separator-line"></div>
+      <!-- Vision Section -->
+<section class="section-ko1 elementor-isd elementor-element-q1b section-vision">
+    <div class="container-vision centered-container">
+        <div class="grid-container vision-layout">
+            <!-- Vision Text Column -->
+            <div class="grid-item vision-text centered-content">
+                <h1 class="title-vision style-heading">
+                    Vision
+                </h1>
+                <p>
+                    We empower independent and empathetic critical thinkers to embody the values of their elders, mentors, and teachers while creating a positive path for future generations.
+                </p>
+            </div>
+
+            <!-- Vision Image Column -->
+            <div class="grid-item vision-image">
+                <img class="animated-image fade-in" src="./images/Untitled-1-01-min.jpg" alt="Vision Image">
+            </div>
+        </div>
+    </div>
+</section>
+<div class="separator-line"></div>
+  <!-- Core Values Section -->
+  <section class="section-ko1 elementor-isd fa-zfs section-f2a">
+    <div class="container-vye">
+        <div class="column-va6 col-wra elementor-isd elementor-element-nq4">
+            <div class="elementor-widget-72h elementor-element-3p5">
+                <div class="elementor-isd elementor-element-xrw elementor-9oa elementor-widget-e8g">
+                    <div class="container-qwj">
+                        <h2 class="title-hyv style-heading">
+                            Core values
+                        </h2>
                     </div>
                 </div>
+                <div class="elementor-isd elementor-element-olf elementor-widget__width-sec elementor-9oa text-kw4">
+                    <div class="container-qwj">
+                        <p>
+                            <font id="style-IDbrz" class="style-IDbrz">
+                                <font id="style-rZXN6" class="style-rZXN6">Our core values ​​guide all our actions:</font>
+                            </font>
+                        </p>
+                    </div>
+                </div>
+                <section class="section-ko1 elementor-isd elementor-element-dy3">
+                    <div class="container-vye column-hz3">
+                        <div class="column-va6 col-3w5 elementor-isd elementor-element-tk5">
+                            <div class="elementor-widget-72h elementor-element-3p5">
+                                <div class="elementor-isd elementor-element-toh elementor-position-m4d elementor-9oa image-nw2">
+                                    <div class="container-qwj">
+                                        <div class="wrapper-jm8">
+                                            <figure class="image-o2d"><a href="#"><img class="animated-image slide-in" src="./images/Untitled-1-01-qedg4t0cy2vslze6l8isl94dpshi19c7vv3yny5hbc.png" class="row-ioz"></a></figure>
+                                            <div class="content-9z5">
+                                                <h4 class="title-qs9"><a href="#">
+                                                    <h3 class="title-hyv style-heading" style="font-weight: bold; font-size: 20px;">
+                                                        Academic Rigor
+                                                    </h3>
+                                                    </a></h4>
+                                                <p class="image-fdp">
+                                                    <font id="style-LZVvK" class="style-LZVvK">
+                                                        <font id="style-pOvE2" class="style-pOvE2">Work hard and study diligently. Push past limiting beliefs.</font>
+                                                    </font>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column-va6 col-3w5 elementor-isd elementor-element-gog">
+                            <div class="elementor-widget-72h elementor-element-3p5">
+                                <div class="elementor-isd elementor-element-xlw elementor-position-m4d elementor-9oa image-nw2">
+                                    <div class="container-qwj">
+                                        <div class="wrapper-jm8">
+                                            <figure class="image-o2d"><a href="#"><img class="animated-image fade-in" src="./images/Untitled-1-04-qedg4uw1bqyd97bga9c1q8nawk88gnjok4exmi2oyw.png" class="row-ioz"></a></figure>
+                                            <div class="content-9z5">
+                                                <h4 class="title-qs9"><a href="#">
+                                                    <h3 class="title-hyv style-heading" style="font-weight: bold; font-size: 20px;">
+                                                        Potential
+                                                    </h3>
+                                                    </a></h4>
+                                                <p class="image-fdp">
+                                                    <font id="style-qAQ84" class="style-qAQ84">
+                                                        <font id="style-jJsdU" class="style-jJsdU">Learn from failure and explore untapped potential.</font>
+                                                    </font>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column-va6 col-3w5 elementor-isd elementor-element-dqm">
+                            <div class="elementor-widget-72h elementor-element-3p5">
+                                <div class="elementor-isd elementor-element-3zm elementor-position-m4d elementor-9oa image-nw2">
+                                    <div class="container-qwj">
+                                        <div class="wrapper-jm8">
+                                            <figure class="image-o2d"><a href="#"><img class="animated-image slide-in" src="./images/Untitled-1-03-qedg4ty74wx2xlctfqxf5qvub6cv8yfy7zrg584354.png" class="row-ioz"></a></figure>
+                                            <div class="content-9z5">
+                                                <h4 class="title-qs9"><a href="#">
+                                                    <h3 class="title-hyv style-heading" style="font-weight: bold; font-size: 20px;">
+                                                        Intellectual Curiosity
+                                                    </h3>
+                                                    </a></h4>
+                                                <p class="image-fdp">
+                                                    <font id="style-WlD7r" class="style-WlD7r">
+                                                        <font id="style-ZnXqw" class="style-ZnXqw">Find subjects that inspire a love of learning.</font>
+                                                    </font>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column-va6 col-3w5 elementor-isd elementor-element-z9j">
+                            <div class="elementor-widget-72h elementor-element-3p5">
+                                <div class="elementor-isd elementor-element-frb elementor-position-m4d elementor-9oa image-nw2">
+                                    <div class="container-qwj">
+                                        <div class="wrapper-jm8">
+                                            <figure class="image-o2d"><a href="#"><img class="animated-image fade-in" src="./images/Untitled-1-02-qedg4ty74wx2xlctfqxf5qvub6cv8yfy7zrg584354.png" class="row-ioz"></a></figure>
+                                            <div class="content-9z5">
+                                                <h4 class="title-qs9"><a href="#">
+                                                    <h3 class="title-hyv style-heading" style="font-weight: bold; font-size: 20px;">
+                                                        Persistence
+                                                    </h3>
+                                                    </a></h4>
+                                                <p class="image-fdp">
+                                                    <font id="style-EWrEx" class="style-EWrEx">
+                                                        <font id="style-Qe9eB" class="style-Qe9eB">Do hard things consistently, regardless of motivation.</font>
+                                                    </font>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column-va6 col-3w5 elementor-isd elementor-element-z9j">
+                            <div class="elementor-widget-72h elementor-element-3p5">
+                                <div class="elementor-isd elementor-element-frb elementor-position-m4d elementor-9oa image-nw2">
+                                    <div class="container-qwj">
+                                        <div class="wrapper-jm8">
+                                            <figure class="image-o2d"><a href="#"><img class="animated-image slide-in" src="./images/Untitled-1-02-qedg4ty74wx2xlctfqxf5qvub6cv8yfy7zrg584354.png" class="row-ioz"></a></figure>
+                                            <div class="content-9z5">
+                                                <h4 class="title-qs9"><a href="#">
+                                                    <h3 class="title-hyv style-heading" style="font-weight: bold; font-size: 20px;">
+                                                        Service
+                                                    </h3>
+                                                    </a></h4>
+                                                <p class="image-fdp">
+                                                    <font id="style-EWrEx" class="style-EWrEx">
+                                                        <font id="style-Qe9eB" class="style-Qe9eB">Build community. Choose a cause that will help the world. Serve those in need.</font>
+                                                    </font>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
+
 
         <!-- Footer Section -->
         <footer class="main-footer">
@@ -851,11 +1017,11 @@ a:hover {
                                             <!-- Column -->
                                             <div class="column col-lg-6 col-md-6 col-sm-12">
                                                 <ul class="list-link">
-                                                    <li><a href="#">Home</a></li>
-                                                    <li><a href="#">Services</a></li>
-                                                    <li><a href="#">Courses</a></li>
-                                                    <li><a href="#">Blog Insight</a></li>
-                                                    <li><a href="#">Contact</a></li>
+                                                <li><a href="index.html">Home</a></li>
+												<li><a href="about.html">About</a></li>
+												<li><a href="service-detail.html">Services</a></li>
+												<li><a href="portfolio.html">Results</a></li>
+												<li><a href="consultant.html">Contact</a></li>
                                                 </ul>
                                             </div>
                                             <!-- Column -->
