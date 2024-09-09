@@ -133,7 +133,7 @@
 		/* Team Section Styles */
 		.team-section {
 			background-color: #f9f9ff;
-			padding: 40px 0;
+			padding: 80px 0;
 			text-align: center;
 		}
 
@@ -170,7 +170,7 @@
 		.team-member img {
 			width: 100%;
 			height: auto;
-			border-radius: 50%;
+			border-radius: 10%;
 			margin-bottom: 15px;
 			border: 3px solid #ddd;
 		}
@@ -183,64 +183,75 @@
 			position: relative;
 		}
 
-		.team-member p {
-			font-size: 1rem;
-			color: #777;
-		}
+		.team-member {
+			position: relative;
+			text-align: center;
+			margin: 20px;
+		  }
+		  .read-more-btn {
+			margin-top: 10px;
+			padding: 5px 10px;
+			font-size: 0.9rem;
+			cursor: pointer;
+			background-color: #000000;
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			transition: background-color 0.3s;
+		  }
+		  .read-more-btn:hover {
+			background-color: #02060a;
+		  }
 
 		/* Enhanced Bio Popup Styles */
 		.bio-popup {
-			display: none;
-			/* Hidden by default */
-			position: absolute;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.7);
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			z-index: 1000;
-			background-color: #ffffff;
-			/* White background for a clean look */
 			padding: 20px;
-			/* More padding for better spacing */
-			border-radius: 12px;
-			/* Rounded corners for a modern look */
-			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-			/* Shadow for a subtle 3D effect */
-			max-width: 300px;
-			/* Limiting the width for readability */
+			box-sizing: border-box;
+		  }
+		  .bio-content {
+			background-color: #fff;
+			padding: 30px;
+			border-radius: 8px;
+			max-width: 500px;
 			text-align: left;
-			animation: fadeIn 0.3s ease-out, slideIn 0.5s ease-out;
-			/* Combined animations for fade-in and slide-in effect */
-			border: 1px solid #e0e0e0;
-			/* Light border for a subtle effect */
-			transform: translateY(-20px);
-			/* Adjust pop-up to move up slightly */
-			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-			/* Modern and clean font */
-			color: #333;
-			/* Text color */
-		}
-
-		.bio-content {
+			position: relative;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			font-family: Arial, sans-serif;
 			font-size: 1rem;
-			color: #444;
-			/* Darker text for better contrast */
 			line-height: 1.6;
-			/* Increased line height for readability */
-		}
-
-		.bio-popup::before {
-			content: '';
-			/* Decorative arrow element */
+		  }
+		  
+		  .bio-content strong {
+			font-size: 1.2rem;
+			color: #070707;
+			display: block;
+			margin-bottom: 10px;
+		  }
+		  
+		  .bio-content span {
+			display: block;
+			margin-bottom: 5px;
+			color: #333;
+		  }
+		  
+		  .close-btn {
 			position: absolute;
-			top: 100%;
-			/* Position at the bottom of the pop-up */
-			left: 15%;
-			/* Center it horizontally */
-			margin-left: -5px;
-			/* Offset by half the width */
-			border-width: 6px;
-			/* Triangle size */
-			border-style: solid;
-			border-color: #ffffff transparent transparent transparent;
-			/* White arrow */
-		}
+			top: 10px;
+			right: 15px;
+			font-size: 1.5rem;
+			cursor: pointer;
+			color: #333;
+		  }
 
 		@keyframes fadeIn {
 			from {
@@ -355,7 +366,7 @@
 									</li>
 									<li class="dropdown"><a href="#">Services</a>
 										<ul class="dropdown-content">
-											<li><a href="course_exp.html">College Admissions</a></li>
+											<li><a href="courses_exp.html">College Admissions</a></li>
 											<li class="dropdown"><a href="#">Boarding School</a>
 												<ul class="dropdown-content">
 
@@ -537,61 +548,66 @@
 				<div class="team-grid">
 					<!-- Motivational Quote -->
 					<section class="quote-section" style="margin: 40px 0; text-align: center;">
-						<blockquote style="font-size: 1.5rem; font-style: italic; color: #555;">
-							"We are a strong and dedicated team, united by our commitment to delivering unparalleled
-							success and satisfaction for our clients. Your success is our mission."
-						</blockquote>
+					  <blockquote style="font-size: 1.5rem; font-style: italic; color: #555;">
+						"We are a strong and dedicated team, united by our commitment to delivering unparalleled
+						success and satisfaction for our clients. Your success is our mission."
+					  </blockquote>
 					</section>
+					
 					<!-- Team Member 1 -->
 					<div class="team-member">
-						<img src="assets/images/team/Charles.jpg" alt="Charles Kim">
-						<h3 class="member-name" data-bio="CHARLES KIM (FOUNDER)
-      Lead: Test Prep and Admissions
-      B.A. Social Administration at the University of California Riverside
-      20 years experience in Test Prep: SAT I/II, ACT, AP Exams, TOEFL/IELTS, etc.
-      12 years experience in Admission Consulting for application to universities, boarding and international schools
-      Head of Test Prep department at Point Avenue
-      Director at Icon Institute, Bundang, Korea
-      Assistant Director at Chase Academy, Seoul, Korea">Charles Kim</h3>
-						<p>Founder</p>
+					  <img src="assets/images/team/Charles.jpg" alt="Charles Kim">
+					  <h3 class="member-name" data-bio='
+						<strong>CHARLES KIM (FOUNDER)</strong><br>
+						<span>Lead: Test Prep and Admissions</span><br>
+						<span>B.A. Social Administration at the University of California Riverside</span><br>
+						<span>20 years experience in Test Prep: SAT I/II, ACT, AP Exams, TOEFL/IELTS, etc.</span><br>
+						<span>12 years experience in Admission Consulting for applications to universities, boarding, and international schools</span><br>
+						<span>Head of Test Prep department at Point Avenue</span><br>
+						<span>Director at Icon Institute, Bundang, Korea</span><br>
+						<span>Assistant Director at Chase Academy, Seoul, Korea</span>'>Charles Kim</h3>
+					  <p>Founder</p>
+					  <button class="read-more-btn" onclick="showBio(this)">Read More</button>
 					</div>
-
+				  
 					<!-- Team Member 2 -->
 					<div class="team-member">
-						<img src="assets/images/team/Dan.jpg" alt="Dan Stone">
-						<h3 class="member-name"
-							data-bio="DAN STONE
-      Co-Founder & International Admissions Consultant
-      B.A. Psychology, Minor in Education - UMass Amherst
-      10+ Years teaching, advising, developing curriculum
-      Former Center Director & Writing teacher at Point Avenue
-      Experience supporting over 400 students with college applications to undergraduate and master's programs in Europe, North America, and Asia, including guidance with visa preparations, scholarship applications, interviews, and resumes.">
-							Dan Stone</h3>
-						<p>Co-Founder Consultant</p>
+					  <img src="assets/images/team/Dan.jpg" alt="Dan Stone">
+					  <h3 class="member-name" data-bio='
+						<strong>DAN STONE</strong><br>
+						<span>Co-Founder & International Admissions Consultant</span><br>
+						<span>B.A. Psychology, Minor in Education - UMass Amherst</span><br>
+						<span>10+ Years teaching, advising, developing curriculum</span><br>
+						<span>Former Center Director & Writing teacher at Point Avenue</span><br>
+						<span>Experience supporting over 400 students with college applications to undergraduate and master's programs in Europe, North America, and Asia, including guidance with visa preparations, scholarship applications, interviews, and resumes.</span>Dan Stone</h3>
+					  <p>Co-Founder Consultant</p>
+					  <button class="read-more-btn" onclick="showBio(this)">Read More</button>
 					</div>
-
+				  
 					<!-- Team Member 3 -->
 					<div class="team-member">
-						<img src="assets/images/team/Ryan.jpg" alt="Ryan Bleich">
-						<h3 class="member-name" data-bio="RYAN BLEICH 
-      Senior Management Consultant: Boarding School/International School Admissions
-      Ridley College Graduate
-      B.A. History/Geography, and B.Education, Lakehead University
-      Ontario Certified Teacher with over 10+ years experience in Secondary Schooling
-      IB certified teacher: History DP - Route II
-      Academic Consultant partnered with CAIS schools in Canada for over 5+ years
-      Founder of 2 English Academies in Seoul">Ryan Bleich</h3>
-						<p>Senior Management Consultant</p>
+					  <img src="assets/images/team/Ryan.jpg" alt="Ryan Bleich">
+					  <h3 class="member-name" data-bio='
+						<strong>RYAN BLEICH</strong><br>
+						<span>Senior Management Consultant: Boarding School/International School Admissions</span><br>
+						<span>Ridley College Graduate</span><br>
+						<span>B.A History/Geography, and B.Education, Lakehead University</span><br>
+						<span>Ontario Certified Teacher with over 10+ years experience in Secondary Schooling</span><br>
+						<span>IB certified teacher: History DP - Route II</span><br>
+						<span>Academic Consultant partnered with CAIS schools in Canada for over 5+ years</span><br>
+						<span>Founder of 2 English Academies in Seoul</span>'>Ryan Bleich</h3>
+					  <p>Senior Management Consultant</p>
+					  <button class="read-more-btn" onclick="showBio(this)">Read More</button>
 					</div>
-				</div>
-			</div>
+				  </div>
 
 			<!-- Bio Popup -->
-			<div id="bio-popup" class="bio-popup">
+			<div id="bio-popup" class="bio-popup" style="display:none;">
 				<div class="bio-content">
-					<p id="bio-text"></p>
+					<span class="close-btn" onclick="closeBio()">&times;</span>
+					<div id="bio-text"></div>
 				</div>
-			</div>
+			  </div>
 		</section>
 		<!-- End Faq's Page Section -->
 
@@ -759,54 +775,22 @@
 	<script src="assets/js/script.js"></script>
 
 	<script>
-		document.querySelectorAll('.member-name').forEach(member => {
-			member.addEventListener('mouseenter', function () {
-				const bioPopup = document.getElementById('bio-popup');
-				const bioText = document.getElementById('bio-text');
-
-				// Structured content for the bio
-				const bioContent = `
-      <div style="font-size: 1.2rem; line-height: 1.7; padding: 10px; background-color: #f4f4f9; border-radius: 8px;">
-        <h4 style="margin-bottom: 10px; color: #333;">${this.textContent}</h4>
-        <p><strong>Position:</strong> ${this.closest('.team-member').querySelector('p').textContent}</p>
-        <p><strong>Experience:</strong> 20+ years in education and admissions consulting.</p>
-        <p><strong>Specialties:</strong> Test prep, admissions strategies, and international education.</p>
-        <p><strong>Education:</strong> ${this.getAttribute('data-bio')}</p>
-      </div>
-    `;
-
-				// Set the bio content
-				bioText.innerHTML = bioContent;
-
-				// Position the popup near the hovered element at the upper right side
-				const rect = this.closest('.team-member').getBoundingClientRect();
-				bioPopup.style.top = `${rect.top + window.scrollY - 10}px`;
-				bioPopup.style.left = `${rect.right + window.scrollX + 10}px`;
-
-				// Show the popup
-				bioPopup.style.display = 'block';
-			});
-
-			member.addEventListener('mouseleave', function () {
-				const bioPopup = document.getElementById('bio-popup');
-				bioPopup.style.display = 'none';
-			});
-		});
-
-	</script>
-
-
-
-
-	<!--Team Slide-->
-	<script>
-		$(document).ready(function () {
-			$('#teamCarousel').carousel({
-				interval: 2000, // 2 seconds
-				pause: "hover" // Optional: Pause on hover
-			});
-		});
-	</script>
+		function showBio(button) {
+			const bioPopup = document.getElementById('bio-popup');
+			const bioText = document.getElementById('bio-text');
+			const bio = button.previousElementSibling.previousElementSibling.getAttribute('data-bio');
+			
+			// Inject bio content into the popup
+			bioText.innerHTML = bio;
+			bioPopup.style.display = 'flex';
+		  }
+		  
+		  function closeBio() {
+			const bioPopup = document.getElementById('bio-popup');
+			bioPopup.style.display = 'none';
+		  }
+		  
+	</script>  
 
 
 </body>

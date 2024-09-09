@@ -11,6 +11,7 @@
 <link href="assets/css/responsive.css" rel="stylesheet">
 
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
 <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
@@ -85,23 +86,88 @@
         flex-wrap: wrap;
         justify-content: space-around;
     }
-    
+	.additional-services {
+		display: flex;
+		align-items: flex-start; /* Align at the top */
+		justify-content: space-between;
+		gap: 20px; /* Space between the image and the text content */
+	}
+	
+	.services-left {
+		flex: 1;
+		display: flex;
+		align-items: center;
+	}
+	
+	.left-image {
+		width: 100%;
+		max-width: 350px; /* Max width for the image */
+		border-radius: 8px;
+		object-fit: cover;
+	}
+	
+	.services-right {
+		flex: 2;
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.services-right h2 {
+		font-size: 32px; /* Font size similar to image 1 */
+		font-weight: bold;
+		margin-bottom: 15px; /* Space below the heading */
+		color: #1F3A93; /* Similar color */
+	}
+	
+	.services-right p {
+		font-size: 18px; /* Adjusted font size */
+		margin-bottom: 25px; /* Space between text and grid */
+		color: #333; /* Text color */
+	}
+	
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr); /* Four items per row */
+		gap: 30px; /* Spacing between grid items */
+		text-align: center;
+	}
+	
     .service-item {
-        width: 30%;
-        text-align: center;
-        margin-bottom: 20px;
-    }
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.service-item i {
+		font-size: 36px; /* Icon size */
+		margin-bottom: 10px;
+		color: #1F3A93; /* Similar color */
+	}
     
     .service-item img {
         width: 90px; /* Further increased size */
         height: 90px; /* Further increased size */
         margin-bottom: 10px;
     }
+	body {
+		font-family: Arial, sans-serif;
+	}
+	.section-container {
+		border: 2px solid #e0e0e0; /* Border color */
+		padding: 40px; /* Space inside the box */
+		background-color: #f9f9f9; /* Background color for the section */
+		border-radius: 10px; /* Rounded corners */
+		max-width: 1200px; /* Maximum width of the container */
+		margin: 30px auto; /* Center the container */
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+	}
     
     .service-item h3 {
-        font-size: 16px;
-        margin: 10px 0;
-    }
+		font-size: 16px; /* Font size */
+		font-weight: bold;
+		margin: 0;
+		color: #333; /* Text color */
+	}
     
     .test-prep {
         margin-top: 40px;
@@ -143,6 +209,12 @@
 		margin-bottom: -150px; /* Adjust as needed */
 		filter: drop-shadow(2px 2px 5px white); /* Adds a white shadow effect */
 	}
+	.sidebar-info-contents .logo img {
+		filter: brightness(150%); /* Increase brightness */
+		max-width: 150px; /* Adjust the width as needed */
+		margin-bottom: 20px; /* Adds space between the logo and content */
+		display: block;
+	}
     
 
 </style>
@@ -172,9 +244,9 @@
                     <div class="top-right pull-right clearfix">
 						<!-- Social Box -->
 						<ul class="social-box">
-							<li><a href="https://www.facebook.com/share/nanbA8kA8TZNrpFv/?mibextid=LQQJ4d" class="fa fa-facebook"></a></li>
-							<li><a href="https://www.instagram.com/kylanconsulting.vn?igsh=MXZpcjRmbGg1amR2Mg==" class="fa fa-instagram"></a></li>
-							<li><a href="https://youtube.com/" class="fa fa-youtube-play"></a></li>
+							<li><a href="https://www.facebook.com/share/nanbA8kA8TZNrpFv/?mibextid=LQQJ4d" class="fa-brands fa-facebook"></a></li>
+							<li><a href="https://www.instagram.com/kylanconsulting.vn?igsh=MXZpcjRmbGg1amR2Mg==" class="fa-brands fa-instagram"></a></li>
+							<li><a href="https://youtube.com/" class="fa-brands fa-youtube"></a></li>
 							
 						</ul>
 						<a href="consultant.html" class="btn btn-consultation">Free Consultation</a>
@@ -326,27 +398,26 @@
 						<div class="content-inner">
 							<div class="logo">
 								<a href="index.html"><img src="assets/images/logo.png" alt="" /></a>
-							</div>
+
 							<div class="content-box">
 								<h4>About Us</h4>
-								<p class="text">I am glad that you have made it here to send a distress signal, and inform the Senate that all on board killed. Dantooine. I’m not going to Alderaan. I really got to go. But that to me.</p>
+								<p class="text">Kylan Consulting is a team of education consultants, admissions strategists, and trusted friends and family. We partner with families to simplify admissions processes and guide students toward personal, academic, and extracurricular success.</p>
 								<a href="contact.html" class="theme-btn btn-style-one"><span class="txt">Consultation</span></a>
 							</div>
 							<div class="contact-info">
 								<h4>Contact Info</h4>
 								<ul class="list-style-one">
-									<li><span class="icon fa fa-location-arrow"></span>Chicago 12, Melborne City, USA</li>
-									<li><span class="icon fa fa-phone"></span>(111) 111-111-1111</li>
-									<li><span class="icon fa fa-envelope"></span>avarton@gmail.com</li>
-									<li><span class="icon fa fa-clock-o"></span>Week Days: 09.00 to 18.00 Sunday: Closed</li>
+									<li><span class="fa-solid fa-location-arrow"></span>Shophouse A26, Sunshine City, Ciputra, Ha Noi</li>
+									<li><span class="fa-solid fa-phone"></span>(111) 111-111-1111</li>
+									<li><span class="fa-solid fa-envelope"></span>kylanconsulting@gmail.com</li>
+									<li><span class="fa-regular fa-clock"></span>Week Days: 09.00 to 18.00 Sunday: Closed</li>
 								</ul>
 							</div>
 							<!-- Social Box -->
 							<ul class="social-box">
-								<li><a href="https://www.facebook.com/" class="fa fa-facebook-f"></a></li>
-								<li><a href="https://www.twitter.com/" class="fa fa-twitter"></a></li>
-								<li><a href="https://www.linkedin.com/" class="fa fa-linkedin"></a></li>
-								<li><a href="https://youtube.com/" class="fa fa-youtube-play"></a></li>
+								<li><a href="https://www.facebook.com/share/nanbA8kA8TZNrpFv/?mibextid=LQQJ4d" class="fa-brands fa-facebook"></a></li>
+								<li><a href="https://www.instagram.com/kylanconsulting.vn?igsh=MXZpcjRmbGg1amR2Mg==" class="fa-brands fa-instagram"></a></li>
+								<li><a href="https://youtube.com/" class="fa-brands fa-youtube"></a></li>
 							</ul>
 						</div>
 					</div>
@@ -376,70 +447,53 @@
         <div class="row clearfix">
 
             <!-- Additional Services Section -->
-            <div class="services-section" style="margin-bottom: 50px;">
-                <h2>Academic Coaching & Additional Services</h2>
-                <p>The strength of a student’s application may require investments in additional services. Our trusted network of organizations and experts will increase the likelihood of acceptance through:</p>
+			<div class="section-container">
+				<div class="additional-services">
+					<div class="services-left">
+						<img src="assets/images/left-image.png" alt="Student Image" class="left-image">
+					</div>
+					<div class="services-right">
+						<h2>ADDITIONAL SERVICES</h2>
+						<p>The strength of a student’s application may require investments in additional services. Our trusted network of organizations and experts will increase the likelihood of acceptance through:</p>
+						<div class="services-grid">
+							<div class="service-item">
+								<i class="fas fa-graduation-cap"></i>
+								<h3>Academic Tutoring</h3>
+							</div>
+							<div class="service-item">
+								<i class="fas fa-users"></i>
+								<h3>Community Service Projects</h3>
+							</div>
+							<div class="service-item">
+								<i class="fas fa-laptop"></i>
+								<h3>Online Courses</h3>
+							</div>
+							<div class="service-item">
+								<i class="fas fa-medal"></i>
+								<h3>Academic Competitions</h3>
+							</div>
+							<div class="service-item">
+								<i class="fas fa-flask"></i>
+								<h3>Research & Independent Projects</h3>
+							</div>
+							<div class="service-item">
+								<i class="fas fa-briefcase"></i>
+								<h3>Internships & Summer Programs</h3>
+							</div>
+							<div class="service-item">
+								<i class="fas fa-user-check"></i>
+								<h3>Career and Personality Testing</h3>
+							</div>
+							<div class="service-item">
+								<i class="fas fa-folder-open"></i>
+								<h3>Portfolio Building</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-                <div class="service-list">
-                    <div class="service-item">
-                        <img src="assets/images/icons/academic_tutoring.png" alt="Academic Tutoring">
-                        <h3>Academic Tutoring</h3>
-                    </div>
-                    <div class="service-item">
-                        <img src="assets/images/icons/community_service.jpg" alt="Community Service Projects">
-                        <h3>Community Service Projects</h3>
-                    </div>
-                    <div class="service-item">
-                        <img src="assets/images/icons/online_courses.png" alt="Online Courses">
-                        <h3>Online Courses</h3>
-                    </div>
-                    <div class="service-item">
-                        <img src="assets/images/icons/research_projects.jpg" alt="Research & Independent Projects">
-                        <h3>Research & Independent Projects</h3>
-                    </div>
-                    <div class="service-item">
-                        <img src="assets/images/icons/academic_competitions.jpg" alt="Academic Competitions">
-                        <h3>Academic Competitions</h3>
-                    </div>
-                    <div class="service-item">
-                        <img src="assets/images/icons/internships.png" alt="Internships & Summer Programs">
-                        <h3>Internships & Summer Programs</h3>
-                    </div>
-                    <div class="service-item">
-                        <img src="assets/images/icons/career_testing.jpg" alt="Career and Personality Testing">
-                        <h3>Career and Personality Testing</h3>
-                    </div>
-                    <div class="service-item">
-                        <img src="assets/images/icons/portfolio_building.png" alt="Portfolio Building">
-                        <h3>Portfolio Building</h3>
-                    </div>
-                </div>
-
-                <h3 style="text-align: center; margin-top: 40px;">Test Prep</h3>
-                <p style="text-align: center;">Our sister company, Vision Mentors, offers group and 1-on-1 tutoring and classes for standardized tests, including:</p>
-                
-                <div class="service-list">
-                    <div class="service-item">
-                        <img src="assets/images/icons/toefl.png" alt="TOEFL / IELTS / Duo Lingo">
-                        <h3>TOEFL / IELTS / Duo Lingo</h3>
-                    </div>
-                    <div class="service-item">
-                        <img src="assets/images/icons/sat_icon.jpg" alt="Digital SAT / ACT">
-                        <h3>Digital SAT / ACT</h3>
-                    </div>
-                    <div class="service-item">
-                        <img src="assets/images/icons/ssat_icon.png" alt="SSAT / ISEE">
-                        <h3>SSAT / ISEE</h3>
-                    </div>
-                    <div class="service-item">
-                        <img src="assets/images/icons/igcse_icon.png" alt="IGCSE">
-                        <h3>IGCSE</h3>
-                    </div>
-                    <div class="service-item">
-                        <img src="assets/images/icons/ib_ap_icon.jpeg" alt="IB, AP, A-Level">
-                        <h3>IB, AP, A-Level</h3>
-                    </div>
-            </div>
+            
             <!-- End Additional Services Section -->
 
             <!-- Accordian Block -->
