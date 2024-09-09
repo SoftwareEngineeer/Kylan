@@ -207,10 +207,26 @@
 
 /* Logo Image Styling */
 .footer-widget .logo img {
-    height: 200px; /* Increase the height to make the logo larger */
+    height: 200px; /* Adjust height as needed */
     width: auto; /* Maintain aspect ratio */
-    display: block; /* Ensures the image is displayed as a block element */
-    margin-bottom:-150px; /* Adds space between the logo and the text */
+    display: block;
+    margin-bottom: -150px; /* Adjust as needed */
+    filter: drop-shadow(2px 2px 5px white); /* Adds a white shadow effect */
+}
+/* Specific rule to target the third checkbox */
+/* Target the third checkbox and set the background color to sky blue */
+/* Target only the third checkbox and change its background color */
+.option-list li:nth-child(3) .icon {
+    background-color: skyblue; /* or use #87CEEB for a specific shade of sky blue */
+    border-radius: 4px; /* Optional: Rounded corners */
+    padding: 8px; /* Adjust the padding as needed */
+    display: inline-block; /* Ensures the element is displayed correctly */
+}
+.sidebar-info-contents .logo img {
+    filter: brightness(150%); /* Increase brightness */
+    max-width: 150px; /* Adjust the width as needed */
+    margin-bottom: 20px; /* Adds space between the logo and content */
+    display: block;
 }
 
 
@@ -297,7 +313,7 @@
 								</li>
 								<li class="dropdown"><a href="#">Services</a>
 									<ul class="dropdown-content">
-										<li><a href="courses.html">College Admissions</a></li>
+										<li><a href="course_exp.html">College Admissions</a></li>
 										<li class="dropdown"><a href="#">Boarding School</a>
 											<ul class="dropdown-content">
 											
@@ -395,7 +411,7 @@
 						<div class="content-inner">
 							<div class="logo">
 								<a href="index.html"><img src="assets/images/logo.png" alt="" /></a>
-							</div>
+						
 							<div class="content-box">
 								<h4>About Us</h4>
 								<p class="text">Kylan Consulting is a team of education consultants, admissions strategists, and trusted friends and family. We partner with families to simplify admissions processes and guide students toward personal, academic, and extracurricular success.</p>
@@ -553,8 +569,8 @@
 							<div class="column col-lg-4 col-md-4 col-sm-12">
 								<ul class="option-list">
 									<li>
-										<span class="icon transition-500ms flaticon-check"></span>
-										Time to time <br> shedule
+										<span class="icon transition-500ms flaticon-check" style="background-color: #FFEB99;"></span>
+										Time to time <br> schedule
 									</li>
 								</ul>
 							</div>
@@ -562,8 +578,8 @@
 							<div class="column col-lg-4 col-md-4 col-sm-12">
 								<ul class="option-list">
 									<li>
-										<span class="icon transition-500ms flaticon-check"></span>
-										24/7 Online <br> Suppport
+										<span class="icon transition-500ms flaticon-check" style="background-color: #2F6B5F;"></span>
+										24/7 Online <br> Support
 									</li>
 								</ul>
 							</div>
@@ -571,15 +587,13 @@
 							<div class="column col-lg-4 col-md-4 col-sm-12">
 								<ul class="option-list">
 									<li>
-										<span class="icon transition-500ms flaticon-check"></span>
+										<span class="icon transition-500ms flaticon-check" style="background-color: skyblue;"></span>
 										Man to <br> Optimize
 									</li>
 								</ul>
 							</div>
+							
 						</div>
-						
-						
-						
 					</div>
 				</div>
 				
@@ -621,7 +635,7 @@
 					<div class="service-block translate-top">
 						<div class="inner-box">
 							<div class="image">
-								<a href="service-detail.html"><img class="transition-500ms" src="assets/images/resource/Service-2.png" alt="" /></a>
+								<a href="service-detail.html"><img class="transition-500ms" src="assets/images/resource/Service-2.jpg" alt="" /></a>
 							</div>
 							<div class="lower-content">
 								

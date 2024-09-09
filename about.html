@@ -112,11 +112,13 @@
         
         /* Logo Image Styling */
         .footer-widget .logo img {
-            height: 200px; /* Increase the height to make the logo larger */
+            height: 200px; /* Adjust height as needed */
             width: auto; /* Maintain aspect ratio */
-            display: block; /* Ensures the image is displayed as a block element */
-            margin-bottom:-150px; /* Adds space between the logo and the text */
+            display: block;
+            margin-bottom: -150px; /* Adjust as needed */
+            filter: drop-shadow(2px 2px 5px white); /* Adds a white shadow effect */
         }
+        
        /* Global Styling */
 body {
     font-family: 'Arial', sans-serif;
@@ -454,6 +456,12 @@ a:hover {
         max-height: 250px;
     }
 }
+.sidebar-info-contents .logo img {
+    filter: brightness(150%); /* Increase brightness */
+    max-width: 150px; /* Adjust the width as needed */
+    margin-bottom: 20px; /* Adds space between the logo and content */
+    display: block;
+}
 
     </style>
 </head>
@@ -535,7 +543,7 @@ a:hover {
                                     </li>
                                     <li class="dropdown"><a href="#">Services</a>
                                         <ul class="dropdown-content">
-                                            <li><a href="courses.html">College Admissions</a></li>
+                                            <li><a href="course_exp.html">College Admissions</a></li>
                                             <li class="dropdown"><a href="#">Boarding School</a>
                                                 <ul class="dropdown-content">
                                                 
@@ -633,7 +641,7 @@ a:hover {
                             <div class="content-inner">
                                 <div class="logo">
                                     <a href="index.html"><img src="assets/images/logo.png" alt="" /></a>
-                                </div>
+                            
                                 <div class="content-box">
                                     <h4>About Us</h4>
 								    <p class="text">Kylan Consulting is a team of education consultants, admissions strategists, and trusted friends and family. We partner with families to simplify admissions processes and guide students toward personal, academic, and extracurricular success.</p>
