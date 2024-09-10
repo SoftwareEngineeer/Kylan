@@ -85,6 +85,122 @@
 		margin-bottom: -150px; /* Adjust as needed */
 		filter: drop-shadow(2px 2px 5px white); /* Adds a white shadow effect */
 	}
+	body {
+		font-family: 'Georgia', serif; /* Classic serif font for a traditional academic feel */
+		margin: 0;
+		padding: 0;
+		background-color: #f9f9f9; /* Light background */
+		color: #4a4a4a; /* Medium gray for body text for better readability */
+	}
+	
+	.acceptances-section {
+		padding: 40px;
+		max-width: 960px;
+		margin: auto;
+		text-align: left;
+		background-color: #ffffff; /* White background for the main section */
+		border: 1px solid #ddd; /* Subtle border around the content */
+		border-radius: 5px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+	}
+	
+	.acceptances-section h2 {
+		font-size: 2.2em;
+		color: #000000; /* Black for main title for emphasis */
+		margin-bottom: 20px;
+		border-bottom: 2px solid #990000; /* Underline effect to mimic headers */
+		padding-bottom: 10px;
+	}
+	
+	.acceptances-section p {
+		font-size: 1.1em;
+		margin-bottom: 30px;
+		color: #4a4a4a; /* Medium gray for paragraph text */
+	}
+	
+	.list-container {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+	
+	.acceptances-list {
+		padding: 15px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		background-color: #fdfdfd; /* Slightly off-white for contrast */
+		margin-bottom: 20px;
+	}
+	
+	.acceptances-list h3 {
+		font-size: 1.5em;
+		color: #000000; /* Black for section titles */
+		margin-bottom: 10px;
+		text-align: left;
+	}
+	
+	.region {
+		margin-bottom: 15px;
+	}
+	
+	.region h4 {
+		font-size: 1.2em;
+		color: #333333; /* Darker gray for subheadings */
+		margin-bottom: 5px;
+		cursor: pointer;
+		padding-bottom: 5px;
+		border-bottom: 1px solid #ddd; /* Underline effect for section headers */
+		transition: color 0.3s;
+	}
+	
+	.region h4:hover {
+		color: #990000; /* Change color on hover for interactivity */
+	}
+	
+	ul {
+		list-style-type: none;
+		padding-left: 20px;
+		margin: 0;
+	}
+	
+	li {
+		font-size: 1em;
+		margin-bottom: 5px;
+		color: #4a4a4a; /* Medium gray for list items */
+	}
+	
+	li:hover {
+		color: #333333; /* Darker color on hover for better visibility */
+		cursor: pointer;
+	}
+	
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+	
 </style>
 </head>
 
@@ -105,7 +221,7 @@
                 <div class="inner-container clearfix">
 					<!-- Top Left -->
 					<div class="top-left clearfix">
-						<div class="text"><span>Working time:</span> Monday to Friday 9 AM - 5 PM</div>
+						<div class="text"><span>Working time:</span> Monday to Friday</div>
 					</div>
 					
 					<!-- Top Right -->
@@ -266,26 +382,23 @@
 						<div class="content-inner">
 							<div class="logo">
 								<a href="index.html"><img src="assets/images/logo.png" alt="" /></a>
-							</div>
 							<div class="content-box">
 								<h4>About Us</h4>
-								<p class="text">I am glad that you have made it here to send a distress signal, and inform the Senate that all on board killed. Dantooine. I’m not going to Alderaan. I really got to go. But that to me.</p>
+								<p class="text">Kylan Consulting partners with families to simplify admissions processes and guide students toward academic, personal, and professional success.</p>
 								<a href="contact.html" class="theme-btn btn-style-one"><span class="txt">Consultation</span></a>
 							</div>
 							<div class="contact-info">
-								<h4>Contact Info</h4>
+								<h4>Contact</h4>
 								<ul class="list-style-one">
-									<li><span class="icon fa fa-location-arrow"></span>Chicago 12, Melborne City, USA</li>
-									<li><span class="icon fa fa-phone"></span>(111) 111-111-1111</li>
-									<li><span class="icon fa fa-envelope"></span>avarton@gmail.com</li>
-									<li><span class="icon fa fa-clock-o"></span>Week Days: 09.00 to 18.00 Sunday: Closed</li>
+									<li><span class="icon fa fa-location-arrow"></span>Shophouse A26, Sunshine City, Ciputra, Ha Noi</li>
+									<li><span class="icon fa fa-envelope"></span>kylanconsulting@gmail.com</li>
+									<li><span class="icon fa fa-clock-o"></span>Working Time: Monday to Friday</li>
 								</ul>
 							</div>
 							<!-- Social Box -->
 							<ul class="social-box">
-								<li><a href="https://www.facebook.com/" class="fa fa-facebook-f"></a></li>
-								<li><a href="https://www.twitter.com/" class="fa fa-twitter"></a></li>
-								<li><a href="https://www.linkedin.com/" class="fa fa-linkedin"></a></li>
+								<<li><a href="https://www.facebook.com/share/nanbA8kA8TZNrpFv/?mibextid=LQQJ4d" class="fa fa-facebook-f"></a></li>
+								<li><a href="https://www.instagram.com/kylanconsulting.vn?igsh=MXZpcjRmbGg1amR2Mg==" class="fa fa-instagram"></a></li>
 								<li><a href="https://youtube.com/" class="fa fa-youtube-play"></a></li>
 							</ul>
 						</div>
@@ -301,8 +414,8 @@
 	<section class="page-title" style="background-image: url(assets/images/background/2.jpg)">
 		<div class="auto-container">
 			<div class="content">
-				<div class="text">Welcome to our company</div>
-				<h1>Case Study</h1>
+				<div class="text"></div>
+				<h1>Admissions Success</h1>
 			</div>
 			
 		</div>
@@ -311,228 +424,135 @@
 	
 	<!-- Portfolio Page Section -->
 	<section class="portfolio-page-section">
-		<div class="auto-container">
-			<!--MixitUp Galery-->
-            <div class="mixitup-gallery">
-                
-                <!--Filter-->
-                <div class="filters clearfix">
-                	
-                	<ul class="filter-tabs filter-btns text-center clearfix">
-                        <li class="active filter" data-role="button" data-filter="all">All Services</li>
-                        <li class="filter" data-role="button" data-filter=".consultancy">Consultancy</li>
-                        <li class="filter" data-role="button" data-filter=".course">Online Course</li>
-                        <li class="filter" data-role="button" data-filter=".support">Online Support</li>
-                    </ul>
-                    
-                </div>
-                
-                <div class="filter-list row clearfix">
-					
-					<!-- Gallery Block -->
-					<div class="gallery-block mix all course support col-lg-4 col-md-4 col-sm-12">
-						<div class="inner-box">
-							<figure class="image-box">
-								<img src="assets/images/gallery/1.jpg" alt="">
-								<!-- Overlay Box -->
-								<div class="overlay-box">
-									<div class="content">
-										<div class="category">Self Development</div>
-										<h4><a href="portfolio-detail.html">Dancy Life Saving Decisions</a></h4>
-									</div>
-									<a href="assets/images/gallery/1.jpg" data-fancybox="gallery-1" data-caption="" class="plus-link"><span class="icon flaticon-full-screen"></span></a>
-								</div>
-							</figure>
-						</div>
+		<div class="acceptances-section">
+			<h2>Kylan Consulting Acceptances</h2>
+			<p>For over ten years, Kylan Consulting’s students have gained acceptance to highly selective, best-fit, and top-choice boarding schools and colleges.</p>
+			
+			<div class="list-container">
+				<div class="acceptances-list">
+					<h3>Colleges</h3>
+					<div class="region">
+						<h4>United States</h4>
+						<ul>
+							<li>Massachusetts Institute of Technology</li>
+							<li>Stanford University</li>
+							<li>Harvard University</li>
+							<li>California Institute of Technology</li>
+							<li>Princeton University</li>
+							<li>University of Chicago</li>
+							<li>University of Pennsylvania</li>
+							<li>Yale University</li>
+							<li>Columbia University</li>
+							<li>Duke University</li>
+							<li>Northwestern University</li>
+							<li>Johns Hopkins University</li>
+							<li>University of California, Berkeley</li>
+							<li>University of California, Los Angeles</li>
+							<li>Cornell University</li>
+							<li>University of Michigan</li>
+							<li>University of Southern California</li>
+							<li>New York University</li>
+							<li>Carnegie Mellon University</li>
+							<li>University of North Carolina</li>
+							<li>University of South Florida</li>
+							<li>Arizona State University</li>
+							<li>George Washington University</li>
+							<li>University of Rochester</li>
+							<li>Gettysburg College</li>
+							<li>University of Georgia</li>
+							<li>Wesleyan University</li>
+						</ul>
 					</div>
-					
-					<!-- Gallery Block -->
-					<div class="gallery-block mix all support col-lg-4 col-md-4 col-sm-12">
-						<div class="inner-box">
-							<figure class="image-box">
-								<img src="assets/images/gallery/2.jpg" alt="">
-								<!-- Overlay Box -->
-								<div class="overlay-box">
-									<div class="content">
-										<div class="category">Self Development</div>
-										<h4><a href="portfolio-detail.html">Dancy Life Saving Decisions</a></h4>
-									</div>
-									<a href="assets/images/gallery/2.jpg" data-fancybox="gallery-1" data-caption="" class="plus-link"><span class="icon flaticon-full-screen"></span></a>
-								</div>
-							</figure>
-						</div>
+					<div class="region">
+						<h4>Canada</h4>
+						<ul>
+							<li>University of Toronto</li>
+							<li>University of British Columbia</li>
+							<li>McGill University</li>
+							<li>University of Alberta</li>
+							<li>University of Waterloo</li>
+						</ul>
 					</div>
-					
-					<!-- Gallery Block -->
-					<div class="gallery-block mix all support course col-lg-4 col-md-4 col-sm-12">
-						<div class="inner-box">
-							<figure class="image-box">
-								<img src="assets/images/gallery/3.jpg" alt="">
-								<!-- Overlay Box -->
-								<div class="overlay-box">
-									<div class="content">
-										<div class="category">Self Development</div>
-										<h4><a href="portfolio-detail.html">Dancy Life Saving Decisions</a></h4>
-									</div>
-									<a href="assets/images/gallery/3.jpg" data-fancybox="gallery-1" data-caption="" class="plus-link"><span class="icon flaticon-full-screen"></span></a>
-								</div>
-							</figure>
-						</div>
+					<div class="region">
+						<h4>United Kingdom</h4>
+						<ul>
+							<li>University of Oxford</li>
+							<li>University of Cambridge</li>
+							<li>Imperial College London</li>
+							<li>University College London</li>
+							<li>King’s College London</li>
+							<li>University of Edinburgh</li>
+							<li>University of Manchester</li>
+							<li>University of Bristol</li>
+							<li>University of Warwick</li>
+						</ul>
 					</div>
-					
-					<!-- Gallery Block -->
-					<div class="gallery-block mix all consultancy col-lg-4 col-md-4 col-sm-12">
-						<div class="inner-box">
-							<figure class="image-box">
-								<img src="assets/images/gallery/4.jpg" alt="">
-								<!-- Overlay Box -->
-								<div class="overlay-box">
-									<div class="content">
-										<div class="category">Self Development</div>
-										<h4><a href="portfolio-detail.html">Dancy Life Saving Decisions</a></h4>
-									</div>
-									<a href="assets/images/gallery/4.jpg" data-fancybox="gallery-1" data-caption="" class="plus-link"><span class="icon flaticon-full-screen"></span></a>
-								</div>
-							</figure>
-						</div>
+					<div class="region">
+						<h4>Australia</h4>
+						<ul>
+							<li>University of Melbourne</li>
+							<li>Australian National University</li>
+							<li>University of Sydney</li>
+							<li>University of Queensland</li>
+							<li>University of New South Wales</li>
+							<li>Monash University</li>
+						</ul>
 					</div>
-					
-					<!-- Gallery Block -->
-					<div class="gallery-block mix all support col-lg-4 col-md-4 col-sm-12">
-						<div class="inner-box">
-							<figure class="image-box">
-								<img src="assets/images/gallery/5.jpg" alt="">
-								<!-- Overlay Box -->
-								<div class="overlay-box">
-									<div class="content">
-										<div class="category">Self Development</div>
-										<h4><a href="portfolio-detail.html">Dancy Life Saving Decisions</a></h4>
-									</div>
-									<a href="assets/images/gallery/5.jpg" data-fancybox="gallery-1" data-caption="" class="plus-link"><span class="icon flaticon-full-screen"></span></a>
-								</div>
-							</figure>
-						</div>
+					<div class="region">
+						<h4>Asia</h4>
+						<ul>
+							<li>National University of Singapore</li>
+							<li>Nanyang Technological University</li>
+							<li>University of Hong Kong</li>
+							<li>Hong Kong University of Science and Technology</li>
+							<li>VinUniversity</li>
+							<li>British University Vietnam</li>
+						</ul>
 					</div>
-					
-					<!-- Gallery Block -->
-					<div class="gallery-block mix all consultancy course col-lg-4 col-md-4 col-sm-12">
-						<div class="inner-box">
-							<figure class="image-box">
-								<img src="assets/images/gallery/6.jpg" alt="">
-								<!-- Overlay Box -->
-								<div class="overlay-box">
-									<div class="content">
-										<div class="category">Self Development</div>
-										<h4><a href="portfolio-detail.html">Dancy Life Saving Decisions</a></h4>
-									</div>
-									<a href="assets/images/gallery/6.jpg" data-fancybox="gallery-1" data-caption="" class="plus-link"><span class="icon flaticon-full-screen"></span></a>
-								</div>
-							</figure>
-						</div>
+				</div>
+	
+				<div class="acceptances-list">
+					<h3>Boarding Schools</h3>
+					<div class="region">
+						<h4>United States</h4>
+						<ul>
+							<li>Phillips Academy</li>
+							<li>Phillips Exeter Academy</li>
+							<li>The Hotchkiss School</li>
+							<li>St. Paul's School</li>
+							<li>Deerfield Academy</li>
+							<li>Groton School</li>
+							<li>The Lawrenceville School</li>
+							<li>Milton Academy</li>
+							<li>Choate Rosemary Hall</li>
+							<li>The Taft School</li>
+							<li>The Hill School</li>
+							<li>Loomis Chaffee</li>
+							<li>The Peddie School</li>
+							<li>The Cate School</li>
+							<li>The Thacher School</li>
+							<li>The Putney School</li>
+							<li>St. Andrew's School</li>
+							<li>Blair Academy</li>
+							<li>Middlesex School</li>
+							<li>Northfield Mount Hermon</li>
+						</ul>
 					</div>
-					
-					<!-- Gallery Block -->
-					<div class="gallery-block mix all support col-lg-4 col-md-4 col-sm-12">
-						<div class="inner-box">
-							<figure class="image-box">
-								<img src="assets/images/gallery/7.jpg" alt="">
-								<!-- Overlay Box -->
-								<div class="overlay-box">
-									<div class="content">
-										<div class="category">Self Development</div>
-										<h4><a href="portfolio-detail.html">Dancy Life Saving Decisions</a></h4>
-									</div>
-									<a href="assets/images/gallery/7.jpg" data-fancybox="gallery-1" data-caption="" class="plus-link"><span class="icon flaticon-full-screen"></span></a>
-								</div>
-							</figure>
-						</div>
+					<div class="region">
+						<h4>Canada</h4>
+						<ul>
+							<li>Upper Canada College</li>
+							<li>Appleby College</li>
+							<li>St. Michael’s University School</li>
+							<li>Ridley College</li>
+							<li>Brentwood College School</li>
+							<li>St. Andrew's College</li>
+							<li>Ashbury College</li>
+							<li>Lakefield College School</li>
+							<li>Bishop’s College School</li>
+							<li>Shawnigan Lake School</li>
+						</ul>
 					</div>
-					
-					<!-- Gallery Block -->
-					<div class="gallery-block mix all consultancy col-lg-4 col-md-4 col-sm-12">
-						<div class="inner-box">
-							<figure class="image-box">
-								<img src="assets/images/gallery/8.jpg" alt="">
-								<!-- Overlay Box -->
-								<div class="overlay-box">
-									<div class="content">
-										<div class="category">Self Development</div>
-										<h4><a href="portfolio-detail.html">Dancy Life Saving Decisions</a></h4>
-									</div>
-									<a href="assets/images/gallery/8.jpg" data-fancybox="gallery-1" data-caption="" class="plus-link"><span class="icon flaticon-full-screen"></span></a>
-								</div>
-							</figure>
-						</div>
-					</div>
-					
-					<!-- Gallery Block -->
-					<div class="gallery-block mix all support course col-lg-4 col-md-4 col-sm-12">
-						<div class="inner-box">
-							<figure class="image-box">
-								<img src="assets/images/gallery/9.jpg" alt="">
-								<!-- Overlay Box -->
-								<div class="overlay-box">
-									<div class="content">
-										<div class="category">Self Development</div>
-										<h4><a href="portfolio-detail.html">Dancy Life Saving Decisions</a></h4>
-									</div>
-									<a href="assets/images/gallery/9.jpg" data-fancybox="gallery-1" data-caption="" class="plus-link"><span class="icon flaticon-full-screen"></span></a>
-								</div>
-							</figure>
-						</div>
-					</div>
-					
-					<!-- Gallery Block -->
-					<div class="gallery-block mix all consultancy col-lg-4 col-md-4 col-sm-12">
-						<div class="inner-box">
-							<figure class="image-box">
-								<img src="assets/images/gallery/10.jpg" alt="">
-								<!-- Overlay Box -->
-								<div class="overlay-box">
-									<div class="content">
-										<div class="category">Self Development</div>
-										<h4><a href="portfolio-detail.html">Dancy Life Saving Decisions</a></h4>
-									</div>
-									<a href="assets/images/gallery/10.jpg" data-fancybox="gallery-1" data-caption="" class="plus-link"><span class="icon flaticon-full-screen"></span></a>
-								</div>
-							</figure>
-						</div>
-					</div>
-					
-					<!-- Gallery Block -->
-					<div class="gallery-block mix all support course col-lg-4 col-md-4 col-sm-12">
-						<div class="inner-box">
-							<figure class="image-box">
-								<img src="assets/images/gallery/11.jpg" alt="">
-								<!-- Overlay Box -->
-								<div class="overlay-box">
-									<div class="content">
-										<div class="category">Self Development</div>
-										<h4><a href="portfolio-detail.html">Dancy Life Saving Decisions</a></h4>
-									</div>
-									<a href="assets/images/gallery/11.jpg" data-fancybox="gallery-1" data-caption="" class="plus-link"><span class="icon flaticon-full-screen"></span></a>
-								</div>
-							</figure>
-						</div>
-					</div>
-					
-					<!-- Gallery Block -->
-					<div class="gallery-block mix all consultancy col-lg-4 col-md-4 col-sm-12">
-						<div class="inner-box">
-							<figure class="image-box">
-								<img src="assets/images/gallery/12.jpg" alt="">
-								<!-- Overlay Box -->
-								<div class="overlay-box">
-									<div class="content">
-										<div class="category">Self Development</div>
-										<h4><a href="portfolio-detail.html">Dancy Life Saving Decisions</a></h4>
-									</div>
-									<a href="assets/images/gallery/12.jpg" data-fancybox="gallery-1" data-caption="" class="plus-link"><span class="icon flaticon-full-screen"></span></a>
-								</div>
-							</figure>
-						</div>
-					</div>
-				
 				</div>
 			</div>
 		</div>

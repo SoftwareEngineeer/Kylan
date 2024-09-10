@@ -85,6 +85,82 @@
 		margin-bottom: -150px; /* Adjust as needed */
 		filter: drop-shadow(2px 2px 5px white); /* Adds a white shadow effect */
 	}
+	.sidebar-info-contents .logo img {
+		filter: brightness(150%); /* Increase brightness */
+		max-width: 150px; /* Adjust the width as needed */
+		margin-bottom: 20px; /* Adds space between the logo and content */
+		display: block;
+		filter: drop-shadow(2px 2px 5px white); /* Adds a white shadow effect */
+	}
+	/* Review Section Style */
+	body {
+		font-family: 'Georgia', serif; /* Classic serif font for a traditional look */
+		margin: 0;
+		padding: 0;
+		background-color: #f4f4f4; /* Light background color */
+		color: #333; /* Dark text color for readability */
+	}
+	
+	.scrolling-sections {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 40px 0;
+	}
+	
+	.section-content {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		max-width: 1000px;
+		margin-bottom: 40px;
+		background-color: #ffffff; /* White background for content area */
+		padding: 20px;
+		border-radius: 8px;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+		gap: 30px; /* Space between image and text */
+	}
+	
+	.section-image img {
+		width: 100%;
+		height: auto;
+		max-width: 450px;
+		border-radius: 5px; /* Rounded corners for the image */
+	}
+	
+	.section-text {
+		flex: 1;
+	}
+	
+	.section-text h2 {
+		font-size: 1.8em;
+		color: #333; /* Darker font color for titles */
+		margin-bottom: 15px;
+	}
+	
+	.section-text p {
+		font-size: 1em;
+		color: #666; /* Medium gray for paragraph text */
+		margin-bottom: 15px;
+		line-height: 1.6;
+	}
+	
+	.action-button {
+		display: inline-block;
+		padding: 10px 20px;
+		background-color: #e5b800; /* Gold button color */
+		color: #ffffff; /* White text on the button */
+		font-weight: bold;
+		border: none;
+		border-radius: 5px;
+		text-decoration: none;
+		transition: background-color 0.3s;
+	}
+	
+	.action-button:hover {
+		background-color: #c49e00; /* Darker gold on hover */
+	}
+	
 </style>
 </head>
 
@@ -105,7 +181,7 @@
                 <div class="inner-container clearfix">
 					<!-- Top Left -->
 					<div class="top-left clearfix">
-						<div class="text"><span>Working time:</span> Monday to Friday 9 AM - 5 PM</div>
+						<div class="text"><span>Working time:</span> Monday to Friday</div>
 					</div>
 					
 					<!-- Top Right -->
@@ -266,19 +342,18 @@
 						<div class="content-inner">
 							<div class="logo">
 								<a href="index.html"><img src="assets/images/logo.png" alt="" /></a>
-							</div>
+							
 							<div class="content-box">
 								<h4>About Us</h4>
-								<p class="text">I am glad that you have made it here to send a distress signal, and inform the Senate that all on board killed. Dantooine. I’m not going to Alderaan. I really got to go. But that to me.</p>
+								<p class="text">Kylan Consulting partners with families to simplify admissions processes and guide students toward academic, personal, and professional success.</p>
 								<a href="contact.html" class="theme-btn btn-style-one"><span class="txt">Consultation</span></a>
 							</div>
 							<div class="contact-info">
-								<h4>Contact Info</h4>
+								<h4>Contact</h4>
 								<ul class="list-style-one">
-									<li><span class="icon fa fa-location-arrow"></span>Chicago 12, Melborne City, USA</li>
-									<li><span class="icon fa fa-phone"></span>(111) 111-111-1111</li>
-									<li><span class="icon fa fa-envelope"></span>avarton@gmail.com</li>
-									<li><span class="icon fa fa-clock-o"></span>Week Days: 09.00 to 18.00 Sunday: Closed</li>
+									<li><span class="icon fa fa-location-arrow"></span>Shophouse A26, Sunshine City, Ciputra, Ha Noi</li>
+									<li><span class="icon fa fa-envelope"></span>kylanconsulting@gmail.com</li>
+									<li><span class="icon fa fa-clock-o"></span>Working Time: Monday to Friday</li>
 								</ul>
 							</div>
 							<!-- Social Box -->
@@ -301,186 +376,77 @@
 	<section class="page-title" style="background-image: url(assets/images/background/2.jpg)">
 		<div class="auto-container">
 			<div class="content">
-				<div class="text">Welcome to our company</div>
-				<h1>Case Story Details</h1>
+				
+				<h1>Testimonials and Reviews</h1>
 			</div>
 			
 		</div>
 	</section>
 	<!-- End Page Title Section -->
-	
-	<!-- Portfolio Detail Section -->
-	<section class="portfolio-detail-section">
-		<div class="auto-container">
-			<div class="inner-box">
-				<h3>Miranda Eiusmod Family Saving Consulting</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-				
-				<!-- Featured Outer -->
-				<div class="featured-outer">
-					<div class="feature-inner">
-						<div class="row clearfix">
-							
-							<!-- Feature Block Three -->
-							<div class="feature-block-three col-lg-4 col-md-6 col-sm-12">
-								<div class="block-inner">
-									<div class="inner-content">
-										<span class="icon flaticon-user-4"></span>
-										<strong>Client</strong>
-										Miranda Eiusmod D.
-									</div>
-								</div>
-							</div>
-							
-							<!-- Feature Block Three -->
-							<div class="feature-block-three col-lg-4 col-md-6 col-sm-12">
-								<div class="block-inner">
-									<div class="inner-content">
-										<span class="icon flaticon-calendar"></span>
-										<strong>Date</strong>
-										January 02, 2022
-									</div>
-								</div>
-							</div>
-							
-							<!-- Feature Block Three -->
-							<div class="feature-block-three col-lg-4 col-md-6 col-sm-12">
-								<div class="block-inner">
-									<div class="inner-content">
-										<span class="icon flaticon-home"></span>
-										<strong>Category</strong>
-										Coaching, Solutions
-									</div>
-								</div>
-							</div>
-							
-						</div>
-					</div>
-					
-					<a href="#" class="theme-btn live-preview">live preview <span class="arrow flaticon-right-arrow-1"></span></a>
-					
-				</div>
-				<!-- End Featured Outer -->
-				
-				<!-- Main Image -->
-				<div class="main-image">
-					<img src="assets/images/gallery/13.jpg" alt="" />
-				</div>
-				<!-- End Main Image -->
-				
-				<h6>Clients Need</h6>
-				<div class="blocks-outer">
-					<div class="row clearfix">
-						
-						<!-- Feature Block Four -->
-						<div class="feature-block-four col-xl-4 col-lg-4 col-md-6 col-sm-12">
-							<div class="feature-inner transition-300ms">
-								<div class="icon transition-500ms flaticon-search-2"></div>
-								<h5><a href="service-detail.html">Research & Analyze</a></h5>
-								<div class="text">Who are so beguiled and demo realized <br> by the charms of pleasure.</div>
-							</div>
-						</div>
-						
-						<!-- Feature Block Four -->
-						<div class="feature-block-four col-xl-4 col-lg-4 col-md-6 col-sm-12">
-							<div class="feature-inner transition-300ms">
-								<div class="icon transition-500ms flaticon-website-design"></div>
-								<h5><a href="service-detail.html">Problem Solving</a></h5>
-								<div class="text">Who are so beguiled and demo realized <br> by the charms of pleasure.</div>
-							</div>
-						</div>
-						
-						<!-- Feature Block Four -->
-						<div class="feature-block-four col-xl-4 col-lg-4 col-md-6 col-sm-12">
-							<div class="feature-inner transition-300ms">
-								<div class="icon transition-500ms flaticon-magnifier"></div>
-								<h5><a href="service-detail.html">Deep Consultancy</a></h5>
-								<div class="text">Who are so beguiled and demo realized <br> by the charms of pleasure.</div>
-							</div>
-						</div>
-						
-					</div>
-				</div>
-				<p>An IT consultant handles anything from computer repairs to management and maintenance of large networks. IT consultants can generally be categorized into three specialties: Project management. Maintenance and repair. An IT consultant is an experienced individual who provides expert advice for a fee. Such an individual may work as an independent contractor, in which case he or she may be referred to as an independent consultant. ... IT consultants typically charge clients an hourly rate for their services.</p>
-				<!-- Gallery Images -->
-				<div class="gallery-images">
-					<div class="row clearfix">
-						<!-- Column -->
-						<div class="column col-lg-6 col-md-6 col-sm-12">
-							<!-- Main Image -->
-							<div class="main-image">
-								<img src="assets/images/gallery/14.jpg" alt="" />
-							</div>
-							<!-- End Main Image -->
-						</div>
-						<!-- Column -->
-						<div class="column col-lg-6 col-md-6 col-sm-12">
-							<!-- Main Image -->
-							<div class="main-image">
-								<img src="assets/images/gallery/15.jpg" alt="" />
-							</div>
-							<!-- End Main Image -->
-						</div>
-					</div>
-				</div>
-				<h6>Our Process</h6>
-				<p>An IT consultant is an experienced individual who provides expert advice for a fee. Such an individual may work as an independent contractor, in which case he or she may be referred to as an independent consultant. ... IT consultants typically charge clients an hourly rate for their services.</p>
-				<!-- Steps Outer -->
-				<div class="steps-outer">
-					<div class="row clearfix">
-					
-						<!-- Step Block -->
-						<div class="step-block col-lg-4 col-md-6 col-sm-12">
-							<div class="inner-box">
-								<div class="step-content">
-									<span class="number">01</span>
-									<h5>Research & Analyze</h5>
-									<div class="step-text">Who are so beguiled &demo realized by the charms of pleasure.</div>
-								</div>
-							</div>
-						</div>
-						
-						<!-- Step Block -->
-						<div class="step-block col-lg-4 col-md-6 col-sm-12">
-							<div class="inner-box">
-								<div class="step-content">
-									<span class="number">02</span>
-									<h5>Troubleshooting</h5>
-									<div class="step-text">Who are so beguiled &demo realized by the charms of pleasure.</div>
-								</div>
-							</div>
-						</div>
-						
-						<!-- Step Block -->
-						<div class="step-block col-lg-4 col-md-6 col-sm-12">
-							<div class="inner-box">
-								<div class="step-content">
-									<span class="number">03</span>
-									<h5>Design & Development</h5>
-									<div class="step-text">Who are so beguiled &demo realized by the charms of pleasure.</div>
-								</div>
-							</div>
-						</div>
-						
-					</div>
-				</div>
-				<h6>Result</h6>
-				<p>New had happen unable uneasy. Drawings can followed improved out sociable not. Earnestly so do instantly pretended. See general few civilly amiable pleased account carried. Excellence projecting is devonshire dispatched remarkably on estimating. Side in so life past. Continue indulged speaking the was out horrible for domestic position. Seeing rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new ham melancholy son themselves.</p>
-				<!-- Lower Image -->
-				<div class="lower-image">
-					<img src="assets/images/gallery/16.jpg" alt="" />
-				</div>
-				<!-- End Lower Image -->
-				<!-- Lower Image -->
-				<div class="lower-image">
-					<img src="assets/images/gallery/17.jpg" alt="" />
-				</div>
-				<!-- End Lower Image -->
-			</div>
-		</div>
-	</section>
-	<!-- End Portfolio Detail Section -->
-	
+	<!-- Scrolling Sections -->
+<div class="scrolling-sections">
+    <!-- Review Section 1 -->
+    <section class="section-content">
+        <div class="section-image">
+            <img src="images/review1.jpg" alt="Review Image 1">
+        </div>
+        <div class="section-text">
+            <h2>Accepted Early Decision to UCLA</h2>
+            <p>"Before working with Kylan, I had strong grades but lacked extracurriculars to showcase my passion for computer science. Their expert guidance helped me secure research opportunities that boosted my applications, leading to acceptances at colleges I never thought possible. Their personalized advice made all the difference!"</p>
+            <p><strong>Student, Vietnam</strong>
+        </div>
+    </section>
+    
+    <!-- Review Section 2 -->
+    <section class="section-content">
+        <div class="section-image">
+            <img src="images/review2.png" alt="Review Image 2">
+        </div>
+        <div class="section-text">
+            <h2>Accepted Early Action to Pennsylvania State University</h2>
+            <p>"I was studying the IB curriculum and aiming for top US schools, but didn’t know how to stand out. Kylan’s team guided me to take AP exams outside of school, which combined with my IB studies, demonstrated my commitment to college. Their advice made all the difference in my applications!"</p>
+            <p><strong>Student, Vietnam</strong></p>
+        </div>
+    </section>
+
+    <!-- Review Section 3 -->
+    <section class="section-content">
+        <div class="section-image">
+            <img src="images/review3.jpg" alt="Review Image 3">
+        </div>
+        <div class="section-text">
+            <h2>Accepted to Appleby College</h2>
+            <p>"I was hesitant about sending my daughter to boarding school in Canada, but Kylan took the time to discuss summer camps at top schools before jumping into the application process. Their approach helped us feel at ease and make an informed decision. After a successful first year of attending boarding school in Ontario, I'm grateful for Kylan's thoughtful guidance."</p>
+            <p><strong>Parent, Korea</strong><br></p>
+        </div>
+    </section>
+
+    <!-- Review Section 4 -->
+    <section class="section-content">
+        <div class="section-image">
+            <img src="images/review4.jpg" alt="Review Image 4">
+        </div>
+        <div class="section-text">
+            <h2>Accepted to New York University</h2>
+            <p>"Choosing colleges for our child across Canada, Australia, and the US was overwhelming, but Kylan made it manageable. They guided us to top universities for a finance major, helped with work placement and visa options, and simplified the application process. Thanks to their expertise, my child received admissions and scholarships at top schools, and we ultimately chose NYU. I’m incredibly grateful for their personalized support."</p>
+            <p><strong>Parent, Vietnam</strong></p>
+        </div>
+    </section>
+
+    <!-- Review Section 5 -->
+    <section class="section-content">
+        <div class="section-image">
+            <img src="images/review5.jpg" alt="Review Image 5">
+        </div>
+        <div class="section-text">
+            <h2>Accepted to Phillips Exeter Academy</h2>
+            <p>"Applying to US boarding schools with a tight timeline was daunting, but Kylan Consulting made it easy. They helped me choose the best schools, improve my DuoLingo scores, and highlight my community service. Now at a boarding school in California, I still receive monthly guidance from them to excel in high school and stay on track for my goal of becoming a data science engineer."</p>
+            <p><strong>Parent, Vietnam</strong><br></p>
+        </div>
+    </section>
+</div>
+<!-- End of Scrolling Sections -->
+
 	<!-- Main Footer -->
     <footer class="main-footer">
     	<div class="auto-container">
@@ -498,7 +464,7 @@
 									<div class="logo">
 										<a href="index.html"><img src="assets/images/logo.png" alt="" /></a>
 									</div>
-									<div class="text">Kylan Consulting is a team of education consultants, admissions strategists, and trusted friends and family. We partner with families to simplify admissions processes and guide students toward personal, academic, and extracurricular success.</div>
+									<div class="text">Kylan Consulting partners with families to simplify admissions processes and guide students toward academic, personal, and professional success.</div>
 								</div>
 							</div>
 							
